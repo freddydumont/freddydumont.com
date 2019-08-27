@@ -1,43 +1,35 @@
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    title: `freddydumont's personal blog`,
+    name: `Dumont Digital`,
+    siteUrl: `https://freddydumont.com`,
+    description: `freddydumont's blog about modern full stack web app development using tech like JavasScript, React, GraphQL and Gatsby.`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+      heading: `Interested in modern web application development? Keep reading.`,
       maxWidth: 652,
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/_freddydumont`,
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
-      },
-      {
-        name: `instagram`,
-        url: `https://instagram.com/narative.co`,
+        url: `https://github.com/freddydumont`,
       },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://www.linkedin.com/in/freddydumont/`,
       },
     ],
   },
   plugins: [
     {
-      resolve: "@narative/gatsby-theme-novela",
+      resolve: '@narative/gatsby-theme-novela',
       options: {
-        contentPosts: "content/posts",
-        contentAuthors: "content/authors",
-        basePath: "/",
+        contentPosts: 'content/posts',
+        contentAuthors: 'content/authors',
+        basePath: '/',
         authorsPage: true,
         sources: {
           local: true,
@@ -48,8 +40,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
+        name: `freddydumont's personal blog`,
+        short_name: `freddydumont`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,

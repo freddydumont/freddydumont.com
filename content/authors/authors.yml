@@ -1,17 +1,12 @@
-- name: Dennis Brotzky
+- name: Frederick Morin
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/dennis-brotzky.jpg
+    Hi! 👋I'm Frederick Morin. I'm a full stack web application developer. I like JavaScript, React, GraphQL and Gatsby.
+  avatar: ./avatars/freddydumont.jpg
   featured: true
   social:
     - name: github
-      url: https://github.com
+      url: https://github.com/freddydumont
     - name: twitter
-      url: https://github.com
-    - name: instagram
-      url: https://github.com
-    - name: dribbble
-      url: https://github.com
+      url: https://twitter.com/_freddydumont
     - name: linkedin
-      url: https://github.com
+      url: https://www.linkedin.com/in/freddydumont/
