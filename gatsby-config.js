@@ -29,7 +29,7 @@ module.exports = {
       options: {
         contentPosts: 'content/posts',
         contentAuthors: 'content/authors',
-        basePath: '/',
+        basePath: '/blog/',
         authorsPage: true,
         sources: {
           local: true,
@@ -49,5 +49,6 @@ module.exports = {
         icon: `src/assets/favicon.png`,
       },
     },
+    'gatsby-plugin-postcss',
   ],
 };
