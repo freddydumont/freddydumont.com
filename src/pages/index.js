@@ -1,17 +1,29 @@
 import React from 'react';
 import Logo from '../@narative/gatsby-theme-novela/components/Logo';
+import thumbnail from '../../content/authors/avatars/freddydumont.jpg';
 import '../css/index.css';
 
 /**
  * Menu items
  * @param {Object} props
- * @param {string} props.to href destination
+ * @param {string} [props.to] href destination
+ * @param {boolean} [props.isComingSoon] display soon (tm) badge
  * @param {string} props.children displayed string
  */
-const ListItem = ({ to, children }) => (
-  <li className="cursor-pointer animated-item">
-    <a href={to}>{children}</a>
-  </li>
+const ListItem = ({ to, isComingSoon, children }) => (
+  // the div is there for the animated bg to stop when text ends
+  <div className="flex items-center">
+    <li className="cursor-pointer animated-item">
+      <a href={to || '#'}>{children}</a>
+    </li>
+    {isComingSoon && <SoonBadge />}
+  </div>
+);
+
+const SoonBadge = () => (
+  <span className="inline-block rounded-full px-2 bg-teal-200 text-teal-800 text-xs ml-2">
+    soon(tm)
+  </span>
 );
 
 const Index = () => (
@@ -24,13 +36,24 @@ const Index = () => (
         <ul>
           <ListItem to="#about">about</ListItem>
           <ListItem to="/blog">blog</ListItem>
-          <ListItem to="#portfolio">portfolio</ListItem>
-          <ListItem to="#contact">contact</ListItem>
+          <ListItem isComingSoon>portfolio</ListItem>
+          <ListItem isComingSoon>contact</ListItem>
         </ul>
       </nav>
     </section>
-    <section id="about" className="h-screen">
-      <div>some stuff</div>
+    <section id="about" className="h-screen bg-kinda-black text-gray-100 pt-32">
+      <div className="container mx-auto p-6">
+        <img
+          className="rounded-full h-16 w-16 mb-4"
+          src={thumbnail}
+          alt="frederick morin"
+        />
+        <h1 className="text-4xl font-semibold pb-6">Hey! I'm Frederick.</h1>
+        <h3 className="text-2xl">
+          I'm a full stack web application developer. I build things using all
+          the latest tech.
+        </h3>
+      </div>
     </section>
   </main>
 );
