@@ -1,4 +1,5 @@
 import React from 'react';
+import scrollTo from '../utils/scroll';
 import Logo from '../@narative/gatsby-theme-novela/components/Logo';
 import thumbnail from '../../content/authors/avatars/freddydumont.jpg';
 import '../css/index.css';
@@ -7,14 +8,18 @@ import '../css/index.css';
  * Menu items
  * @param {Object} props
  * @param {string} [props.to] href destination
+ * @param {string} [props.clickDestination] onClick destination for `scrollTo`
  * @param {boolean} [props.isComingSoon] display soon (tm) badge
  * @param {string} props.children displayed string
  */
-const ListItem = ({ to, isComingSoon, children }) => (
+const ListItem = ({ to, clickDestination, isComingSoon, children }) => (
   // the div is there for the animated bg to stop when text ends
   <div className="flex items-center">
     <li className="cursor-pointer animated-item">
-      <a href={to || '#'}>{children}</a>
+      {to && <a href={to}>{children}</a>}
+      {clickDestination && (
+        <button onClick={() => scrollTo(clickDestination)}>{children}</button>
+      )}
     </li>
     {isComingSoon && <SoonBadge />}
   </div>
@@ -34,10 +39,14 @@ const Index = () => (
           <Logo />
         </div>
         <ul>
-          <ListItem to="#about">about</ListItem>
+          <ListItem clickDestination="#about">about</ListItem>
           <ListItem to="/blog">blog</ListItem>
-          <ListItem isComingSoon>portfolio</ListItem>
-          <ListItem isComingSoon>contact</ListItem>
+          <ListItem to="#" isComingSoon>
+            portfolio
+          </ListItem>
+          <ListItem to="#" isComingSoon>
+            contact
+          </ListItem>
         </ul>
       </nav>
     </section>
