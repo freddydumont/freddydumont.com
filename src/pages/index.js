@@ -52,7 +52,7 @@ const Index = ({ data }) => (
       </nav>
     </section>
     <section id="about" className="h-screen bg-kinda-black text-gray-100 pt-32">
-      <div className="container mx-auto p-6">
+      <div className="container mx-auto max-w-3xl p-6">
         <Img
           fluid={data.author.avatar.childImageSharp.fluid}
           className="rounded-full h-24 w-24 mb-4 -ml-1"
