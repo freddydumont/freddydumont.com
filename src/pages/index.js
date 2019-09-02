@@ -1,7 +1,8 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import scrollTo from '../utils/scroll';
 import Logo from '../@narative/gatsby-theme-novela/components/Logo';
-import thumbnail from '../../content/authors/avatars/freddydumont.jpg';
 import '../css/index.css';
 
 /**
@@ -31,7 +32,7 @@ const SoonBadge = () => (
   </span>
 );
 
-const Index = () => (
+const Index = ({ data }) => (
   <main className="h-full">
     <section className="main-bg h-screen text-gray-100 font-mono flex items-center justify-center">
       <nav className="container mx-auto max-w-xs text-2xl p-6 leading-relaxed bg-kinda-black">
@@ -52,9 +53,9 @@ const Index = () => (
     </section>
     <section id="about" className="h-screen bg-kinda-black text-gray-100 pt-32">
       <div className="container mx-auto p-6">
-        <img
-          className="rounded-full h-16 w-16 mb-4"
-          src={thumbnail}
+        <Img
+          fluid={data.author.avatar.childImageSharp.fluid}
+          className="rounded-full h-24 w-24 mb-4"
           alt="frederick morin"
         />
         <h1 className="text-4xl font-semibold pb-6">Hey! I'm Frederick.</h1>
@@ -66,5 +67,19 @@ const Index = () => (
     </section>
   </main>
 );
+
+export const query = graphql`
+  query {
+    author(name: { eq: "Frederick Morin" }) {
+      avatar {
+        childImageSharp {
+          fluid(maxWidth: 522) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Index;
