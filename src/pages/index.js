@@ -55,14 +55,20 @@ const Index = ({ data }) => (
       <div className="container mx-auto p-6">
         <Img
           fluid={data.author.avatar.childImageSharp.fluid}
-          className="rounded-full h-24 w-24 mb-4"
+          className="rounded-full h-24 w-24 mb-4 -ml-1"
           alt="frederick morin"
         />
-        <h1 className="text-4xl font-semibold pb-6">Hey! I'm Frederick.</h1>
-        <h3 className="text-2xl">
-          I'm a full stack web application developer. I build things using all
-          the latest tech.
-        </h3>
+        <h1 className="text-3xl font-semibold mb-4">{data.author.bio}</h1>
+        <p className="text-xl">
+          I'm currently building this website. Check out{' '}
+          <a
+            href="/blog"
+            className="text-teal-500 hover:text-teal-400 cursor-pointer"
+          >
+            my blog
+          </a>{' '}
+          in the meantime.
+        </p>
       </div>
     </section>
   </main>
@@ -71,6 +77,7 @@ const Index = ({ data }) => (
 export const query = graphql`
   query {
     author(name: { eq: "Frederick Morin" }) {
+      bio
       avatar {
         childImageSharp {
           fluid(maxWidth: 522) {
