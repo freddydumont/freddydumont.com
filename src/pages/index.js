@@ -2,7 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import scrollTo from '../utils/scroll';
+import SEO from '../../node_modules/@narative/gatsby-theme-novela/src/components/SEO';
 import Logo from '../@narative/gatsby-theme-novela/components/Logo';
+import social_header from '../assets/dumont_digital_logo.png';
 import '../css/index.css';
 
 /**
@@ -33,45 +35,51 @@ const SoonBadge = () => (
 );
 
 const Index = ({ data }) => (
-  <main className="h-full">
-    <section className="main-bg h-screen text-gray-100 font-mono flex items-center justify-center">
-      <nav className="container mx-auto max-w-xs text-2xl p-6 leading-relaxed bg-kinda-black">
-        <div className="pb-6">
-          <Logo />
+  <>
+    <SEO image={social_header} />
+    <main className="h-full">
+      <section className="main-bg h-screen text-gray-100 font-mono flex items-center justify-center">
+        <nav className="container mx-auto max-w-xs text-2xl p-6 leading-relaxed bg-kinda-black">
+          <div className="pb-6">
+            <Logo />
+          </div>
+          <ul>
+            <ListItem clickDestination="#about">about</ListItem>
+            <ListItem to="/blog">blog</ListItem>
+            <ListItem to="#" isComingSoon>
+              portfolio
+            </ListItem>
+            <ListItem to="#" isComingSoon>
+              contact
+            </ListItem>
+          </ul>
+        </nav>
+      </section>
+      <section
+        id="about"
+        className="h-screen bg-kinda-black text-gray-100 pt-32"
+      >
+        <div className="container mx-auto max-w-3xl p-6">
+          <Img
+            fluid={data.author.avatar.childImageSharp.fluid}
+            className="rounded-full h-24 w-24 mb-4 -ml-1"
+            alt="frederick morin"
+          />
+          <h1 className="text-3xl font-semibold mb-4">{data.author.bio}</h1>
+          <p className="text-xl">
+            I'm currently building this website. Check out{' '}
+            <a
+              href="/blog"
+              className="text-teal-500 hover:text-teal-400 cursor-pointer"
+            >
+              my blog
+            </a>{' '}
+            in the meantime.
+          </p>
         </div>
-        <ul>
-          <ListItem clickDestination="#about">about</ListItem>
-          <ListItem to="/blog">blog</ListItem>
-          <ListItem to="#" isComingSoon>
-            portfolio
-          </ListItem>
-          <ListItem to="#" isComingSoon>
-            contact
-          </ListItem>
-        </ul>
-      </nav>
-    </section>
-    <section id="about" className="h-screen bg-kinda-black text-gray-100 pt-32">
-      <div className="container mx-auto max-w-3xl p-6">
-        <Img
-          fluid={data.author.avatar.childImageSharp.fluid}
-          className="rounded-full h-24 w-24 mb-4 -ml-1"
-          alt="frederick morin"
-        />
-        <h1 className="text-3xl font-semibold mb-4">{data.author.bio}</h1>
-        <p className="text-xl">
-          I'm currently building this website. Check out{' '}
-          <a
-            href="/blog"
-            className="text-teal-500 hover:text-teal-400 cursor-pointer"
-          >
-            my blog
-          </a>{' '}
-          in the meantime.
-        </p>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </>
 );
 
 export const query = graphql`
