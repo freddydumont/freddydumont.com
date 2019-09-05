@@ -37,9 +37,9 @@ const SoonBadge = () => (
 const Index = ({ data }) => (
   <>
     <SEO image={social_header} />
-    <main className="h-full">
+    <main className="h-full bg-near-black">
       <section className="main-bg h-screen text-gray-100 font-mono flex items-center justify-center">
-        <nav className="container mx-auto max-w-xs text-2xl p-6 leading-relaxed bg-kinda-black">
+        <nav className="container mx-auto max-w-xs text-2xl -mt-32 p-6 leading-relaxed bg-near-black">
           <div className="pb-6">
             <Logo />
           </div>
@@ -57,9 +57,9 @@ const Index = ({ data }) => (
       </section>
       <section
         id="about"
-        className="h-screen bg-kinda-black text-gray-100 pt-32"
+        className="h-screen bg-near-black text-gray-100 pt-32"
       >
-        <div className="container mx-auto max-w-3xl p-6">
+        <div className="container mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl p-6">
           <Img
             fluid={data.author.avatar.childImageSharp.fluid}
             className="rounded-full h-24 w-24 mb-4 -ml-1"
