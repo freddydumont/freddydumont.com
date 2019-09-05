@@ -18,8 +18,4 @@
   background-position: left bottom;
 }
 
-.bg-near-black {
-  background-color: #1d1d1e;
-}
-
 @tailwind utilities;

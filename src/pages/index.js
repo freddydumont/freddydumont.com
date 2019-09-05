@@ -62,7 +62,7 @@ const Index = ({ data }) => (
         <div className="container mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl p-6">
           <Img
             fluid={data.author.avatar.childImageSharp.fluid}
-            className="rounded-full h-24 w-24 mb-4 -ml-1"
+            className="rounded-full h-24 w-24 mb-4 -ml-1 shadow-outline-teal"
             alt="frederick morin"
           />
           <h1 className="text-3xl font-semibold mb-4">{data.author.bio}</h1>
