@@ -36,7 +36,11 @@ const SoonBadge = () => (
 
 const Index = ({ data }) => (
   <>
-    <SEO image={social_header} />
+    <SEO
+      title="freddydumont | Full stack web application development"
+      description="I'm a full stack web application developer helping startups turn ideas into reality. Click to find out how I can help you grow your business now!"
+      image={social_header}
+    />
     <main className="h-full bg-near-black">
       <section className="main-bg h-screen text-gray-100 font-mono flex items-center justify-center">
         <nav className="container mx-auto max-w-xs text-2xl -mt-32 p-6 leading-relaxed bg-near-black">
