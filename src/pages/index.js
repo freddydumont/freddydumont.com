@@ -57,25 +57,32 @@ const Index = ({ data }) => (
       </section>
       <section
         id="about"
-        className="h-screen bg-near-black text-gray-100 pt-32"
+        className="h-full bg-near-black text-gray-100 py-16 sm:py-32"
       >
         <div className="container mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl p-6">
           <Img
             fluid={data.author.avatar.childImageSharp.fluid}
-            className="rounded-full h-24 w-24 mb-4 -ml-1 shadow-outline-teal"
+            className="rounded-full h-24 w-24 mb-8 -ml-1 shadow-outline-teal"
             alt="frederick morin"
           />
-          <h1 className="text-3xl font-semibold mb-4">{data.author.bio}</h1>
-          <p className="text-xl">
-            I'm currently building this website. Check out{' '}
+          <h1 className="text-2xl sm:text-4xl font-semibold mb-4">
+            Hi!{' '}
+            <span role="img" aria-label="Waving Hand Sign">
+              👋
+            </span>{' '}
+            I'm Frederick Morin.
+          </h1>
+          <h3 className="text-xl sm:text-2xl mb-4">
+            I'm a full stack web application developer helping startups turn
+            ideas into reality.{' '}
             <a
-              href="/blog"
-              className="text-teal-500 hover:text-teal-400 cursor-pointer"
+              href="https://www.linkedin.com/in/freddydumont/"
+              className="text-teal-500 hover:text-teal-400 hover:underline cursor-pointer"
             >
-              my blog
+              Get in touch now
             </a>{' '}
-            in the meantime.
-          </p>
+            to learn how I can help you grow your business.
+          </h3>
         </div>
       </section>
     </main>
@@ -85,7 +92,6 @@ const Index = ({ data }) => (
 export const query = graphql`
   query {
     author(name: { eq: "Frederick Morin" }) {
-      bio
       avatar {
         childImageSharp {
           fluid(maxWidth: 522) {
