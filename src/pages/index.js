@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import scrollTo from '../utils/scroll';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import SEO from '../../node_modules/@narative/gatsby-theme-novela/src/components/SEO';
 import Logo from '../@narative/gatsby-theme-novela/components/Logo';
 import social_header from '../assets/dumont_digital_logo.png';
