@@ -6211,6 +6211,13 @@ gatsby-plugin-sharp@^2.2.9:
     sharp "^0.23.0"
     svgo "^1.3.0"
 
+gatsby-plugin-smoothscroll@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-smoothscroll/-/gatsby-plugin-smoothscroll-1.0.1.tgz#15044c5867e5806b3335be01bffc85cdafe8cd71"
+  integrity sha512-1l9yziN29geKLaB/9crxQCjdZsezHm7XI6F6+HNFCA6umRJ3ss7fOhlKcnGGxEgXGMatRcyWPFpP39M280baQw==
+  dependencies:
+    smoothscroll-polyfill "^0.4.4"
+
 gatsby-plugin-theme-ui@^0.2.40:
   version "0.2.41"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.2.41.tgz#375e32bdf5f19625f038bed45e801ff4092e319c"

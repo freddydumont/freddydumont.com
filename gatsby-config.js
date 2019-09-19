@@ -24,6 +24,7 @@ module.exports = {
     ],
   },
   plugins: [
+    'gatsby-plugin-smoothscroll',
     {
       resolve: '@narative/gatsby-theme-novela',
       options: {
