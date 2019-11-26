@@ -77,15 +77,15 @@ const Index = ({ data }) => (
             I'm Frederick Morin.
           </h1>
           <h3 className="text-xl sm:text-2xl mb-4">
-            I'm a full stack web application developer helping startups turn
-            ideas into reality.{' '}
+            I'm a full stack web application developer helping teams and
+            startups turn ideas into reality.{' '}
             <a
               href="https://www.linkedin.com/in/freddydumont/"
               className="text-teal-500 hover:text-teal-400 hover:underline cursor-pointer"
             >
               Get in touch now
             </a>{' '}
-            to learn how I can help you grow your business.
+            to learn how I can help you grow your business with software.
           </h3>
         </div>
       </section>
