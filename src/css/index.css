@@ -1,13 +1,17 @@
 @tailwind base;
 @tailwind components;
 
-.main-bg {
-  background-color: #1d1d1e;
+.bg-pattern-circuits {
+  background-color: theme('colors.gray.900');
   background-image: url('../assets/background.svg');
 }
 
 .animated-item {
-  background: linear-gradient(to left, transparent 50%, #68c4d070 50%);
+  background: linear-gradient(
+    to left,
+    transparent 50%,
+    theme('colors.teal-vivid.900') 50%
+  );
   background-size: 210% 100%;
   background-position: right bottom;
   transition: all 250ms ease;

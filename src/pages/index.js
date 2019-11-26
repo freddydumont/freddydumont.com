@@ -29,7 +29,7 @@ const ListItem = ({ to, clickDestination, isComingSoon, children }) => (
 );
 
 const SoonBadge = () => (
-  <span className="inline-block rounded-full px-2 bg-teal-200 text-teal-800 text-xs ml-2">
+  <span className="inline-block rounded-full px-2 bg-teal-vivid-200 text-teal-vivid-800 text-xs ml-2">
     soon(tm)
   </span>
 );
@@ -41,9 +41,9 @@ const Index = ({ data }) => (
       description="I'm a full stack web application developer helping startups turn ideas into reality. Click to find out how I can help you grow your business now!"
       image={social_header}
     />
-    <main className="h-full bg-near-black">
-      <section className="main-bg h-screen text-gray-100 font-mono flex items-center justify-center">
-        <nav className="container mx-auto max-w-xs text-2xl -mt-32 p-6 leading-relaxed bg-near-black">
+    <main className="h-full bg-gray-900">
+      <section className="bg-pattern-circuits h-screen text-gray-050 font-mono flex items-center justify-center">
+        <nav className="container mx-auto max-w-xs text-2xl -mt-32 p-6 leading-relaxed bg-gray-900">
           <div className="pb-6">
             <Logo />
           </div>
@@ -61,7 +61,7 @@ const Index = ({ data }) => (
       </section>
       <section
         id="about"
-        className="h-full bg-near-black text-gray-100 py-16 sm:py-32"
+        className="h-full bg-gray-900 text-gray-050 py-16 sm:py-32"
       >
         <div className="container mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl p-6">
           <Img
@@ -81,7 +81,7 @@ const Index = ({ data }) => (
             startups turn ideas into reality.{' '}
             <a
               href="https://www.linkedin.com/in/freddydumont/"
-              className="text-teal-500 hover:text-teal-400 hover:underline cursor-pointer"
+              className="text-teal-vivid-500 hover:text-teal-vivid-400 hover:underline cursor-pointer"
             >
               Get in touch now
             </a>{' '}
