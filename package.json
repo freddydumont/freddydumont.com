@@ -16,7 +16,8 @@
     "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-smoothscroll": "^1.0.3",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "typeface-ibm-plex-sans": "^0.0.75"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.2",

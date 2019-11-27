@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        body: ['IBM Plex Sans', 'sans-serif'],
+      },
       colors: {
         'teal-vivid': {
           '050': '#F0FCF9',
@@ -56,6 +59,8 @@ module.exports = {
       },
       boxShadow: {
         'outline-teal': '0 0 0 3px #079A82', // teal-vivid-600
+        'lg-teal':
+          '0 10px 15px -3px hsla(172, 98%, 20%, 50%), 0 4px 6px -2px hsla(172, 98%, 20%, 25%)',
       },
     },
   },
