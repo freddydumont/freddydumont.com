@@ -1,11 +1,12 @@
 import React from 'react';
 import Section from './Section';
 import nessia from '../assets/nessia.png';
+import Button from './Button';
 
 const Portfolio = () => (
   <Section htmlId="portfolio">
     <h1 className="text-4xl text-gray-100 font-semibold mb-8">Portfolio</h1>
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800 border-teal-vivid-600 border-t-4 font-body">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body">
       <div className="px-6 pt-4 pb-3">
         <div className="font-semibold text-gray-050 text-2xl tracking-wide">
           NessIA.ca
@@ -38,9 +39,7 @@ const Portfolio = () => (
           nihil.
         </p>
       </div>
-      <div className="py-6 text-center text-lg font-semibold uppercase tracking-widest bg-teal-vivid-800 text-teal-vivid-300 hover:bg-teal-vivid-300 hover:text-teal-vivid-800 cursor-pointer">
-        Launch project
-      </div>
+      <Button>go to project</Button>
     </div>
   </Section>
 );
