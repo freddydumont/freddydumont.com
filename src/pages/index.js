@@ -50,9 +50,7 @@ const Index = () => (
           <ul>
             <ListItem clickDestination="#about">about</ListItem>
             <ListItem to="/blog">blog</ListItem>
-            <ListItem to="#" isComingSoon>
-              portfolio
-            </ListItem>
+            <ListItem clickDestination="#portfolio">portfolio</ListItem>
             <ListItem to="#" isComingSoon>
               contact
             </ListItem>
