@@ -24,14 +24,14 @@ const About = () => {
         className="rounded-full h-24 w-24 mb-8 -ml-1 shadow-outline-teal"
         alt="frederick morin"
       />
-      <h1 className="text-gray-050 text-2xl sm:text-4xl font-semibold mb-4">
+      <h1 className="text-gray-100 text-2xl sm:text-4xl font-semibold mb-4">
         Hi!{' '}
         <span role="img" aria-label="Waving Hand Sign">
           👋
         </span>{' '}
         I'm Frederick Morin.
       </h1>
-      <h3 className="text-xl sm:text-2xl mb-4">
+      <h3 className="text-xl font-body sm:text-2xl mb-4">
         I'm a full stack web application developer helping teams and startups
         turn ideas into reality.{' '}
         <a

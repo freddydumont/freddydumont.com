@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 
+.hyphens {
+  hyphens: auto;
+}
+
 .bg-pattern-circuits {
   background-color: theme('colors.gray.900');
   background-image: url('../assets/background.svg');
