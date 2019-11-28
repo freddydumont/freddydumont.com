@@ -39,7 +39,7 @@ const PortfolioCard = ({
       <Img
         fluid={image.childImageSharp.fluid}
         alt={alt}
-        className="w-full mb-4 rounded-sm"
+        className="mb-4 mx-2 rounded-sm"
       />
       <div className="px-6 py-4">
         <div className="text-xl text-gray-100 mb-4">{category}</div>
@@ -59,7 +59,7 @@ const PortfolioCard = ({
 
 const Tag = ({ name, color }) => (
   <span
-    className={`${color} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2`}
+    className={`${color} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
   >
     {name}
   </span>

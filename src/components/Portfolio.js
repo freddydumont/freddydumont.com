@@ -36,7 +36,7 @@ const Portfolio = () => {
       <h1 className="text-4xl md:text-5xl text-gray-100 font-semibold mb-4">
         Portfolio
       </h1>
-      <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:items-start">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:items-start lg:flex-wrap">
         {nodes.map((card) => (
           <PortfolioCard key={card.title} {...card} />
         ))}
