@@ -2,8 +2,8 @@
   {
     "title": "NessIA.ca",
     "category": "Business website",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
-    "technology": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "description": "Built for a client operating in the Business Intelligence space, this website outperforms competitors in speed, design and usability. It serves as a showcase for their services and as social proof via the Client and Partners section.",
+    "technology": "The tool of choice these days for blazing fast websites is Gatsby. Its plugin architecture and Node API make website development a breeze.",
     "link": "https://nessia.ca/en",
     "image": "./src/assets/nessia.png",
     "alt": "NessIA homepage",
@@ -12,8 +12,8 @@
   {
     "title": "Huddol",
     "category": "Front End Development",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
-    "technology": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "description": "React front end development work on the Huddol website and platform as part of a small development team. I mentored junior developers and cooperated with the CTO and my peers to get ideas to production as fast.",
+    "technology": "Typical React/Redux application. Most of the codebase was of the early React adoption days so a major challenge which I enjoyed was to refactor enormous class components into well designed functional hook-based components for easier maintainability.",
     "link": "https://huddol.com",
     "image": "./src/assets/huddol_homepage.png",
     "alt": "Huddol homepage",
@@ -22,12 +22,22 @@
   {
     "title": "Digispeed.io",
     "category": "Business Website",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
-    "technology": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "description": "Built for a client who needed an online presence for their business. The provided company logo influenced the design decisions. We chose to keep a simple document feeling to complement its black and white nature. Smooth animations and well designed icons improve the usability of the site.",
+    "technology": "I believe in using the right tool for the job at hand. In this case, we needed a simple framework to quickly design and build a landing page. Gatsby is the obvious choice in this category, having all the features needed for navigation and extensibility. Bootstrap and Sass are used to power the CSS, and Netlify deploys the website at minimal costs.",
     "link": "https://digispeed.io",
     "image": "./src/assets/digispeed.png",
     "alt": "Digispeed homepage",
     "tags": ["javascript", "react", "gatsby", "bootstrap", "sass"]
+  },
+  {
+    "title": "Netsweeper",
+    "category": "Game",
+    "description": "Neon cyberpunk minesweeper. Built for fun and to learn Phaser and Typescript.",
+    "technology": "Netsweeper is built in TypeScript using the Phaser game engine. Since DOM Element Game Objects weren't supported in Phaser 3.16, React was used to create UI elements positioned on Game Objects. An xstate State Machine handles most of the gameplay logic.",
+    "link": "https://freddydumont.itch.io/netsweeper",
+    "image": "./src/assets/netsweeper.png",
+    "alt": "netsweeper gameplay",
+    "tags": ["typescript", "phaser", "react", "xstate", "emotion"]
   },
   {
     "title": "Star Wars Planet Guide",

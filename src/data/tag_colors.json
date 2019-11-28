@@ -8,5 +8,8 @@
   "emotion": "bg-pink-400 text-gray-900",
   "bootstrap": "bg-purple-800 text-purple-100",
   "sass": "bg-pink-500 text-gray-900",
-  "redux-saga": "bg-green-500 text-gray-900"
+  "redux-saga": "bg-green-500 text-gray-900",
+  "phaser": "bg-orange-600 text-gray-900",
+  "typescript": "bg-blue-700 text-white",
+  "xstate": "bg-black text-gray-050"
 }
