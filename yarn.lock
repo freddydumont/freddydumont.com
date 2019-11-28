@@ -13834,6 +13834,11 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tailwindcss-plugin-transitions@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/tailwindcss-plugin-transitions/-/tailwindcss-plugin-transitions-1.0.6.tgz#e25e2b122de9eb12ee4cb786cc2913e0caa9bed6"
+  integrity sha512-hZy1TUFh9847Cm3SnYgmHw0IRAHGErt7uN2AG1IpD3sI4WV/0Bm1391GKZG5l3UYB1qFv5lUo85aZyz4QFbT7A==
+
 tailwindcss@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.1.4.tgz#786bd5faaf485c9eddcb821dd55666c56baa814e"

@@ -21,6 +21,7 @@
     "gatsby-transformer-sharp": "^2.3.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "tailwindcss-plugin-transitions": "^1.0.6",
     "typeface-ibm-plex-sans": "^0.0.75",
     "typeface-overpass-mono": "^0.0.71"
   },
