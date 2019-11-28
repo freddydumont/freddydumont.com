@@ -1,6 +1,6 @@
 {
-  "javascript": "yellow",
-  "react": "blue",
-  "gatsby": "purple",
-  "bulma": "green"
+  "javascript": "bg-yellow-vivid-400 text-gray-900",
+  "react": "bg-blue-400 text-gray-900",
+  "gatsby": "bg-purple-700 text-purple-100",
+  "bulma": "bg-teal-vivid-200 text-teal-vivid-900"
 }

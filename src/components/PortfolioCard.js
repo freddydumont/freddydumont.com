@@ -45,7 +45,7 @@ const PortfolioCard = ({
         <div className="text-xl text-gray-100 mb-4">{category}</div>
         <div className="mb-4">
           {tags.map((tag) => (
-            <Tag name={tag.name} />
+            <Tag key={tag.name} name={tag.name} color={tag.color} />
           ))}
         </div>
         <p className="text-gray-300 text-base text-justify hyphens">
@@ -59,7 +59,7 @@ const PortfolioCard = ({
 
 const Tag = ({ name, color }) => (
   <span
-    className={`inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mr-2`}
+    className={`${color} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2`}
   >
     {name}
   </span>

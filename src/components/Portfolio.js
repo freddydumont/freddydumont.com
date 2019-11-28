@@ -35,7 +35,7 @@ const Portfolio = () => {
     <Section htmlId="portfolio">
       <h1 className="text-4xl text-gray-100 font-semibold mb-8">Portfolio</h1>
       {nodes.map((card) => (
-        <PortfolioCard {...card} />
+        <PortfolioCard key={card.title} {...card} />
       ))}
     </Section>
   );
