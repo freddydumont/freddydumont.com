@@ -30,7 +30,7 @@ const PortfolioCard = ({
   tags,
 }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body m-4">
+    <div className="max-w-xs sm:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body m-4">
       <div className="px-6 pt-4 pb-3">
         <div className="font-semibold text-gray-050 text-2xl tracking-wide">
           {title}
@@ -39,11 +39,11 @@ const PortfolioCard = ({
       <Img
         fluid={image.childImageSharp.fluid}
         alt={alt}
-        className="h-64 w-full mb-4 rounded-sm"
+        className="w-full mb-4 rounded-sm"
       />
       <div className="px-6 py-4">
         <div className="text-xl text-gray-100 mb-4">{category}</div>
-        <div className="mb-4">
+        <div className="mb-2 flex flex-no-wrap overflow-x-scroll scrolling-touch">
           {tags.map((tag) => (
             <Tag key={tag.name} name={tag.name} color={tag.color} />
           ))}
@@ -59,7 +59,7 @@ const PortfolioCard = ({
 
 const Tag = ({ name, color }) => (
   <span
-    className={`${color} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2`}
+    className={`${color} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2`}
   >
     {name}
   </span>

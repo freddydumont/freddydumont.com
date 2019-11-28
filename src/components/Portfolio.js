@@ -12,7 +12,7 @@ const Portfolio = () => {
         nodes {
           image {
             childImageSharp {
-              fluid(maxHeight: 256) {
+              fluid(maxWidth: 384) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
@@ -33,10 +33,14 @@ const Portfolio = () => {
 
   return (
     <Section htmlId="portfolio">
-      <h1 className="text-4xl text-gray-100 font-semibold mb-8">Portfolio</h1>
-      {nodes.map((card) => (
-        <PortfolioCard key={card.title} {...card} />
-      ))}
+      <h1 className="text-4xl md:text-5xl text-gray-100 font-semibold mb-4">
+        Portfolio
+      </h1>
+      <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:items-start">
+        {nodes.map((card) => (
+          <PortfolioCard key={card.title} {...card} />
+        ))}
+      </div>
     </Section>
   );
 };
