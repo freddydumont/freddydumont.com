@@ -5,5 +5,8 @@
   "bulma": "bg-teal-vivid-200 text-teal-vivid-900",
   "redux": "bg-purple-600 text-purple-100",
   "jest": "bg-red-vivid-800 text-white",
-  "emotion": "bg-pink-400 text-gray-900"
+  "emotion": "bg-pink-400 text-gray-900",
+  "bootstrap": "bg-purple-800 text-purple-100",
+  "sass": "bg-pink-500 text-gray-900",
+  "redux-saga": "bg-green-500 text-gray-900"
 }

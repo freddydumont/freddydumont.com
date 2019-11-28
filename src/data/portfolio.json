@@ -14,7 +14,25 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
     "link": "https://huddol.com",
     "image": "./src/assets/huddol_homepage.png",
-    "alt": "Huddol app",
+    "alt": "Huddol homepage",
     "tags": ["javascript", "react", "redux", "jest", "emotion"]
+  },
+  {
+    "title": "Digispeed.io",
+    "category": "Business Website",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "link": "https://digispeed.io",
+    "image": "./src/assets/digispeed.png",
+    "alt": "Digispeed homepage",
+    "tags": ["javascript", "react", "gatsby", "bootstrap", "sass"]
+  },
+  {
+    "title": "Star Wars Planet Guide",
+    "category": "Typical interview project",
+    "description": "A tool for Star Wars fans to browse and learn about the different planets of the Star Wars extended universe. The Planet Guide makes use of redux-saga to handle asynchronous events such as the API calls to SWAPI. The DevExtreme React Grid component is used to present the data in a table handling filtering, sorting and the display of detailed information.",
+    "link": "https://freddydumont.github.io/star-wars-planet-guide/",
+    "image": "./src/assets/starwars.png",
+    "alt": "star wars planet guide",
+    "tags": ["javascript", "react", "redux", "redux-saga", "bootstrap"]
   }
 ]
