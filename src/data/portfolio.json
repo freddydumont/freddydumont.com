@@ -1,0 +1,20 @@
+[
+  {
+    "title": "NessIA.ca",
+    "category": "Business website",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "link": "https://nessia.ca/en",
+    "image": "./src/assets/nessia.png",
+    "alt": "NessIA homepage",
+    "tags": ["javascript", "react", "gatsby", "bulma"]
+  },
+  {
+    "title": "Dumont Digital",
+    "category": "Business website",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "link": "https://nessia.ca/en",
+    "image": "./src/assets/dumont_digital_logo.png",
+    "alt": "dumont digital homepage",
+    "tags": ["javascript", "react", "gatsby", "bulma"]
+  }
+]
