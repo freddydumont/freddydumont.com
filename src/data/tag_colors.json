@@ -2,5 +2,8 @@
   "javascript": "bg-yellow-vivid-400 text-gray-900",
   "react": "bg-blue-400 text-gray-900",
   "gatsby": "bg-purple-700 text-purple-100",
-  "bulma": "bg-teal-vivid-200 text-teal-vivid-900"
+  "bulma": "bg-teal-vivid-200 text-teal-vivid-900",
+  "redux": "bg-purple-600 text-purple-100",
+  "jest": "bg-red-vivid-800 text-white",
+  "emotion": "bg-pink-400 text-gray-900"
 }

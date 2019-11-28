@@ -9,12 +9,12 @@
     "tags": ["javascript", "react", "gatsby", "bulma"]
   },
   {
-    "title": "Dumont Digital",
-    "category": "Business website",
+    "title": "Huddol",
+    "category": "Front End Development",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
-    "link": "https://nessia.ca/en",
-    "image": "./src/assets/dumont_digital_logo.png",
-    "alt": "dumont digital homepage",
-    "tags": ["javascript", "react", "gatsby", "bulma"]
+    "link": "https://huddol.com",
+    "image": "./src/assets/huddol_homepage.png",
+    "alt": "Huddol app",
+    "tags": ["javascript", "react", "redux", "jest", "emotion"]
   }
 ]
