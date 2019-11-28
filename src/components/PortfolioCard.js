@@ -15,6 +15,7 @@ import Button from './Button';
  * @param {String} props.title
  * @param {String} props.category
  * @param {String} props.description
+ * @param {String} props.technology
  * @param {String} props.link
  * @param {String} props.alt
  * @param {Object} props.image
@@ -24,6 +25,7 @@ const PortfolioCard = ({
   title,
   category,
   description,
+  technology,
   link,
   alt,
   image,
@@ -32,9 +34,9 @@ const PortfolioCard = ({
   return (
     <div className="max-w-xs sm:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body m-4">
       <div className="px-6 pt-4 pb-3">
-        <div className="font-semibold text-gray-050 text-2xl tracking-wide">
+        <h2 className="font-semibold text-gray-050 text-2xl tracking-wide">
           {title}
-        </div>
+        </h2>
       </div>
       <Img
         fluid={image.childImageSharp.fluid}
@@ -42,7 +44,7 @@ const PortfolioCard = ({
         className="mb-4 mx-2 rounded-sm"
       />
       <div className="px-6 py-4">
-        <div className="text-xl text-gray-100 mb-4">{category}</div>
+        <h3 className="text-xl text-gray-100 mb-4">{category}</h3>
         <div className="mb-2 flex flex-no-wrap overflow-x-scroll scrolling-touch">
           {tags.map((tag) => (
             <Tag key={tag.name} name={tag.name} color={tag.color} />
@@ -50,6 +52,10 @@ const PortfolioCard = ({
         </div>
         <p className="text-gray-300 text-base text-justify hyphens">
           {description}
+        </p>
+        <h3 className="text-lg text-gray-100 mt-4 mb-1">Technology</h3>
+        <p className="text-gray-300 text-base text-justify hyphens">
+          {technology}
         </p>
       </div>
       <Button link={link}>go to project</Button>

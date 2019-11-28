@@ -20,6 +20,7 @@ const Portfolio = () => {
           alt
           category
           description
+          technology
           link
           tags {
             color

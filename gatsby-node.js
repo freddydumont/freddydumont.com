@@ -13,7 +13,16 @@ const colors = require('./src/data/tag_colors.json');
  */
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   portfolio.forEach((card) => {
-    const { title, category, description, link, image, alt, tags } = card;
+    const {
+      title,
+      category,
+      description,
+      technology,
+      link,
+      image,
+      alt,
+      tags,
+    } = card;
 
     // get the name and extension of an image's relative path
     const { name, ext } = path.parse(image);
@@ -48,6 +57,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       title,
       category,
       description,
+      technology,
       link,
       // when imageNode is created, the sharp plugin adds childImageSharp to the node
       image: imageNode,
