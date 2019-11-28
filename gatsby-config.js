@@ -1,5 +1,17 @@
 const path = require(`path`);
 
+// get colors from tag_colors into purgecss whitelist
+const colors = require('./src/data/tag_colors.json');
+
+// currentColors are 2 classNames separated by a space
+const whitelist = Object.values(colors).reduce(
+  (whitelistedColors, currentColors) => [
+    ...whitelistedColors,
+    ...currentColors.split(' '),
+  ],
+  []
+);
+
 module.exports = {
   siteMetadata: {
     title: `freddydumont's personal blog`,
@@ -66,6 +78,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
+        whitelist,
       },
     },
   ],
