@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      maxWidth: {
+        '7xl': '80rem',
+      },
       fontFamily: {
         mono:
           '"Overpass Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
