@@ -11,5 +11,8 @@
   "redux-saga": "bg-green-500 text-gray-900",
   "phaser": "bg-orange-600 text-gray-900",
   "typescript": "bg-blue-700 text-white",
-  "xstate": "bg-black text-gray-050"
+  "xstate": "bg-black text-gray-050",
+  "rot.js": "bg-black text-gray-050",
+  "tachyons": "bg-gray-050 text-gray-900",
+  "howler": "bg-yellow-700 text-gray-050"
 }

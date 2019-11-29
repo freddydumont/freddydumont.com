@@ -48,5 +48,45 @@
     "image": "./src/assets/starwars.png",
     "alt": "star wars planet guide",
     "tags": ["javascript", "react", "redux", "redux-saga", "bootstrap"]
+  },
+  {
+    "title": "The Labyrinth",
+    "category": "Game",
+    "description": "A roguelike game based on the ancient Greek myth of Theseus and the Minotaur, featuring dungeon-crawling, leveling and permadeath. The goal is to reach the depth of the labyrinth and slay the Minotaur before he devours the helpless Athenian youths sent as tribute.",
+    "technology": "The Labyrinth makes use of the rot.js library to manage some aspects of roguelike game development, React for the front end and Tachyons for the CSS.",
+    "link": "https://freddydumont.github.io/the-labyrinth-roguelike/",
+    "image": "./src/assets/labyrinth.png",
+    "alt": "The Labyrinth gameplay",
+    "tags": ["javascript", "react", "rot.js", "tachyons"]
+  },
+  {
+    "title": "Poké(Si)mon",
+    "category": "Game",
+    "description": "A port of the classic electronic game Simon with a Pokémon theme and sound effects.",
+    "technology": "Poké(Si)mon is a React application making use of Redux thunks to generate the game loop. Flexbox is used for the main layout and CSS Grid for the Pokémon buttons. The sound is managed by the powerful Howler library. Most icons were manipulated in Adobe Illustrator to achieve the desired result.",
+    "link": "https://freddydumont.github.io/simon-game/",
+    "image": "./src/assets/pokesimon.png",
+    "alt": "Poké(Si)mon on different devices",
+    "tags": ["javascript", "react", "redux", "howler"]
+  },
+  {
+    "title": "Minimax's Tic Tac Toe",
+    "category": "Game",
+    "description": "A tic tac toe game against an invincible robot taunting the player with clever commentary.",
+    "technology": "Why is this using jQuery I hear you ask yourself? This was before React was commonplace in job postings so I used jQuery for animations as a way to plug jQuery experience because most jobs still required it. I know you shouldn't do that no need to tell me.",
+    "link": "https://freddydumont.github.io/tic-tac-toe/",
+    "image": "./src/assets/tictactoe.png",
+    "alt": "Minimax's Tic Tac Toe on different devices",
+    "tags": ["javascript", "react", "redux"]
+  },
+  {
+    "title": "Burmese Pomodoro",
+    "category": "Web app",
+    "description": "A time management tool based on the Pomodoro Technique allowing the user to set work intervals separated by short breaks. A soothing burmese bell sound annouces the end of a session—and the start of a new one.",
+    "technology": "Pomodoro is a React application using Bootstrap for the layout and Moment.js to format the timer.",
+    "link": "https://freddydumont.github.io/pomodoro-clock/",
+    "image": "./src/assets/pomodoro.png",
+    "alt": "Burmese Pomodoro on different devices",
+    "tags": ["javascript", "react", "bootstrap"]
   }
 ]
