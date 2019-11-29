@@ -32,7 +32,7 @@ const PortfolioCard = ({
   tags,
 }) => {
   return (
-    <div className="max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body m-4">
+    <div className="break-avoid max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body mb-8 mx-auto">
       <div className="px-6 pt-4 pb-3">
         <h2 className="font-semibold text-gray-050 text-2xl tracking-wide">
           {title}

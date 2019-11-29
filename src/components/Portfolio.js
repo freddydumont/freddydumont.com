@@ -40,10 +40,12 @@ const Portfolio = () => {
           Portfolio
         </h1>
       </Container>
-      <div className="mx-auto flex flex-col items-center md:flex-row md:justify-center md:items-start md:flex-wrap xl:max-w-7xl">
-        {nodes.map((card) => (
-          <PortfolioCard key={card.title} {...card} />
-        ))}
+      <div className="w-full inline-block mx-auto">
+        <div className="col-1 md:col-2 md:max-w-2xl md:mx-auto lg:max-w-4xl xl:col-3 xl:max-w-7xl">
+          {nodes.map((card) => (
+            <PortfolioCard key={card.title} {...card} />
+          ))}
+        </div>
       </div>
     </Section>
   );

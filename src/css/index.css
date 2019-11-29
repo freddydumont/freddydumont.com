@@ -31,3 +31,7 @@
 .min-w-xs {
   min-width: 20rem;
 }
+
+.break-avoid {
+  break-inside: avoid;
+}
