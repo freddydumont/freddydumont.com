@@ -18,7 +18,7 @@ const About = () => {
     }
   `);
   return (
-    <Section htmlId="about">
+    <Section htmlId="about" withContainer>
       <Img
         fluid={data.author.avatar.childImageSharp.fluid}
         className="rounded-full h-24 w-24 mb-8 -ml-1 shadow-outline-teal"
