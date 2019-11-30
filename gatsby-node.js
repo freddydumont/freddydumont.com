@@ -2,6 +2,8 @@ const path = require('path');
 const portfolio = require('./src/data/portfolio.json');
 const colors = require('./src/data/tag_colors.json');
 
+const IMAGE_PATH = './src/assets/';
+
 /**
  * Create custom PortfolioCard nodes.
  * Some processing is needed for the tags because the colors are stored in
@@ -24,15 +26,11 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       tags,
     } = card;
 
-    // get the name and extension of an image's relative path
+    // name, extension and absolute path are required to build a File node
     const { name, ext } = path.parse(image);
+    const absolutePath = path.resolve(__dirname, IMAGE_PATH, image);
 
-    // get the image's absolute path. The image path is from the root in the
-    // json file to have the proper path here
-    const absolutePath = path.resolve(__dirname, image);
-
-    // build the data corresponding to an image node in order to have it
-    // processed by sharp
+    // this data corresponds to a File node that Sharp can process
     const data = {
       name,
       ext,
@@ -44,7 +42,6 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     const imageNode = {
       ...data,
       id: createNodeId(`card-image-${name}`),
-      children: [],
       internal: {
         type: 'PortfolioCardImage',
         contentDigest: createContentDigest(data),
@@ -60,6 +57,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       technology,
       link,
       // when imageNode is created, the sharp plugin adds childImageSharp to the node
+      // so it will be available under the "image field"
       image: imageNode,
       alt,
       tags: tags.map((name) => ({

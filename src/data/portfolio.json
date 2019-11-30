@@ -5,7 +5,7 @@
     "description": "Built for a client operating in the Business Intelligence space, this website outperforms competitors in speed, design and usability. It serves as a showcase for their services and as social proof via the Client and Partners section.",
     "technology": "The tool of choice these days for blazing fast websites is Gatsby. Its plugin architecture and Node API make website development a breeze.",
     "link": "https://nessia.ca/en",
-    "image": "./src/assets/nessia.png",
+    "image": "nessia.png",
     "alt": "NessIA homepage",
     "tags": ["javascript", "react", "gatsby", "bulma"]
   },
@@ -15,7 +15,7 @@
     "description": "React front end development work on the Huddol website and platform as part of a small development team. I mentored junior developers and cooperated with the CTO and my peers to get ideas to production as fast.",
     "technology": "Typical React/Redux application. Most of the codebase was of the early React adoption days so a major challenge which I enjoyed was to refactor enormous class components into well designed functional hook-based components for easier maintainability.",
     "link": "https://huddol.com",
-    "image": "./src/assets/huddol_homepage.png",
+    "image": "huddol_homepage.png",
     "alt": "Huddol homepage",
     "tags": ["javascript", "react", "redux", "jest", "emotion"]
   },
@@ -25,7 +25,7 @@
     "description": "Built for a client who needed an online presence for their business. The provided company logo influenced the design decisions. We chose to keep a simple document feeling to complement its black and white nature. Smooth animations and well designed icons improve the usability of the site.",
     "technology": "I believe in using the right tool for the job at hand. In this case, we needed a simple framework to quickly design and build a landing page. Gatsby is the obvious choice in this category, having all the features needed for navigation and extensibility. Bootstrap and Sass are used to power the CSS, and Netlify deploys the website at minimal costs.",
     "link": "https://digispeed.io",
-    "image": "./src/assets/digispeed.png",
+    "image": "digispeed.png",
     "alt": "Digispeed homepage",
     "tags": ["javascript", "react", "gatsby", "bootstrap", "sass"]
   },
@@ -35,7 +35,7 @@
     "description": "Neon cyberpunk minesweeper. Built for fun and to learn Phaser and Typescript.",
     "technology": "Netsweeper is built in TypeScript using the Phaser game engine. Since DOM Element Game Objects weren't supported in Phaser 3.16, React was used to create UI elements positioned on Game Objects. An xstate State Machine handles most of the gameplay logic.",
     "link": "https://freddydumont.itch.io/netsweeper",
-    "image": "./src/assets/netsweeper.png",
+    "image": "netsweeper.png",
     "alt": "netsweeper gameplay",
     "tags": ["typescript", "phaser", "react", "xstate", "emotion"]
   },
@@ -45,7 +45,7 @@
     "description": "A tool for Star Wars fans to browse and learn about the different planets of the Star Wars extended universe.",
     "technology": "The Planet Guide makes use of redux-saga to handle asynchronous events such as the API calls to SWAPI. The DevExtreme React Grid component is used to present the data in a table handling filtering, sorting and the display of detailed information.",
     "link": "https://freddydumont.github.io/star-wars-planet-guide/",
-    "image": "./src/assets/starwars.png",
+    "image": "starwars.png",
     "alt": "star wars planet guide",
     "tags": ["javascript", "react", "redux", "redux-saga", "bootstrap"]
   },
@@ -55,7 +55,7 @@
     "description": "A roguelike game based on the ancient Greek myth of Theseus and the Minotaur, featuring dungeon-crawling, leveling and permadeath. The goal is to reach the depth of the labyrinth and slay the Minotaur before he devours the helpless Athenian youths sent as tribute.",
     "technology": "The Labyrinth makes use of the rot.js library to manage some aspects of roguelike game development, React for the front end and Tachyons for the CSS.",
     "link": "https://freddydumont.github.io/the-labyrinth-roguelike/",
-    "image": "./src/assets/labyrinth.png",
+    "image": "labyrinth.png",
     "alt": "The Labyrinth gameplay",
     "tags": ["javascript", "react", "rot.js", "tachyons"]
   },
@@ -65,7 +65,7 @@
     "description": "A port of the classic electronic game Simon with a Pokémon theme and sound effects.",
     "technology": "Poké(Si)mon is a React application making use of Redux thunks to generate the game loop. Flexbox is used for the main layout and CSS Grid for the Pokémon buttons. The sound is managed by the powerful Howler library. Most icons were manipulated in Adobe Illustrator to achieve the desired result.",
     "link": "https://freddydumont.github.io/simon-game/",
-    "image": "./src/assets/pokesimon.png",
+    "image": "pokesimon.png",
     "alt": "Poké(Si)mon on different devices",
     "tags": ["javascript", "react", "redux", "howler"]
   },
@@ -75,7 +75,7 @@
     "description": "A tic tac toe game against an invincible robot taunting the player with clever commentary.",
     "technology": "Why is this using jQuery I hear you ask yourself? This was before React was commonplace in job postings so I used jQuery for animations as a way to plug jQuery experience because most jobs still required it. I know you shouldn't do that no need to tell me.",
     "link": "https://freddydumont.github.io/tic-tac-toe/",
-    "image": "./src/assets/tictactoe.png",
+    "image": "tictactoe.png",
     "alt": "Minimax's Tic Tac Toe on different devices",
     "tags": ["javascript", "react", "redux"]
   },
@@ -85,7 +85,7 @@
     "description": "A time management tool based on the Pomodoro Technique allowing the user to set work intervals separated by short breaks. A soothing burmese bell sound annouces the end of a session—and the start of a new one.",
     "technology": "Pomodoro is a React application using Bootstrap for the layout and Moment.js to format the timer.",
     "link": "https://freddydumont.github.io/pomodoro-clock/",
-    "image": "./src/assets/pomodoro.png",
+    "image": "pomodoro.png",
     "alt": "Burmese Pomodoro on different devices",
     "tags": ["javascript", "react", "bootstrap"]
   }
