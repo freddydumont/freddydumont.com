@@ -6,16 +6,16 @@ import social_header from '../assets/dumont_digital_logo.png';
 import '../css/index.css';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
+import Contact from '../components/Contact';
 
 /**
  * Menu items
  * @param {Object} props
  * @param {string} [props.to] href destination
  * @param {string} [props.clickDestination] onClick destination for `scrollTo`
- * @param {boolean} [props.isComingSoon] display soon (tm) badge
  * @param {string} props.children displayed string
  */
-const ListItem = ({ to, clickDestination, isComingSoon, children }) => (
+const ListItem = ({ to, clickDestination, children }) => (
   // the div is there for the animated bg to stop when text ends
   <div className="flex items-center">
     <li className="cursor-pointer animated-item">
@@ -24,21 +24,14 @@ const ListItem = ({ to, clickDestination, isComingSoon, children }) => (
         <button onClick={() => scrollTo(clickDestination)}>{children}</button>
       )}
     </li>
-    {isComingSoon && <SoonBadge />}
   </div>
-);
-
-const SoonBadge = () => (
-  <span className="inline-block rounded-full px-2 bg-teal-vivid-200 text-teal-vivid-800 text-xs ml-2">
-    soon(tm)
-  </span>
 );
 
 const Index = () => (
   <>
     <SEO
       title="freddydumont | Full stack web application development"
-      description="I'm a full stack web application developer helping startups turn ideas into reality. Click to find out how I can help you grow your business now!"
+      description="I'm a full stack web application developer helping teams and startups turn ideas into reality. Click to find out how I can help you grow your business now!"
       image={social_header}
     />
     <main className="h-full bg-gray-900 pb-16 sm:pb-32">
@@ -51,14 +44,13 @@ const Index = () => (
             <ListItem clickDestination="#about">about</ListItem>
             <ListItem to="/blog">blog</ListItem>
             <ListItem clickDestination="#portfolio">portfolio</ListItem>
-            <ListItem to="#" isComingSoon>
-              contact
-            </ListItem>
+            <ListItem clickDestination="#contact">contact</ListItem>
           </ul>
         </nav>
       </section>
       <About />
       <Portfolio />
+      <Contact />
     </main>
   </>
 );

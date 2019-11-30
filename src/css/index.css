@@ -1,6 +1,20 @@
 @tailwind base;
 @tailwind components;
 
+.form-element {
+  @apply appearance-none block bg-transparent border-b border-b-2 w-full mr-3 py-1 text-xl font-body;
+}
+
+.form-element:focus {
+  @apply outline-none;
+}
+
+@media (min-width: 640px) {
+  .form-element {
+    @apply text-2xl;
+  }
+}
+
 .btn {
   @apply inline-block w-full py-6 text-center text-lg font-bold font-mono uppercase tracking-wider cursor-pointer transition-all transition-faster ease-in-out;
 }

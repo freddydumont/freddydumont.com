@@ -1,4 +1,5 @@
 import React from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Section from './Section';
@@ -34,12 +35,12 @@ const About = () => {
       <Section.Body>
         I'm a full stack web application developer helping teams and startups
         turn ideas into reality.{' '}
-        <a
-          href="https://www.linkedin.com/in/freddydumont/"
-          className="text-teal-vivid-500 hover:text-teal-vivid-400 hover:underline cursor-pointer"
+        <button
+          onClick={() => scrollTo('#contact')}
+          className="appearance-none text-teal-vivid-500 hover:text-teal-vivid-400 hover:underline cursor-pointer"
         >
-          Get in touch now
-        </a>{' '}
+          Contact me now
+        </button>{' '}
         to learn how I can help you grow your business.
       </Section.Body>
     </Section>

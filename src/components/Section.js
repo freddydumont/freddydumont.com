@@ -26,7 +26,7 @@ Section.Title = ({ children }) => (
  * Section body text with styles
  */
 Section.Body = ({ children }) => (
-  <p className="text-xl font-body sm:text-2xl mb-4">{children}</p>
+  <p className="text-xl font-body sm:text-2xl mb-12">{children}</p>
 );
 
 export default Section;
