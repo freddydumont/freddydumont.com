@@ -31,7 +31,7 @@ const About = () => {
         </span>{' '}
         I'm Frederick Morin.
       </h1>
-      <h3 className="text-xl font-body sm:text-2xl mb-4">
+      <Section.Body>
         I'm a full stack web application developer helping teams and startups
         turn ideas into reality.{' '}
         <a
@@ -40,8 +40,8 @@ const About = () => {
         >
           Get in touch now
         </a>{' '}
-        to learn how I can help you grow your business with software.
-      </h3>
+        to learn how I can help you grow your business.
+      </Section.Body>
     </Section>
   );
 };
