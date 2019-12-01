@@ -57,7 +57,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       technology,
       link,
       // when imageNode is created, the sharp plugin adds childImageSharp to the node
-      // so it will be available under the "image field"
+      // so it will be available under the `image` field.
       image: imageNode,
       alt,
       tags: tags.map((name) => ({

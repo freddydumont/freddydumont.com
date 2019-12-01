@@ -1,0 +1,388 @@
+---
+title: 'How to source images and data from JSON files in Gatsby'
+author: Frederick Morin
+date: 2019-12-01
+hero: ./images/header.jpg
+excerpt: Use Gatsby's Node API to process images in JSON files with gatsby-plugin-sharp and customize the shape of your data in GraphQL nodes.
+---
+
+When I started building the portfolio section of my personal site, I encountered a small problem.
+
+I was building cards that contained both data and image and I wanted everything to appear under the same GraphQL node. Turns out there's no way for Gatsby to recognize a path to an image in a JSON file by default.
+
+Additionally, I needed to do some processing on the tag data before it could be usable so I started searching for a solution that would handle both cases.
+
+## The problem
+
+I wanted to achieve two things:
+
+1. Process the tag array and turn it into a usable array of objects
+2. Have Sharp process the image and get the resulting node in the same tree
+
+My first reflex was to go for [`gatsby-transformer-json`](https://www.gatsbyjs.org/packages/gatsby-transformer-json/), but I quickly realized that this transformer wouldn't understand that I had image paths in my data, much less process them using Sharp.
+
+On top of it, I couldn't preprocess my tag array nor give a specific shape to my `PortfolioCard` node.
+
+Back to the docs. I knew that I needed to source images from the filesystem so I started there. The [documentation](https://www.gatsbyjs.org/docs/working-with-images/) was helpful in that regard.
+
+I recommend you have a read if you've never done this, but here's a summary of what you need to do:
+
+1. Install the following plugins with yarn:
+
+   ```shell
+   yarn add gatsby-image gatsby-source-filesystem gatsby-plugin-sharp gatsby-transformer-sharp
+   ```
+
+   or using `npm`:
+
+   ```shell
+   npm install gatsby-image gatsby-source-filesystem gatsby-plugin-sharp gatsby-transformer-sharp
+   ```
+
+2. Add the plugins to your `gatsby-config.js`:
+
+```javascript {6,7,9}
+const path = require(`path`);
+
+module.exports = {
+  ...
+  plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        // provide the path to your image folder here:
+        path: path.join(__dirname, `src`, `assets`),
+      },
+    },
+    ...
+  ],
+};
+```
+
+Now if you go to your GraphiQL IDE (by default Gatsby serves it on http://localhost:8000/___graphql) you'll see an `allImageSharp` field which you can use to query your images processed by Sharp.
+
+That's great, but not exactly what I wanted.
+
+These image nodes should appear under the corresponding `PortfolioCard` tree with the rest of the associated data. Not on a top-level node that I would have to query separately using the name of the image obtained in a previous query.
+
+## The solution
+
+With some research, I ended up on [`sourceNodes` in the Gatsby Node APIs docs](https://www.gatsbyjs.org/docs/node-apis/#sourceNodes).
+
+I understood that using this API, I could grab data from the filesystem, transform it and build a node in the shape that suited my needs.
+
+Here's the result of my work in a step-by-step format. I'll be using code examples from my own website so feel free to browse the [source code on GitHub](https://github.com/freddydumont/freddydumont.com/blob/master/gatsby-node.js) should you need to.
+
+### Sourcing the data
+
+The first thing we need to do is to get the JSON data in the `gatsby-node.js` file.
+
+If we were to write a plugin handling a number of use cases, we'd need to read from the filesystem using Node to source the data. But because we're targeting a specific use case, hard coding the paths to our JSON files is the simplest thing to do:
+
+```javascript
+const path = require('path');
+const portfolio = require('./src/data/portfolio.json');
+const colors = require('./src/data/tag_colors.json');
+
+// relative path from `gatsby-node.js`
+const IMAGE_PATH = './src/assets/';
+```
+
+For reference, here's `portfolio.json`:
+
+```json
+[
+  {
+    "title": "NessIA.ca",
+    "category": "Business website",
+    "description": "Built for a client operating in the Business Intelligence space...",
+    "technology": "The tool of choice these days for blazing fast websites is Gatsby...",
+    "link": "https://nessia.ca/en",
+    "image": "nessia.png",
+    "alt": "NessIA homepage",
+    "tags": ["javascript", "react", "gatsby", "bulma"]
+  },
+  ...
+]
+```
+
+and `tag_colors.json`:
+
+```json
+{
+  "javascript": "bg-yellow-vivid-400 text-gray-900",
+  "react": "bg-blue-400 text-gray-900",
+  "gatsby": "bg-purple-700 text-purple-100",
+  ...
+}
+```
+
+Now that we have access to our data, we need to build a node by adapting the [code example from the docs](https://www.gatsbyjs.org/docs/node-apis/#sourceNodes) to fit our objects.
+
+In this example, we need to iterate over an array and build a node for each portfolio card, so all our code will be written inside a `forEach` loop:
+
+```javascript {23,25}
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
+  portfolio.forEach((card) => {
+    // 1. Extract the card data.
+    const {
+      title,
+      category,
+      description,
+      technology,
+      link,
+      image,
+      alt,
+      tags,
+    } = card;
+
+    // 2. Build the PortfolioCard node. Note that most fields simply correspond to
+    //    to our JSON data.
+    const node = {
+      title,
+      category,
+      description,
+      technology,
+      link,
+      image, // <----- Problem here
+      alt,
+      tags, // <------ and here
+      id: createNodeId(`card-${title}`),
+      internal: {
+        type: 'PortfolioCard',
+        contentDigest: createContentDigest(card),
+      },
+    };
+
+    // 3. Create the node
+    actions.createNode(node);
+  });
+};
+```
+
+That's a good start. Our data now exists in a top-level node called `allPortfolioCard`. But what happens if we query it?
+
+```graphql {7,9}
+query {
+  allPortfolioCard {
+    nodes {
+      alt
+      category
+      description
+      image
+      link
+      tags
+      technology
+      title
+    }
+  }
+}
+```
+
+As expected, we have a couple of issues. Both `image` and `tags` need to be processed before they can be usable.
+
+```json {9,11}
+{
+  "data": {
+    "allPortfolioCard": {
+      "nodes": [
+        {
+          "alt": "NessIA homepage",
+          "category": "Business website",
+          "description": "Built for a client operating in the Business Intelligence space...",
+          "image": "nessia.png",
+          "link": "https://nessia.ca/en",
+          "tags": ["javascript", "react", "gatsby", "bulma"],
+          "technology": "The tool of choice these days for blazing fast websites is Gatsby...",
+          "title": "NessIA.ca"
+        },
+        ...
+      ]
+    }
+  }
+}
+```
+
+Let's start with our `tags` array.
+
+### Processing JSON data
+
+Right now, we have an array of strings that needs to be transformed into an array of objects with the properties `name` and `color`:
+
+```json
+[
+  {
+    "name": "javascript",
+    "color": "bg-yellow-vivid-400 text-gray-900"
+  },
+  ...
+]
+```
+
+This is a fairly simple fix. We have the color data already imported in our `gatsby-node.js` file. All we need to do is to `map` over the tag array when building our node and return an object:
+
+```javascript {9-12}
+const colors = require('./src/data/tag_colors.json');
+
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
+  portfolio.forEach((card) => {
+    // ...
+
+    const node = {
+      // ...
+      tags: tags.map((name) => ({
+        name,
+        color: colors[name],
+      })),
+      // ...
+    };
+
+    actions.createNode(node);
+  });
+};
+```
+
+The following query will now be possible:
+
+```graphql
+query {
+  allPortfolioCard {
+    nodes {
+      tags {
+        color
+        name
+      }
+    }
+  }
+}
+```
+
+And will return the following data:
+
+```json {8,9}
+{
+  "data": {
+    "allPortfolioCard": {
+      "nodes": [
+        {
+          "tags": [
+            {
+              "color": "bg-yellow-vivid-400 text-gray-900",
+              "name": "javascript"
+            },
+            {
+              "color": "bg-blue-400 text-gray-900",
+              "name": "react"
+            }
+            // ...
+          ]
+        }
+        // ...
+      ]
+    }
+  }
+}
+```
+
+As you can see, when building a custom node, we can do whatever we want with the data. We can pass it down as it is or transform it into a desired shape.
+
+But what about the image field?
+
+### Transforming an image path into a childImageSharp node
+
+Now that's the tricky part.
+
+It took a bit of digging, but I learned from [this Stack Overflow answer](https://stackoverflow.com/a/56012718) that in order for Sharp to transform an image, it needs to be a `File` node.
+
+So all we need to do is to create such a node by giving it the required fields.
+
+> `gatsby-transformer-sharp` only checks if a node has the field 'extension' and -- if it is one of the valid file types -- processes it.  
+> &mdash; <cite>[Derek Nguyen](https://stackoverflow.com/users/10340970/derek-nguyen) on [Stack Overflow](https://stackoverflow.com/a/56012718)</cite>
+
+The whole answer is worth reading to deepen your understanding of how Gatsby operates under the hood. Let's go ahead and implement it.
+
+```javascript {5,9,17,27,28,33,34}
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
+  portfolio.forEach((card) => {
+    // ...
+
+    // 1. name, extension and absolute path are required to build a File node
+    const { name, ext } = path.parse(image);
+    const absolutePath = path.resolve(__dirname, IMAGE_PATH, image);
+
+    // 2. Build a data shape that corresponds to a File node that Sharp can process
+    const data = {
+      name,
+      ext,
+      absolutePath, // <-- required
+      extension: ext.substring(1), // <-- required, remove the dot in `ext`
+    };
+
+    // 3. Build the image node using our data
+    const imageNode = {
+      ...data,
+      id: createNodeId(`card-image-${name}`),
+      internal: {
+        type: 'PortfolioCardImage',
+        contentDigest: createContentDigest(data),
+      },
+    };
+
+    // 4. Create the node. When imageNode is created,
+    //    Sharp adds childImageSharp to the node
+    actions.createNode(imageNode);
+
+    const node = {
+      // ...
+      // 5. Add the image node to our tree
+      image: imageNode,
+      // ...
+    };
+
+    actions.createNode(node);
+  });
+};
+```
+
+Now when you go back to your Graph Explorer, your should see a `childImageSharp` node under the `image` field.
+
+You can then query for it and use it in conjunction with `gatsby-image`.
+
+Here's what the final query looks like:
+
+```graphql
+query {
+  allPortfolioCard {
+    nodes {
+      image {
+        childImageSharp {
+          fluid(maxWidth: 384) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      alt
+      category
+      description
+      technology
+      link
+      tags {
+        color
+        name
+      }
+      title
+    }
+  }
+}
+```
+
+Gatsby is pretty powerful out of the box, and even more once you start understanding how it works. I'm still barely scratching the surface but the more I play with it, the more I'm amazed with what it can do.
+
+The takeaway here is that whether you need to process your data before sending it to your GraphQL tree, or you need images processed by `gatsby-plugin-sharp` under a specific node, using the `sourceNodes` API in conjunction with the `createNode` action will help you achieve your goals.
+
+---
+
+I hope this post was instructive. If you found it helpful, [follow me on Twitter](https://twitter.com/_freddydumont) to be notified when I post the next one! I'll have more posts about Gatsby and the modern front end stack coming soon.
