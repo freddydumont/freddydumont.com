@@ -300,7 +300,7 @@ It took a bit of digging, but I learned from [this Stack Overflow answer](https:
 So all we need to do is to create such a node by giving it the required fields.
 
 > `gatsby-transformer-sharp` only checks if a node has the field 'extension' and -- if it is one of the valid file types -- processes it.  
-> &mdash; <cite>[Derek Nguyen](https://stackoverflow.com/users/10340970/derek-nguyen) on [Stack Overflow](https://stackoverflow.com/a/56012718)</cite>
+> -- <cite>[Derek Nguyen](https://stackoverflow.com/users/10340970/derek-nguyen) on [Stack Overflow](https://stackoverflow.com/a/56012718)</cite>
 
 The whole answer is worth reading to deepen your understanding of how Gatsby operates under the hood. Let's go ahead and implement it.
 
@@ -381,7 +381,7 @@ query {
 
 Gatsby is pretty powerful out of the box, and even more once you start understanding how it works. I'm still barely scratching the surface but the more I play with it, the more I'm amazed with what it can do.
 
-The takeaway here is that whether you need to process your data before sending it to your GraphQL tree, or you need images processed by `gatsby-plugin-sharp` under a specific node, using the `sourceNodes` API in conjunction with the `createNode` action will help you achieve your goals.
+The key takeaway here is that whether you need to process your data before sending it to your GraphQL tree, or you need images processed by `gatsby-plugin-sharp` under a specific node, using the `sourceNodes` API in conjunction with the `createNode` action will help you achieve your goals.
 
 ---
 
