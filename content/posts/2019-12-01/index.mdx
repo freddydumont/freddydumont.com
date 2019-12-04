@@ -6,11 +6,17 @@ hero: ./images/header.jpg
 excerpt: Use Gatsby's Node API to process images in JSON files with gatsby-plugin-sharp and customize the shape of your data in GraphQL nodes.
 ---
 
+import PortfolioCardSample from './components/PortfolioCardSample';
+
 When I started building the portfolio section of my personal site, I encountered a small problem.
 
 I was building cards that contained both data and image and I wanted everything to appear under the same GraphQL node. Turns out there's no way for Gatsby to recognize a path to an image in a JSON file by default.
 
 Additionally, I needed to do some processing on the tag data before it could be usable so I started searching for a solution that would handle both cases.
+
+Here's what a card looks like:
+
+<PortfolioCardSample />
 
 ## The problem
 
@@ -27,19 +33,19 @@ Back to the docs. I knew that I needed to source images from the filesystem so I
 
 I recommend you have a read if you've never done this, but here's a summary of what you need to do:
 
-1. Install the following plugins with yarn:
+- Install the following plugins with yarn:
 
-   ```shell
-   yarn add gatsby-image gatsby-source-filesystem gatsby-plugin-sharp gatsby-transformer-sharp
-   ```
+```shell
+yarn add gatsby-image gatsby-source-filesystem gatsby-plugin-sharp gatsby-transformer-sharp
+```
 
-   or using `npm`:
+or using `npm`:
 
-   ```shell
-   npm install gatsby-image gatsby-source-filesystem gatsby-plugin-sharp gatsby-transformer-sharp
-   ```
+```shell
+npm install gatsby-image gatsby-source-filesystem gatsby-plugin-sharp gatsby-transformer-sharp
+```
 
-2. Add the plugins to your `gatsby-config.js`:
+- Add the plugins to your `gatsby-config.js`:
 
 ```javascript {6,7,9}
 const path = require(`path`);
