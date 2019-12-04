@@ -12,7 +12,7 @@ const PortfolioCardSample = () => {
           image {
             childImageSharp {
               fluid(maxWidth: 384) {
-                ...GatsbyImageSharpFluid_tracedSVG
+                ...GatsbyImageSharpFluid
               }
             }
           }
