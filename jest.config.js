@@ -11,5 +11,5 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ``,
   },
-  setupFiles: [`<rootDir>/loadershim.js`],
+  setupFiles: [`<rootDir>/loadershim.js`, '<rootDir>/setup-test-env.js'],
 };
