@@ -65,7 +65,7 @@ const PortfolioCard = ({
 
 const Tag = ({ name, color }) => (
   <span
-    className={`${color} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
+    className={`${color[0]} ${color[1]} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
   >
     {name}
   </span>
