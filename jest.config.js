@@ -11,6 +11,7 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ``,
   },
-  setupFiles: [`<rootDir>/loadershim.js`, '<rootDir>/setup-test-env.js'],
+  setupFiles: [`<rootDir>/loadershim.js`],
+  setupFilesAfterEnv: ['<rootDir>/setup-test-env.js'],
   collectCoverageFrom: ['**/src/**/*.{js,jsx}', '!**/node_modules/**'],
 };
