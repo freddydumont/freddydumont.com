@@ -60,7 +60,11 @@ const Contact = () => (
       </div>
       <div className="flex flex-wrap justify-end -mx-3 mb-12">
         <div className="w-full md:max-w-xs px-3">
-          <button type="submit" className="btn btn-gray hover:shadow-2xl">
+          <button
+            data-testid="button"
+            type="submit"
+            className="btn btn-gray hover:shadow-2xl"
+          >
             Send
           </button>
         </div>
