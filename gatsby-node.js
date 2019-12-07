@@ -1,6 +1,6 @@
 const path = require('path');
 const portfolio = require('./src/data/portfolio.json');
-const colors = require('./src/data/tag_colors.json');
+const { tagsStringToObject } = require('./src/utils/tags');
 
 const IMAGE_PATH = './src/assets/';
 
@@ -60,10 +60,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       // so it will be available under the `image` field.
       image: imageNode,
       alt,
-      tags: tags.map((name) => ({
-        name,
-        color: colors[name],
-      })),
+      tags: tagsStringToObject(tags),
       id: createNodeId(`card-${title}`),
       internal: {
         type: 'PortfolioCard',
