@@ -63,7 +63,7 @@ const PortfolioCard = ({
   );
 };
 
-const Tag = ({ name, color }) => (
+export const Tag = ({ name, color }) => (
   <span
     className={`${color[0]} ${color[1]} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
   >
