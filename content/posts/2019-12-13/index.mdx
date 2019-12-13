@@ -1,0 +1,116 @@
+---
+title: 'How to whitelist dynamic Tailwind classes in PurgeCSS'
+author: Frederick Morin
+date: 2019-12-13
+hero: ./images/header.jpg
+excerpt: Avoid copy pasting classes with a quick JavaScript function and use the PurgeCSS whitelist configuration option.
+---
+
+import Tags from './components/Tags';
+
+I was building an array of colorful tags to use in my `PortfolioCard` components.
+
+Since many cards could share the same tags, I didn't want to declare colors in my data. It would have led to repetition that would be problematic if I ever needed to change them.
+
+I opted instead to use Gatsby's Node APIs to transform my array of tag names into an array of objects at build time.
+
+I'd maintain an object whose keys correspond to the tag names in my data, and whose values are an array, where the first item is a background color and the second is a text color:
+
+```javascript
+const TAG_COLORS = {
+  javascript: ['bg-yellow-vivid-400', 'text-gray-900'],
+  react: ['bg-blue-400', 'text-gray-900'],
+  gatsby: ['bg-purple-700', 'text-purple-100'],
+  ...
+};
+```
+
+So this JSON data:
+
+```json
+"tags": ["javascript", "react", "gatsby", "jest"]
+```
+
+is converted into this JavaScript array to be consumed by my `Tags` component:
+
+```javascript
+[
+  { name: 'javascript', color: ['bg-yellow-vivid-400', 'text-gray-900'] },
+  { name: 'react', color: ['bg-blue-400', 'text-gray-900'] },
+  { name: 'gatsby', color: ['bg-purple-700', 'text-purple-100'] },
+  { name: 'jest', color: ['bg-red-vivid-800', 'text-white'] },
+];
+```
+
+Here's what the rendered component looks like:
+
+<Tags />
+
+## The problem
+
+Since my CSS classes are injected into the component at build time, PurgeCSS isn't aware of them.
+
+```jsx
+const Tag = ({ name, color }) => (
+  <span className={`${color[0]} ${color[1]} inline-block rounded-lg ...`}>
+    {name}
+  </span>
+);
+```
+
+See how these two color classes are variables as opposed to others classes who are static?
+
+That's why I needed to use the [whitelist configuration option](https://www.purgecss.com/configuration#options). But there's no way I would be copy pasting classes around and manually managing a whitelist.
+
+## The solution
+
+We need to get all the `TAG_COLORS` values and convert them to an array of strings that the PurgeCSS whitelist option will accept.
+
+A simple function does the trick:
+
+```javascript
+const whitelistedClasses = Object.values(TAG_COLORS).reduce(
+  (whitelistedColors, currentColors) => [
+    ...whitelistedColors,
+    ...currentColors,
+  ],
+  []
+);
+```
+
+`Object.values(TAG_COLORS)` does what its name implies and returns an array of values.
+
+Those values are arrays themselves, so we need to `reduce` everything to a single array. No need to worry about duplicates, PurgeCSS is smart enough to either filter or ignore them.
+
+All we need to do now is import `whitelistedClasses` into our config and the problem is solved!
+
+I'm using the Gatsby plugin so here's how to do it in `gatsby-config.js`:
+
+```javascript
+
+const { whitelistedClasses } = require('./src/utils/tags');
+
+module.exports = {
+  plugins: [
+    ...,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        whitelist: whitelistedClasses,
+      },
+    },
+  ],
+};
+
+```
+
+So there you go, now you don't have to worry about copy pasting classes around every time you update a list of colors.
+
+Of course, this is a pretty specific issue to encounter. But the idea behind this post can be applied to many situations.
+
+Manually managing duplicate data is inefficient and can lead to buggy code if this data isn't kept in sync. Instead, make sure that your data flows from one place to the other.
+
+---
+
+I hope this quick post was instructive. If you found it helpful, [follow me on Twitter](https://twitter.com/_freddydumont) to be notified when I post the next one!
