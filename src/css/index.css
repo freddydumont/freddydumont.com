@@ -1,5 +1,10 @@
+@import '../../node_modules/react-slidedown/lib/slidedown.css';
 @tailwind base;
 @tailwind components;
+
+.portfolio-slidedown {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
 .form-element {
   @apply appearance-none block bg-transparent border-b border-b-2 w-full mr-3 py-1 text-xl font-body;

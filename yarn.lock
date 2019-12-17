@@ -2081,6 +2081,11 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
+"@xstate/react@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@xstate/react/-/react-0.8.1.tgz#df200547cca24c909572b7aef1ddab8bca3a0603"
+  integrity sha512-8voZm4GX3x70lNQVvoGedoObPYapkQIbgMhE+xOQEsm8Ait4Zto6R01SZ6WJD4qvLl8JPV6uq96OcFRdEsVESg==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -6823,10 +6828,10 @@ gatsby-plugin-sharp@^2.2.9, gatsby-plugin-sharp@^2.3.4:
     svgo "1.3.2"
     uuid "^3.3.3"
 
-gatsby-plugin-smoothscroll@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-smoothscroll/-/gatsby-plugin-smoothscroll-1.0.3.tgz#61302d26ae06662b0374b3fb376276918a1145bf"
-  integrity sha512-+lFqDc17i1UkdR9kTWnMh30ffDPjFWGSDXpahWGxbxTmyGxShN7EHg7CGs88wJtLprIHVlx6lA1kk0dQSQm1bw==
+gatsby-plugin-smoothscroll@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-smoothscroll/-/gatsby-plugin-smoothscroll-1.0.4.tgz#89368fa04ffe2d02f15a9acd637e9d1c5a2d7ec9"
+  integrity sha512-B61Iv/rGj0X5Uo43EtY+CYnM1ER0Ld/GfDCr9O1v+BzJ15KT2LxWPyk5/CbKb4O4VuX4n+jcQrOVBEyg2D1jIA==
   dependencies:
     smoothscroll-polyfill "^0.4.4"
 
@@ -13042,6 +13047,11 @@ react-live@^2.2.0:
     react-simple-code-editor "^0.10.0"
     unescape "^0.2.0"
 
+react-masonry-css@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/react-masonry-css/-/react-masonry-css-1.0.14.tgz#2ac1ca7bb2c7e96826f7da3accc9e95ae12b2f65"
+  integrity sha512-oAPVOCMApTT0HkxZJy84yU1EWaaQNZnJE0DjDMy/L+LxZoJEph4RRXsT9ppPKbFSo/tCzj+cCLwiBHjZmZ2eXA==
+
 react-medium-image-zoom@^3.1.1:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/react-medium-image-zoom/-/react-medium-image-zoom-3.1.2.tgz#5ac4441f1d424bd9680a25bfc2591be3d7704a42"
@@ -13079,6 +13089,13 @@ react-simple-code-editor@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/react-simple-code-editor/-/react-simple-code-editor-0.10.0.tgz#73e7ac550a928069715482aeb33ccba36efe2373"
   integrity sha512-bL5W5mAxSW6+cLwqqVWY47Silqgy2DKDTR4hDBrLrUqC5BXc29YVx17l2IZk5v36VcDEq1Bszu2oHm1qBwKqBA==
+
+react-slidedown@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/react-slidedown/-/react-slidedown-2.4.5.tgz#d575404256fa0ba81e60161547a8fa9ff62b935d"
+  integrity sha512-zFDhgqQ1ZLfRr+rQA7p+13OTT/+zUR/+3v3JnwrnXPM8R+1KHhuTNseYHU8jYN3QfxjJXtqve0rgbWCBiFkpiw==
+  dependencies:
+    tslib "^1.9.0"
 
 react-test-renderer@^16.12.0:
   version "16.12.0"
@@ -15061,6 +15078,13 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tailwindcss-filters@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-filters/-/tailwindcss-filters-2.0.0.tgz#1a72c6c879fd95df403fb3e2d2eaf6b354ca7263"
+  integrity sha512-D1uXaYamiQAJxAlZOH48rpIGZapC1+kDGvbpGuUlDNce2XkiIHNo1VFytpG+ioqLKsP5wDD0xVK9qZboxos9RA==
+  dependencies:
+    lodash "^4.17.11"
+
 tailwindcss-plugin-transitions@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/tailwindcss-plugin-transitions/-/tailwindcss-plugin-transitions-1.0.6.tgz#e25e2b122de9eb12ee4cb786cc2913e0caa9bed6"
@@ -16656,6 +16680,11 @@ xstate@^4.6.7:
   version "4.6.7"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.6.7.tgz#1f325df07d75676c90d65b17a3a56692f259fd41"
   integrity sha512-mqgtH6BXOgjOHVDxZPyW/h6QUC5kfEggh5IN8uOitjzrdCScE/a/cwcRvgcH8CGAXYReDNvasOKD0aFBWAZ1fg==
+
+xstate@^4.7.3:
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.7.3.tgz#61d36c5f85609ab1e354c72fbaedf38d57525b69"
+  integrity sha512-+1KyOB2JTv4kQQlZnEiDxSpEaIJnqslMa/479sc1KU3NMRP0caIV3p55Sr27GFS1EXQvnJ+n84bnWx77qplDWg==
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.2"
