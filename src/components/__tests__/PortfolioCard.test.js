@@ -10,6 +10,7 @@ describe('PortfolioCard', () => {
 
   it('should hide the technology section before expanding', () => {
     expect(technology).not.toBeInTheDocument();
+    expect(queryByText(/go to project/i)).not.toBeInTheDocument();
   });
 
   it('should have an expand button', () => {
@@ -26,6 +27,7 @@ describe('PortfolioCard', () => {
     await wait(() => {
       expect(queryByText(/technology/i)).toBeVisible();
       expect(button).not.toBeInTheDocument();
+      expect(queryByText(/go to project/i)).toBeVisible();
     });
   });
 });
