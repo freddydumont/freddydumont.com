@@ -68,9 +68,14 @@ module.exports = {
           '0 10px 15px -3px hsla(172, 98%, 20%, 50%), 0 4px 6px -2px hsla(172, 98%, 20%, 25%)',
       },
     },
+    filter: {
+      none: 'none',
+      drop: 'drop-shadow(0 0 20px)',
+    },
   },
   variants: {},
   plugins: [
+    require('tailwindcss-filters')(),
     require('tailwindcss-plugin-transitions'),
     function({ addUtilities }) {
       const newUtilities = {
