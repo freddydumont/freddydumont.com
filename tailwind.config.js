@@ -77,20 +77,5 @@ module.exports = {
   plugins: [
     require('tailwindcss-filters')(),
     require('tailwindcss-plugin-transitions'),
-    function({ addUtilities }) {
-      const newUtilities = {
-        '.col-1': {
-          'column-count': '1',
-        },
-        '.col-2': {
-          'column-count': '2',
-        },
-        '.col-3': {
-          'column-count': '3',
-        },
-      };
-
-      addUtilities(newUtilities, ['responsive']);
-    },
   ],
 };

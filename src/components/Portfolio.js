@@ -47,6 +47,7 @@ const Portfolio = () => {
           767: 1,
         }}
         className="flex md:max-w-2xl md:mx-auto lg:max-w-4xl xl:max-w-7xl"
+        columnClassName="mx-auto"
       >
         {nodes.map((card, index, arr) => {
           // add the "see more" button with last item to avoid breaking the masonry library
