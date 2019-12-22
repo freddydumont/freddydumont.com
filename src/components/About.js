@@ -35,10 +35,7 @@ const About = () => {
       <Section.Body>
         I'm a full stack web application developer helping teams and startups
         turn ideas into reality.{' '}
-        <button
-          onClick={() => scrollTo('#contact')}
-          className="appearance-none text-teal-vivid-500 hover:text-teal-vivid-400 hover:underline cursor-pointer"
-        >
+        <button onClick={() => scrollTo('#contact')} className="link">
           Contact me now
         </button>{' '}
         to learn how I can help you grow your business.
