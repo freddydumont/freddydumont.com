@@ -39,6 +39,26 @@ const Portfolio = () => {
     <Section htmlId="portfolio">
       <Container>
         <Section.Title>Portfolio</Section.Title>
+        <Section.Body>
+          Here's a non-exhaustive collection of stuff I've worked on. I also
+          have a few{' '}
+          <a
+            href="https://www.npmjs.com/~freddydumont"
+            className="link"
+            title="freddydumont's npm packages"
+          >
+            published npm packages
+          </a>{' '}
+          and some{' '}
+          <a
+            href="https://github.com/freddydumont"
+            className="link"
+            title="freddydumont's GitHub profile"
+          >
+            more work on GitHub
+          </a>
+          .
+        </Section.Body>
       </Container>
       <Masonry
         breakpointCols={{
