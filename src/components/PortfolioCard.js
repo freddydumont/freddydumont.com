@@ -5,15 +5,31 @@ import { Machine } from 'xstate';
 import { SlideDown } from 'react-slidedown';
 import Button from './Button';
 
-const cardMachine = Machine({
+export const cardMachine = Machine({
   id: 'portfolioCard',
   initial: 'minified',
   states: {
     minified: {
       on: { EXPAND: 'expanded' },
+      meta: {
+        test: ({ queryByText, queryByTestId }) => {
+          expect(queryByText(/technology/i)).not.toBeInTheDocument();
+          expect(queryByText(/go to project/i)).not.toBeInTheDocument();
+          expect(queryByTestId('expand-button')).toBeVisible();
+        },
+      },
     },
     expanded: {
       type: 'final',
+      meta: {
+        test: async ({ queryByText, queryByTestId, wait }) => {
+          await wait(() => {
+            expect(queryByText(/technology/i)).toBeVisible();
+            expect(queryByTestId('expand-button')).not.toBeInTheDocument();
+            expect(queryByText(/go to project/i)).toBeVisible();
+          });
+        },
+      },
     },
   },
 });
