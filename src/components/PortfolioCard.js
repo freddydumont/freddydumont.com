@@ -1,22 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from 'gatsby-image';
-import { useMachine } from '@xstate/react';
-import { Machine } from 'xstate';
 import { SlideDown } from 'react-slidedown';
 import Button from './Button';
-
-const cardMachine = Machine({
-  id: 'portfolioCard',
-  initial: 'minified',
-  states: {
-    minified: {
-      on: { EXPAND: 'expanded' },
-    },
-    expanded: {
-      type: 'final',
-    },
-  },
-});
 
 /**
  * Tag object with name and tailwind color
@@ -47,7 +32,7 @@ const PortfolioCard = ({
   image,
   tags,
 }) => {
-  const [current, send] = useMachine(cardMachine);
+  const [isExpanded, setExpanded] = useState(false);
 
   return (
     <div className="max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body mb-8 mx-auto relative">
@@ -72,7 +57,7 @@ const PortfolioCard = ({
           <p className="text-gray-300 text-base text-justify hyphens">
             {description}
           </p>
-          {current.value === 'expanded' && (
+          {isExpanded && (
             <>
               <h3 className="text-lg text-gray-100 mt-4 mb-1">Technology</h3>
               <p className="text-gray-300 text-base text-justify hyphens">
@@ -81,16 +66,16 @@ const PortfolioCard = ({
             </>
           )}
         </div>
-        {current.value === 'minified' ? (
+        {isExpanded ? (
+          <Button link={link}>go to project</Button>
+        ) : (
           <button
             data-testid="expand-button"
             className="btn btn-primary absolute inset-x-0 bottom-0 filter-drop"
-            onClick={() => send('EXPAND')}
+            onClick={() => setExpanded(true)}
           >
             See More
           </button>
-        ) : (
-          <Button link={link}>go to project</Button>
         )}
       </SlideDown>
     </div>

@@ -8,11 +8,12 @@
     "dev": "gatsby develop",
     "clean": "gatsby clean",
     "restart": "gatsby clean && gatsby develop",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
   },
   "dependencies": {
     "@narative/gatsby-theme-novela": "0.8.3",
-    "@xstate/react": "^0.8.1",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-advanced-sitemap": "^1.4.5",
@@ -30,8 +31,7 @@
     "tailwindcss-filters": "^2.0.0",
     "tailwindcss-plugin-transitions": "^1.0.6",
     "typeface-ibm-plex-sans": "^0.0.75",
-    "typeface-overpass-mono": "^0.0.71",
-    "xstate": "^4.7.3"
+    "typeface-overpass-mono": "^0.0.71"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
