@@ -43,6 +43,7 @@ module.exports = {
       options: {
         contentPosts: 'content/posts',
         contentAuthors: 'content/authors',
+        rootPath: '/',
         basePath: '/blog/',
         authorsPage: true,
         sources: {
