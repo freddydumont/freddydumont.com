@@ -13,7 +13,7 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
-    "@narative/gatsby-theme-novela": "0.8.3",
+    "@narative/gatsby-theme-novela": "^0.13.2",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-advanced-sitemap": "^1.4.5",
