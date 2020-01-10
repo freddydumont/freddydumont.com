@@ -12,7 +12,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "e2e:record": "qawolf record http://localhost:8000/",
-    "e2e:test": "qawolf test"
+    "e2e:test": "QAW_URL=http://localhost:8000/ qawolf test"
   },
   "dependencies": {
     "@narative/gatsby-theme-novela": "^0.13.2",

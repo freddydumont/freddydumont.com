@@ -6,7 +6,7 @@ describe('Navigation between blog and home page', () => {
   let page;
 
   beforeAll(async () => {
-    browser = await launch({ url: 'http://localhost:8000/' });
+    browser = await launch({ url: process.env.QAW_URL });
     page = await browser.page();
   });
 
