@@ -10,7 +10,9 @@
     "restart": "gatsby clean && gatsby develop",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "e2e:record": "qawolf record http://localhost:8000/",
+    "e2e:test": "qawolf test"
   },
   "dependencies": {
     "@narative/gatsby-theme-novela": "^0.13.2",
@@ -37,6 +39,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@types/jest": "^24.0.23",
+    "@types/puppeteer": "^2.0.0",
     "autoprefixer": "^9.7.2",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.23",
@@ -45,6 +48,7 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
+    "qawolf": "^0.7.11",
     "react-test-renderer": "^16.12.0",
     "tailwindcss": "^1.1.4"
   }
