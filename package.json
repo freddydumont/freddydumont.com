@@ -15,6 +15,8 @@
     "e2e:test": "QAW_URL=http://localhost:8000/ qawolf test"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@mdx-js/react": "^1.5.3",
     "@narative/gatsby-theme-novela": "^0.13.2",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
@@ -32,6 +34,7 @@
     "react-slidedown": "^2.4.5",
     "tailwindcss-filters": "^2.0.0",
     "tailwindcss-plugin-transitions": "^1.0.6",
+    "theme-ui": "^0.2.52",
     "typeface-ibm-plex-sans": "^0.0.75",
     "typeface-overpass-mono": "^0.0.71"
   },
