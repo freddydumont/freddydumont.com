@@ -68,6 +68,7 @@ module.exports = {
           '0 10px 15px -3px hsla(172, 98%, 20%, 50%), 0 4px 6px -2px hsla(172, 98%, 20%, 25%)',
       },
     },
+    // filter and plugins not copied to theme
     filter: {
       none: 'none',
       drop: 'drop-shadow(0 0 20px)',
