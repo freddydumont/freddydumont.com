@@ -1,5 +1,4 @@
 import React from 'react';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import SEO from '../../node_modules/@narative/gatsby-theme-novela/src/components/SEO';
 import Logo from '../@narative/gatsby-theme-novela/components/Logo';
 import social_header from '../assets/dumont_digital_logo.png';
@@ -8,25 +7,7 @@ import { Box } from '@theme-ui/components';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
-
-/**
- * Menu items
- * @param {Object} props
- * @param {string} [props.to] href destination
- * @param {string} [props.clickDestination] onClick destination for `scrollTo`
- * @param {string} props.children displayed string
- */
-const ListItem = ({ to, clickDestination, children }) => (
-  // the div is there for the animated bg to stop when text ends
-  <div className="flex items-center">
-    <li className="cursor-pointer animated-item">
-      {to && <a href={to}>{children}</a>}
-      {clickDestination && (
-        <button onClick={() => scrollTo(clickDestination)}>{children}</button>
-      )}
-    </li>
-  </div>
-);
+import MenuItem from '../components/MainMenuItem';
 
 const Index = () => (
   <>
@@ -49,10 +30,10 @@ const Index = () => (
             <Logo />
           </div>
           <ul>
-            <ListItem clickDestination="#about">about</ListItem>
-            <ListItem to="/blog">blog</ListItem>
-            <ListItem clickDestination="#portfolio">portfolio</ListItem>
-            <ListItem clickDestination="#contact">contact</ListItem>
+            <MenuItem clickDestination="#about">about</MenuItem>
+            <MenuItem to="/blog">blog</MenuItem>
+            <MenuItem clickDestination="#portfolio">portfolio</MenuItem>
+            <MenuItem clickDestination="#contact">contact</MenuItem>
           </ul>
         </nav>
       </section>

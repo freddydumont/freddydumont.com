@@ -131,7 +131,7 @@ const theme = {
       '#97266d',
       '#702459',
     ],
-    'teal-vivid': [
+    teal_vivid: [
       '#F0FCF9',
       '#C6F7E9',
       '#8EEDD1',
@@ -143,7 +143,7 @@ const theme = {
       '#016457',
       '#004440',
     ],
-    'yellow-vivid': [
+    yellow_vivid: [
       '#FFFBEA',
       '#FFF3C4',
       '#FCE588',
@@ -155,7 +155,7 @@ const theme = {
       '#B44D12',
       '#8D2B0B',
     ],
-    'red-vivid': [
+    red_vivid: [
       '#FFE3E3',
       '#FFBDBD',
       '#FF9B9B',
