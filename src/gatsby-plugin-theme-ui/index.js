@@ -343,6 +343,17 @@ const theme = {
     '64': '16rem',
     px: '1px',
   },
+  text: {
+    heading: {
+      fontSize: ['4xl', '4xl', '5xl'],
+      color: 'gray.1',
+      fontWeight: 'semibold',
+    },
+    body: {
+      fontSize: ['xl', '2xl'],
+      fontFamily: 'body',
+    },
+  },
   radii: {
     none: '0',
     sm: '0.125rem',

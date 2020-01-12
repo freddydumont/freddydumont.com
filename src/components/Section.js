@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@theme-ui/components';
+import { Box, Container, Text } from '@theme-ui/components';
 
 /**
  * Section with margin and container
@@ -8,25 +8,35 @@ import { Container } from '@theme-ui/components';
  * @param {string} props.withContainer wraps children in a predefined container
  */
 const Section = ({ htmlId, withContainer, children }) => (
-  <section id={htmlId} className="h-full text-gray-200 my-16 sm:my-32">
+  <Box
+    as="section"
+    id={htmlId}
+    sx={{
+      height: 'full',
+      color: 'gray.2',
+      marginY: [16, 32],
+    }}
+  >
     {withContainer ? <Container>{children}</Container> : children}
-  </section>
+  </Box>
 );
 
 /**
  * Section title with styles
  */
 Section.Title = ({ children }) => (
-  <h1 className="text-4xl md:text-5xl text-gray-100 font-semibold mb-4">
+  <Text as="h1" variant="heading" mb={4}>
     {children}
-  </h1>
+  </Text>
 );
 
 /**
  * Section body text with styles
  */
 Section.Body = ({ children }) => (
-  <p className="text-xl font-body sm:text-2xl mb-12">{children}</p>
+  <Text as="p" variant="body" mb={12}>
+    {children}
+  </Text>
 );
 
 export default Section;
