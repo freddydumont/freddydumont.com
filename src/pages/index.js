@@ -19,16 +19,16 @@ const Index = () => (
     <Box
       as="main"
       bg="background"
-      pb={[5, 6]}
+      pb={[16, 32]}
       sx={{
         height: 'full',
       }}
     >
       <section className="bg-pattern-circuits h-screen text-gray-050 font-mono flex items-center justify-center">
         <nav className="container mx-auto max-w-xs text-2xl -mt-32 p-6 leading-relaxed bg-gray-900">
-          <div className="pb-6">
+          <Box pb="6">
             <Logo />
-          </div>
+          </Box>
           <ul>
             <MenuItem clickDestination="#about">about</MenuItem>
             <MenuItem to="/blog">blog</MenuItem>
