@@ -1,9 +1,9 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Container } from '@theme-ui/components';
 import Section from './Section';
 import PortfolioCard from './PortfolioCard';
-import Container from './Container';
 import Button from './Button';
 
 const Portfolio = () => {

@@ -19,6 +19,7 @@ const Home = () => (
   >
     <Container
       as="nav"
+      variant="box"
       bg="background"
       p={6}
       mt={-32}

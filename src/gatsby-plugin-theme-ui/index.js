@@ -217,6 +217,16 @@ const theme = {
     body: '400',
     heading: '700',
   },
+  layout: {
+    container: {
+      paddingRight: 6,
+      paddingLeft: 6,
+      maxWidth: ['lg', 'lg', '2xl', '4xl'],
+    },
+    box: {
+      maxWidth: 'lg',
+    },
+  },
   letterSpacings: {
     tighter: '-0.05em',
     tight: '-0.025em',
@@ -295,6 +305,7 @@ const theme = {
     full: '100%',
     screenHeight: '100vh',
     screenWidth: '100vw',
+    container: '20rem',
   },
   shadows: {
     default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
