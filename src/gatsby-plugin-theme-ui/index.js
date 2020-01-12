@@ -1,4 +1,4 @@
-export default {
+const theme = {
   borderWidths: {
     '0': '0',
     '2': '2px',
@@ -169,7 +169,6 @@ export default {
     ],
     grayDark: '#2d3748',
     text: '#2d3748',
-    background: '#fff',
     primary: '#2b6cb0',
     primaryHover: '#2c5282',
     secondary: '#718096',
@@ -584,3 +583,7 @@ export default {
     },
   },
 };
+
+theme.colors.background = theme.colors.gray[9];
+
+export default theme;
