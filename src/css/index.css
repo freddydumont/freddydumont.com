@@ -40,14 +40,6 @@
   @apply bg-gray-800 text-gray-300;
 }
 
-.link {
-  @apply appearance-none text-teal-vivid-500 cursor-pointer;
-}
-
-.link:hover {
-  @apply text-teal-vivid-400 underline;
-}
-
 @tailwind utilities;
 
 .hyphens {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Container } from '@theme-ui/components';
+import { Container, Link } from '@theme-ui/components';
 import Section from './Section';
 import PortfolioCard from './PortfolioCard';
 import Button from './Button';
@@ -42,21 +42,19 @@ const Portfolio = () => {
         <Section.Body>
           Here's a non-exhaustive collection of stuff I've worked on. I also
           have a few{' '}
-          <a
+          <Link
             href="https://www.npmjs.com/~freddydumont"
-            className="link"
             title="freddydumont's npm packages"
           >
             published npm packages
-          </a>{' '}
+          </Link>{' '}
           and some{' '}
-          <a
+          <Link
             href="https://github.com/freddydumont"
-            className="link"
             title="freddydumont's GitHub profile"
           >
             more work on GitHub
-          </a>
+          </Link>
           .
         </Section.Body>
       </Container>

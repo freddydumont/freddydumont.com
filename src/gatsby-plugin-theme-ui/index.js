@@ -379,7 +379,9 @@ const theme = {
     a: {
       color: 'primary',
       textDecoration: 'none',
+      cursor: 'pointer',
       ':hover': {
+        color: 'primaryHover',
         textDecoration: 'underline',
       },
     },
@@ -618,5 +620,7 @@ const theme = {
 };
 
 theme.colors.background = theme.colors.gray[9];
+theme.colors.primary = theme.colors.teal_vivid[5];
+theme.colors.primaryHover = theme.colors.teal_vivid[4];
 
 export default theme;

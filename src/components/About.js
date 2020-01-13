@@ -4,7 +4,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Section from './Section';
-import { Text } from '@theme-ui/components';
+import { Text, Link } from '@theme-ui/components';
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -50,9 +50,9 @@ const About = () => {
       <Section.Body>
         I'm a full stack web application developer helping teams and startups
         turn ideas into reality.{' '}
-        <button onClick={() => scrollTo('#contact')} className="link">
+        <Link as="button" onClick={() => scrollTo('#contact')}>
           Contact me now
-        </button>{' '}
+        </Link>{' '}
         to learn how I can help you grow your business.
       </Section.Body>
     </Section>
