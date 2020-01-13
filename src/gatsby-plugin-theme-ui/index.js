@@ -349,6 +349,22 @@ const theme = {
       color: 'gray.1',
       fontWeight: 'semibold',
     },
+    title: {
+      fontWeight: 'semibold',
+      color: 'gray.0',
+      fontSize: '2xl',
+      letterSpacing: 'wide',
+    },
+    category: {
+      fontSize: 'xl',
+      color: 'gray.1',
+    },
+    description: {
+      color: 'gray.3',
+      fontSize: 'base',
+      textAlign: 'justify',
+      hyphens: 'auto',
+    },
     body: {
       fontSize: ['xl', '2xl'],
       fontFamily: 'body',

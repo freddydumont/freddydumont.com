@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+/** @jsx jsx **/
+import { jsx } from 'theme-ui';
+import { useState, Fragment } from 'react';
 import Img from 'gatsby-image';
 import { SlideDown } from 'react-slidedown';
 import Button from './Button';
+import { Text, Box, Flex } from '@theme-ui/components';
 
 /**
  * Tag object with name and tailwind color
@@ -36,36 +39,62 @@ const PortfolioCard = ({
 
   return (
     <div className="max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body mb-8 mx-auto relative">
-      <div className="px-6 pt-4 pb-3">
-        <h2 className="font-semibold text-gray-050 text-2xl tracking-wide">
+      <Box px={6} pt={4} pb={3}>
+        <Text as="h2" variant="title">
           {title}
-        </h2>
-      </div>
+        </Text>
+      </Box>
       <Img
         fluid={image.childImageSharp.fluid}
         alt={alt}
-        className="mb-4 mx-2 rounded-sm"
+        sx={{
+          marginBottom: 4,
+          marginX: 2,
+          borderRadius: 'sm',
+        }}
       />
-      <SlideDown transitionOnAppear={false} className="portfolio-slidedown">
-        <div className="px-6 py-4">
-          <h3 className="text-xl text-gray-100 mb-4">{category}</h3>
-          <div className="mb-2 flex flex-no-wrap overflow-x-scroll scrolling-touch">
+      <SlideDown
+        transitionOnAppear={false}
+        sx={{
+          transition: `transform 0.3s cubic-bezier(0.23, 1, 0.32, 1)`,
+        }}
+      >
+        <Box px={6} py={4}>
+          <Text as="h3" mb={4} variant="category">
+            {category}
+          </Text>
+          <Flex
+            mb={2}
+            css={{
+              flexWrap: 'nowrap',
+              overflowX: 'scroll',
+              WebkitOverflowScrolling: 'touch',
+            }}
+          >
             {tags.map((tag) => (
               <Tag key={tag.name} name={tag.name} color={tag.color} />
             ))}
-          </div>
-          <p className="text-gray-300 text-base text-justify hyphens">
+          </Flex>
+          <Text as="p" variant="description">
             {description}
-          </p>
+          </Text>
           {isExpanded && (
-            <>
-              <h3 className="text-lg text-gray-100 mt-4 mb-1">Technology</h3>
-              <p className="text-gray-300 text-base text-justify hyphens">
+            <Fragment>
+              <Text
+                as="h3"
+                mt={4}
+                mb={1}
+                color="gray.1"
+                sx={{ fontSize: 'lg' }}
+              >
+                Technology
+              </Text>
+              <Text as="p" variant="description">
                 {technology}
-              </p>
-            </>
+              </Text>
+            </Fragment>
           )}
-        </div>
+        </Box>
         {isExpanded ? (
           <Button link={link}>go to project</Button>
         ) : (
