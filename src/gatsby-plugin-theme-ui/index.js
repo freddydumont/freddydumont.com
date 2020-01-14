@@ -181,6 +181,20 @@ const theme = {
     dark: '#2d3748',
     textMuted: '#718096',
   },
+  cards: {
+    primary: {
+      minWidth: 'xs',
+      maxWidth: ['xs', 'sm', 'xs', 'sm'],
+      borderRadius: 'rounded',
+      overflow: 'hidden',
+      boxShadow: 'lg',
+      mb: 8,
+      mx: 'auto',
+      ':hover': {
+        boxShadow: '2xl',
+      },
+    },
+  },
   fonts: {
     sans:
       '-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
@@ -350,16 +364,19 @@ const theme = {
       fontWeight: 'semibold',
     },
     title: {
+      fontFamily: 'body',
       fontWeight: 'semibold',
       color: 'gray.0',
       fontSize: '2xl',
       letterSpacing: 'wide',
     },
     category: {
+      fontFamily: 'body',
       fontSize: 'xl',
       color: 'gray.1',
     },
     description: {
+      fontFamily: 'body',
       color: 'gray.3',
       fontSize: 'base',
       textAlign: 'justify',
@@ -374,6 +391,7 @@ const theme = {
     none: '0',
     sm: '0.125rem',
     default: '0.25rem',
+    rounded: '0.25rem',
     lg: '0.5rem',
     full: '9999px',
   },

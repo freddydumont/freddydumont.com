@@ -17,7 +17,3 @@
 }
 
 @tailwind utilities;
-
-.min-w-xs {
-  min-width: 20rem;
-}

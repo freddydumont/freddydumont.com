@@ -1,7 +1,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Container, Link } from '@theme-ui/components';
+import { Container, Link, Card } from '@theme-ui/components';
 import Section from './Section';
 import PortfolioCard from './PortfolioCard';
 import ButtonLink from './ButtonLink';
@@ -73,11 +73,11 @@ const Portfolio = () => {
             return (
               <React.Fragment key={card.title}>
                 <PortfolioCard {...card} />
-                <div className="max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl mb-8 mx-auto">
+                <Card>
                   <ButtonLink link="https://github.com/freddydumont">
                     See more on GitHub
                   </ButtonLink>
-                </div>
+                </Card>
               </React.Fragment>
             );
           }

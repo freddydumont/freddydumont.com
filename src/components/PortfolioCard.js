@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 import { useState, Fragment } from 'react';
 import Img from 'gatsby-image';
 import { SlideDown } from 'react-slidedown';
-import { Text, Box, Button, Flex } from '@theme-ui/components';
+import { Text, Box, Button, Flex, Card } from '@theme-ui/components';
 import ButtonLink from './ButtonLink';
 
 /**
@@ -38,7 +38,14 @@ const PortfolioCard = ({
   const [isExpanded, setExpanded] = useState(false);
 
   return (
-    <div className="max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body mb-8 mx-auto relative">
+    <Card
+      bg="gray.8"
+      sx={{
+        borderTopWidth: 4,
+        borderTopColor: 'teal_vivid.6',
+        position: 'relative',
+      }}
+    >
       <Box px={6} pt={4} pb={3}>
         <Text as="h2" variant="title">
           {title}
@@ -85,7 +92,7 @@ const PortfolioCard = ({
                 mt={4}
                 mb={1}
                 color="gray.1"
-                sx={{ fontSize: 'lg' }}
+                sx={{ fontSize: 'lg', fontFamily: 'body' }}
               >
                 Technology
               </Text>
@@ -113,13 +120,13 @@ const PortfolioCard = ({
           </Button>
         )}
       </SlideDown>
-    </div>
+    </Card>
   );
 };
 
 export const Tag = ({ name, color }) => (
   <span
-    className={`${color[0]} ${color[1]} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
+    className={`${color[0]} ${color[1]} font-body inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
   >
     {name}
   </span>
