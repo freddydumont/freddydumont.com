@@ -462,6 +462,20 @@ const theme = {
     },
   },
   buttons: {
+    base: {
+      cursor: 'pointer',
+      display: 'inline-block',
+      width: 'full',
+      py: 6,
+      textAlign: 'center',
+      fontSize: 'lg',
+      fontWeight: 'bold',
+      fontFamily: 'mono',
+      textTransform: 'uppercase',
+      letterSpacing: 'wider',
+      transition: 'all 100ms ease-in-out',
+      borderRadius: 'inherit',
+    },
     simple: {
       py: 2,
       px: 3,
@@ -638,5 +652,25 @@ const theme = {
 theme.colors.background = theme.colors.gray[9];
 theme.colors.primary = theme.colors.teal_vivid[5];
 theme.colors.primaryHover = theme.colors.teal_vivid[4];
+
+theme.buttons.primary = {
+  ...theme.buttons.base,
+  backgroundColor: theme.colors.teal_vivid[8],
+  color: theme.colors.teal_vivid[3],
+  ':hover': {
+    backgroundColor: theme.colors.teal_vivid[4],
+    color: theme.colors.teal_vivid[9],
+  },
+};
+
+theme.buttons.gray = {
+  ...theme.buttons.base,
+  backgroundColor: theme.colors.gray[3],
+  color: theme.colors.gray[8],
+  ':hover': {
+    backgroundColor: theme.colors.gray[8],
+    color: theme.colors.gray[3],
+  },
+};
 
 export default theme;

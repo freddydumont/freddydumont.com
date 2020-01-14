@@ -3,8 +3,8 @@ import { jsx } from 'theme-ui';
 import { useState, Fragment } from 'react';
 import Img from 'gatsby-image';
 import { SlideDown } from 'react-slidedown';
-import Button from './Button';
-import { Text, Box, Flex } from '@theme-ui/components';
+import { Text, Box, Button, Flex } from '@theme-ui/components';
+import ButtonLink from './ButtonLink';
 
 /**
  * Tag object with name and tailwind color
@@ -96,15 +96,21 @@ const PortfolioCard = ({
           )}
         </Box>
         {isExpanded ? (
-          <Button link={link}>go to project</Button>
+          <ButtonLink link={link}>go to project</ButtonLink>
         ) : (
-          <button
+          <Button
             data-testid="expand-button"
-            className="btn btn-primary absolute inset-x-0 bottom-0 filter-drop"
+            sx={{
+              position: 'absolute',
+              right: 0,
+              left: 0,
+              bottom: 0,
+              filter: `drop-shadow(0 0 20px)`,
+            }}
             onClick={() => setExpanded(true)}
           >
             See More
-          </button>
+          </Button>
         )}
       </SlideDown>
     </div>

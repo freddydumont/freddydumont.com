@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from './Section';
+import { Button } from '@theme-ui/components';
 
 const Label = ({ labelFor, children }) => (
   <label className="block tracking-wide mb-2 sm:text-lg" htmlFor={labelFor}>
@@ -60,13 +61,18 @@ const Contact = () => (
       </div>
       <div className="flex flex-wrap justify-end -mx-3 mb-12">
         <div className="w-full md:max-w-xs px-3">
-          <button
+          <Button
+            variant="gray"
             data-testid="button"
             type="submit"
-            className="btn btn-gray hover:shadow-2xl"
+            sx={{
+              ':hover': {
+                boxShadow: '2xl',
+              },
+            }}
           >
             Send
-          </button>
+          </Button>
         </div>
       </div>
     </form>

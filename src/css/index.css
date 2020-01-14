@@ -16,32 +16,8 @@
   }
 }
 
-.btn {
-  @apply inline-block w-full py-6 text-center text-lg font-bold font-mono uppercase tracking-wider cursor-pointer transition-all transition-faster ease-in-out;
-}
-
-.btn-primary {
-  @apply bg-teal-vivid-800 text-teal-vivid-300;
-}
-
-.btn-primary:hover {
-  @apply bg-teal-vivid-400 text-teal-vivid-900;
-}
-
-.btn-gray {
-  @apply bg-gray-300 text-gray-800;
-}
-
-.btn-gray:hover {
-  @apply bg-gray-800 text-gray-300;
-}
-
 @tailwind utilities;
 
 .min-w-xs {
   min-width: 20rem;
-}
-
-.break-avoid {
-  break-inside: avoid;
 }
