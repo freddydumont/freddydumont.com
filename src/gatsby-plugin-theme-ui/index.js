@@ -611,6 +611,26 @@ const theme = {
       },
     },
   },
+  forms: {
+    label: {
+      display: 'block',
+      letterSpacing: 'wide',
+      mb: 2,
+      fontSize: ['base', 'lg'],
+    },
+    input: {
+      borderWidth: 0,
+      bg: 'transparent',
+      borderBottomWidth: 2,
+      mr: 3,
+      py: 1,
+      fontSize: ['xl', '2xl'],
+      fontFamily: 'body',
+      ':focus': {
+        outline: 'none',
+      },
+    },
+  },
   inputs: {
     shadow: {
       py: 2,
@@ -665,6 +685,17 @@ const theme = {
       },
     },
   },
+  variants: {
+    flex_form_element: {
+      flexWrap: 'wrap',
+      mx: -3,
+      mb: 12,
+    },
+    form_box: {
+      px: 3,
+      width: 'full',
+    },
+  },
 };
 
 theme.colors.background = theme.colors.gray[9];
@@ -690,5 +721,7 @@ theme.buttons.gray = {
     color: theme.colors.gray[3],
   },
 };
+
+theme.forms.textarea = theme.forms.input;
 
 export default theme;

@@ -1,19 +1,4 @@
 @import '../../node_modules/react-slidedown/lib/slidedown.css';
 @tailwind base;
 @tailwind components;
-
-.form-element {
-  @apply appearance-none block bg-transparent border-b border-b-2 w-full mr-3 py-1 text-xl font-body;
-}
-
-.form-element:focus {
-  @apply outline-none;
-}
-
-@media (min-width: 640px) {
-  .form-element {
-    @apply text-2xl;
-  }
-}
-
 @tailwind utilities;
