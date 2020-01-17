@@ -125,8 +125,8 @@ const PortfolioCard = ({
   );
 };
 
-export const Tag = ({ name, color, bg }) => (
-  <Badge as="span" color={color} bg={bg} variant="tech_tag">
+export const Tag = ({ name, color, bg, ...props }) => (
+  <Badge as="span" color={color} bg={bg} variant="tech_tag" {...props}>
     {name}
   </Badge>
 );

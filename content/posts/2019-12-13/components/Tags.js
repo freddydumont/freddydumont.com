@@ -1,5 +1,8 @@
-import React from 'react';
+/** @jsx jsx **/
+import { jsx } from 'theme-ui';
 import { Tag } from '../../../../src/components/PortfolioCard';
+import ThemeProvider from '../../../../src/components/ThemeProvider';
+import { Flex } from '@theme-ui/components';
 
 const tags = [
   {
@@ -9,15 +12,26 @@ const tags = [
   },
   { name: 'react', color: 'gray.9', bg: 'blue.4' },
   { name: 'gatsby', color: 'purple.1', bg: 'purple.7' },
-  { name: 'jest', color: 'red_vivid.8', bg: 'white' },
+  { name: 'jest', color: 'white', bg: 'red_vivid.8' },
 ];
 
 const Tags = () => (
-  <div className="container mx-auto flex justify-center mb-8">
-    {tags.map((tag) => (
-      <Tag key={tag.name} {...tag} />
-    ))}
-  </div>
+  <ThemeProvider>
+    <Flex mx="auto" mb={8}>
+      {tags.map((tag) => (
+        <Tag
+          key={tag.name}
+          {...tag}
+          sx={{
+            // big fontsize and margins to compensate for novela's root font size
+            fontSize: 'xl',
+            marginRight: 3,
+            marginBottom: 3,
+          }}
+        />
+      ))}
+    </Flex>
+  </ThemeProvider>
 );
 
 export default Tags;
