@@ -3,29 +3,30 @@
  * Name must match with a tag found in `portfolio.json`.
  */
 const TAG_COLORS = {
-  javascript: ['bg-yellow-vivid-400', 'text-gray-900'],
-  react: ['bg-blue-400', 'text-gray-900'],
-  gatsby: ['bg-purple-700', 'text-purple-100'],
-  bulma: ['bg-teal-vivid-200', 'text-teal-vivid-900'],
-  redux: ['bg-purple-600', 'text-purple-100'],
-  jest: ['bg-red-vivid-800', 'text-white'],
-  emotion: ['bg-pink-400', 'text-gray-900'],
-  bootstrap: ['bg-purple-800', 'text-purple-100'],
-  sass: ['bg-pink-500', 'text-gray-900'],
-  'redux-saga': ['bg-green-500', 'text-gray-900'],
-  phaser: ['bg-orange-600', 'text-gray-900'],
-  typescript: ['bg-blue-700', 'text-white'],
-  xstate: ['bg-black', 'text-gray-050'],
-  'rot.js': ['bg-black', 'text-gray-050'],
-  tachyons: ['bg-gray-050', 'text-gray-900'],
-  howler: ['bg-yellow-700', 'text-gray-050'],
+  javascript: ['yellow_vivid.4', 'gray.9'],
+  react: ['blue.4', 'gray.9'],
+  gatsby: ['purple.7', 'purple.1'],
+  bulma: ['teal_vivid.2', 'teal_vivid.9'],
+  redux: ['purple.6', 'purple.1'],
+  jest: ['red_vivid.8', 'white'],
+  emotion: ['pink.4', 'gray.9'],
+  bootstrap: ['purple.8', 'purple.1'],
+  sass: ['pink.5', 'gray.9'],
+  redux_saga: ['green.5', 'gray.9'],
+  phaser: ['orange.6', 'gray.9'],
+  typescript: ['blue.7', 'white'],
+  xstate: ['black', 'gray.0'],
+  'rot.js': ['black', 'gray.0'],
+  tachyons: ['gray.0', 'gray.9'],
+  howler: ['yellow.7', 'gray.0'],
 };
 
 /**
- * Tag object with name and tailwind color
+ * Tag object with name and ThemeUI color
  * @typedef {Object} Tag
  * @property {String} name
- * @property {String} color
+ * @property {String} color text color
+ * @property {String} bg background color
  */
 
 /**
@@ -36,21 +37,10 @@ const TAG_COLORS = {
 const tagsStringToObject = (tags) =>
   tags.map((name) => ({
     name,
-    color: TAG_COLORS[name],
+    color: TAG_COLORS[name][1],
+    bg: TAG_COLORS[name][0],
   }));
-
-/**
- * Whitelist for purgeCSS
- */
-const whitelistedClasses = Object.values(TAG_COLORS).reduce(
-  (whitelistedColors, currentColors) => [
-    ...whitelistedColors,
-    ...currentColors,
-  ],
-  []
-);
 
 module.exports = {
   tagsStringToObject,
-  whitelistedClasses,
 };

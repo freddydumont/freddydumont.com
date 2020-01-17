@@ -29,6 +29,7 @@ const Portfolio = () => {
           tags {
             color
             name
+            bg
           }
           title
         }

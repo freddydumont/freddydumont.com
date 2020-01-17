@@ -479,6 +479,21 @@ const theme = {
       m: 3,
     },
   },
+  badges: {
+    tech_tag: {
+      minWidth: 'initial',
+      display: 'inline-block',
+      fontFamily: 'body',
+      fontWeight: 'semibold',
+      fontSize: 'sm',
+      borderRadius: 'lg',
+      px: 3,
+      py: 1,
+      mr: 2,
+      mb: 2,
+      whiteSpace: 'nowrap',
+    },
+  },
   buttons: {
     base: {
       cursor: 'pointer',

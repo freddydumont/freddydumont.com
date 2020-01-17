@@ -3,14 +3,15 @@ import { jsx } from 'theme-ui';
 import { useState, Fragment } from 'react';
 import Img from 'gatsby-image';
 import { SlideDown } from 'react-slidedown';
-import { Text, Box, Button, Flex, Card } from '@theme-ui/components';
+import { Text, Box, Button, Flex, Card, Badge } from '@theme-ui/components';
 import ButtonLink from './ButtonLink';
 
 /**
- * Tag object with name and tailwind color
+ * Tag object with name and ThemeUI color
  * @typedef {Object} Tag
  * @property {String} name
- * @property {String} color
+ * @property {String} color text color
+ * @property {String} bg background color
  */
 
 /**
@@ -79,7 +80,7 @@ const PortfolioCard = ({
             }}
           >
             {tags.map((tag) => (
-              <Tag key={tag.name} name={tag.name} color={tag.color} />
+              <Tag key={tag.name} {...tag} />
             ))}
           </Flex>
           <Text as="p" variant="description">
@@ -124,12 +125,10 @@ const PortfolioCard = ({
   );
 };
 
-export const Tag = ({ name, color }) => (
-  <span
-    className={`${color[0]} ${color[1]} font-body inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
-  >
+export const Tag = ({ name, color, bg }) => (
+  <Badge as="span" color={color} bg={bg} variant="tech_tag">
     {name}
-  </span>
+  </Badge>
 );
 
 export default PortfolioCard;

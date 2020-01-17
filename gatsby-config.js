@@ -1,5 +1,4 @@
 const path = require(`path`);
-const { whitelistedClasses } = require('./src/utils/tags');
 
 module.exports = {
   siteMetadata: {
@@ -70,7 +69,6 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        whitelist: whitelistedClasses,
       },
     },
   ],
