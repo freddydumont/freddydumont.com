@@ -12,7 +12,7 @@ const TAG_COLORS = {
   emotion: ['pink.4', 'gray.9'],
   bootstrap: ['purple.8', 'purple.1'],
   sass: ['pink.5', 'gray.9'],
-  redux_saga: ['green.5', 'gray.9'],
+  'redux-saga': ['green.5', 'gray.9'],
   phaser: ['orange.6', 'gray.9'],
   typescript: ['blue.7', 'white'],
   xstate: ['black', 'gray.0'],
