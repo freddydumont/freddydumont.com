@@ -26,7 +26,6 @@ module.exports = {
     ],
   },
   plugins: [
-    'gatsby-plugin-theme-ui',
     'gatsby-plugin-advanced-sitemap',
     'gatsby-plugin-smoothscroll',
     `gatsby-transformer-sharp`,

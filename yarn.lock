@@ -7169,7 +7169,7 @@ gatsby-plugin-smoothscroll@^1.0.4:
   dependencies:
     smoothscroll-polyfill "^0.4.4"
 
-gatsby-plugin-theme-ui@^0.2.40, gatsby-plugin-theme-ui@^0.2.53:
+gatsby-plugin-theme-ui@^0.2.40:
   version "0.2.53"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.2.53.tgz#57a52339e50ede7ef4df0b1b5593d360b56b597d"
   integrity sha512-AlQC+uC9lvrP3LlGsLe0f0azp7B5c49qWl4b3FDj8xbravBoqFmJT7XrNTpYYbxnCnx/K1v0QtwP8qindw0S2g==

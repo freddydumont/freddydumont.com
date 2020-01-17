@@ -27,7 +27,6 @@
     "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-plugin-smoothscroll": "^1.0.4",
-    "gatsby-plugin-theme-ui": "^0.2.53",
     "gatsby-source-filesystem": "^2.1.39",
     "gatsby-transformer-sharp": "^2.3.6",
     "react": "^16.12.0",
