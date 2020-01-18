@@ -12,6 +12,9 @@ const CommandLineText = ({ children, withPrompt, withError }) => (
   <Text
     sx={{
       fontSize: 'lg',
+      overflow: 'hidden',
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
     }}
   >
     {withPrompt ? (
