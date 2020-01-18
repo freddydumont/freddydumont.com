@@ -63,12 +63,5 @@ module.exports = {
         icon: `src/assets/favicon.png`,
       },
     },
-    'gatsby-plugin-postcss',
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-      },
-    },
   ],
 };

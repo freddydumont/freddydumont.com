@@ -1,7 +1,6 @@
 import React from 'react';
 import SEO from '../../node_modules/@narative/gatsby-theme-novela/src/components/SEO';
 import social_header from '../assets/dumont_digital_logo.png';
-import '../css/index.css';
 import { Box } from '@theme-ui/components';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
