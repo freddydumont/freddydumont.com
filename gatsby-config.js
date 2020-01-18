@@ -1,5 +1,4 @@
 const path = require(`path`);
-const { whitelistedClasses } = require('./src/utils/tags');
 
 module.exports = {
   siteMetadata: {
@@ -62,14 +61,6 @@ module.exports = {
         theme_color: `#fff`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,
-      },
-    },
-    'gatsby-plugin-postcss',
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-        whitelist: whitelistedClasses,
       },
     },
   ],

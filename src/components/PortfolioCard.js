@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+/** @jsx jsx **/
+import { jsx } from 'theme-ui';
+import { useState, Fragment } from 'react';
 import Img from 'gatsby-image';
 import { SlideDown } from 'react-slidedown';
-import Button from './Button';
+import { Text, Box, Button, Flex, Card, Badge } from '@theme-ui/components';
+import ButtonLink from './ButtonLink';
 
 /**
- * Tag object with name and tailwind color
+ * Tag object with name and ThemeUI color
  * @typedef {Object} Tag
  * @property {String} name
- * @property {String} color
+ * @property {String} color text color
+ * @property {String} bg background color
  */
 
 /**
@@ -35,59 +39,96 @@ const PortfolioCard = ({
   const [isExpanded, setExpanded] = useState(false);
 
   return (
-    <div className="max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl bg-gray-800 border-teal-vivid-600 border-t-4 font-body mb-8 mx-auto relative">
-      <div className="px-6 pt-4 pb-3">
-        <h2 className="font-semibold text-gray-050 text-2xl tracking-wide">
+    <Card
+      bg="gray.8"
+      sx={{
+        borderTopWidth: 4,
+        borderTopColor: 'teal_vivid.6',
+        position: 'relative',
+      }}
+    >
+      <Box px={6} pt={4} pb={3}>
+        <Text as="h2" variant="title">
           {title}
-        </h2>
-      </div>
+        </Text>
+      </Box>
       <Img
         fluid={image.childImageSharp.fluid}
         alt={alt}
-        className="mb-4 mx-2 rounded-sm"
+        sx={{
+          marginBottom: 4,
+          marginX: 2,
+          borderRadius: 'sm',
+        }}
       />
-      <SlideDown transitionOnAppear={false} className="portfolio-slidedown">
-        <div className="px-6 py-4">
-          <h3 className="text-xl text-gray-100 mb-4">{category}</h3>
-          <div className="mb-2 flex flex-no-wrap overflow-x-scroll scrolling-touch">
+      <SlideDown
+        transitionOnAppear={false}
+        sx={{
+          transition: `transform 0.3s cubic-bezier(0.23, 1, 0.32, 1)`,
+        }}
+      >
+        <Box px={6} py={4}>
+          <Text as="h3" mb={4} variant="category">
+            {category}
+          </Text>
+          <Flex
+            mb={2}
+            css={{
+              flexWrap: 'nowrap',
+              overflowX: 'scroll',
+              WebkitOverflowScrolling: 'touch',
+            }}
+          >
             {tags.map((tag) => (
-              <Tag key={tag.name} name={tag.name} color={tag.color} />
+              <Tag key={tag.name} {...tag} />
             ))}
-          </div>
-          <p className="text-gray-300 text-base text-justify hyphens">
+          </Flex>
+          <Text as="p" variant="description">
             {description}
-          </p>
+          </Text>
           {isExpanded && (
-            <>
-              <h3 className="text-lg text-gray-100 mt-4 mb-1">Technology</h3>
-              <p className="text-gray-300 text-base text-justify hyphens">
+            <Fragment>
+              <Text
+                as="h3"
+                mt={4}
+                mb={1}
+                color="gray.1"
+                sx={{ fontSize: 'lg', fontFamily: 'body' }}
+              >
+                Technology
+              </Text>
+              <Text as="p" variant="description">
                 {technology}
-              </p>
-            </>
+              </Text>
+            </Fragment>
           )}
-        </div>
+        </Box>
         {isExpanded ? (
-          <Button link={link}>go to project</Button>
+          <ButtonLink link={link}>go to project</ButtonLink>
         ) : (
-          <button
+          <Button
             data-testid="expand-button"
-            className="btn btn-primary absolute inset-x-0 bottom-0 filter-drop"
+            sx={{
+              position: 'absolute',
+              right: 0,
+              left: 0,
+              bottom: 0,
+              filter: `drop-shadow(0 0 20px)`,
+            }}
             onClick={() => setExpanded(true)}
           >
             See More
-          </button>
+          </Button>
         )}
       </SlideDown>
-    </div>
+    </Card>
   );
 };
 
-export const Tag = ({ name, color }) => (
-  <span
-    className={`${color[0]} ${color[1]} inline-block rounded-lg px-3 py-1 text-sm font-semibold mr-2 mb-2 whitespace-no-wrap`}
-  >
+export const Tag = ({ name, color, bg, ...props }) => (
+  <Badge as="span" color={color} bg={bg} variant="tech_tag" {...props}>
     {name}
-  </span>
+  </Badge>
 );
 
 export default PortfolioCard;

@@ -1,10 +1,11 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Container, Link, Card } from '@theme-ui/components';
+import { Global } from '@emotion/core';
 import Section from './Section';
 import PortfolioCard from './PortfolioCard';
-import Container from './Container';
-import Button from './Button';
+import ButtonLink from './ButtonLink';
 
 const Portfolio = () => {
   const {
@@ -28,6 +29,7 @@ const Portfolio = () => {
           tags {
             color
             name
+            bg
           }
           title
         }
@@ -37,26 +39,47 @@ const Portfolio = () => {
 
   return (
     <Section htmlId="portfolio">
+      {/* Injecting global here because Masonry expects actual classnames */}
+      <Global
+        styles={(theme) => ({
+          '.masonry': {
+            display: 'flex',
+            [`@media (min-width: ${theme.breakpoints[1]})`]: {
+              maxWidth: theme.sizes['2xl'],
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            },
+            [`@media (min-width: ${theme.breakpoints[2]})`]: {
+              maxWidth: theme.sizes['4xl'],
+            },
+            [`@media (min-width: ${theme.breakpoints[3]})`]: {
+              maxWidth: theme.sizes['7xl'],
+            },
+          },
+          '.masonry_column': {
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          },
+        })}
+      />
       <Container>
         <Section.Title>Portfolio</Section.Title>
         <Section.Body>
           Here's a non-exhaustive collection of stuff I've worked on. I also
           have a few{' '}
-          <a
+          <Link
             href="https://www.npmjs.com/~freddydumont"
-            className="link"
             title="freddydumont's npm packages"
           >
             published npm packages
-          </a>{' '}
+          </Link>{' '}
           and some{' '}
-          <a
+          <Link
             href="https://github.com/freddydumont"
-            className="link"
             title="freddydumont's GitHub profile"
           >
             more work on GitHub
-          </a>
+          </Link>
           .
         </Section.Body>
       </Container>
@@ -66,8 +89,8 @@ const Portfolio = () => {
           1279: 2,
           767: 1,
         }}
-        className="flex md:max-w-2xl md:mx-auto lg:max-w-4xl xl:max-w-7xl"
-        columnClassName="mx-auto"
+        className="masonry"
+        columnClassName="masonry_column"
       >
         {nodes.map((card, index, arr) => {
           // add the "see more" button with last item to avoid breaking the masonry library
@@ -75,11 +98,11 @@ const Portfolio = () => {
             return (
               <React.Fragment key={card.title}>
                 <PortfolioCard {...card} />
-                <div className="max-w-xs min-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl mb-8 mx-auto">
-                  <Button link="https://github.com/freddydumont">
+                <Card>
+                  <ButtonLink link="https://github.com/freddydumont">
                     See more on GitHub
-                  </Button>
-                </div>
+                  </ButtonLink>
+                </Card>
               </React.Fragment>
             );
           }
