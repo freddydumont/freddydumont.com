@@ -6,6 +6,7 @@ import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
 import Home from '../components/Home';
+import MainMenu from '../components/MainMenu';
 import ThemeProvider from '../components/ThemeProvider';
 
 const Index = () => (
@@ -23,7 +24,9 @@ const Index = () => (
         height: 'full',
       }}
     >
-      <Home />
+      <Home>
+        <MainMenu />
+      </Home>
       <About />
       <Portfolio />
       <Contact />

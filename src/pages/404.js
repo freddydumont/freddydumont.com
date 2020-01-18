@@ -1,21 +1,27 @@
-import React from "react";
+import React from 'react';
+import Home from '../components/Home';
+import CommandLineText from '../components/CommandLineText';
+import ThemeProvider from '../components/ThemeProvider';
+import MainMenuItem from '../components/MainMenuItem';
 
-import Layout from "@narative/gatsby-theme-novela/src/components/Layout";
-import Section from "@narative/gatsby-theme-novela/src/components/Section";
-import SEO from "@narative/gatsby-theme-novela/src/components/SEO";
-import Headings from "@narative/gatsby-theme-novela/src/components/Headings";
-
-function NotFoundPage() {
-  return (
-    <Layout>
-      <SEO />
-      <Section>
-        <div style={{ marginTop: "100px" }}>
-          <Headings.h1>404: Page Not Found</Headings.h1>
-        </div>
-      </Section>
-    </Layout>
-  );
-}
+const NotFoundPage = () => (
+  <ThemeProvider>
+    <Home>
+      <CommandLineText withPrompt>
+        cd {window.location.pathname}
+      </CommandLineText>
+      <CommandLineText>404 - page not found</CommandLineText>
+      <CommandLineText withPrompt withError>
+        ls
+      </CommandLineText>
+      <CommandLineText>
+        <ul>
+          <MainMenuItem to="/">home</MainMenuItem>
+          <MainMenuItem to="/blog">blog</MainMenuItem>
+        </ul>
+      </CommandLineText>
+    </Home>
+  </ThemeProvider>
+);
 
 export default NotFoundPage;

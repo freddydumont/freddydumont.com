@@ -716,6 +716,7 @@ const theme = {
 theme.colors.background = theme.colors.gray[9];
 theme.colors.primary = theme.colors.teal_vivid[5];
 theme.colors.primaryHover = theme.colors.teal_vivid[4];
+theme.colors.error = theme.colors.red_vivid[5];
 
 theme.buttons.primary = {
   ...theme.buttons.base,

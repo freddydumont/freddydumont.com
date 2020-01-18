@@ -2,10 +2,9 @@
 import { jsx } from 'theme-ui';
 import Logo from '../@narative/gatsby-theme-novela/components/Logo';
 import { Box, Flex, Container } from '@theme-ui/components';
-import MenuItem from '../components/MainMenuItem';
 import circuitBg from '../assets/background.svg';
 
-const Home = () => (
+const Home = ({ children }) => (
   <Flex
     color="gray.0"
     bg="background"
@@ -32,12 +31,7 @@ const Home = () => (
       <Box pb="6">
         <Logo />
       </Box>
-      <ul>
-        <MenuItem clickDestination="#about">about</MenuItem>
-        <MenuItem to="/blog">blog</MenuItem>
-        <MenuItem clickDestination="#portfolio">portfolio</MenuItem>
-        <MenuItem clickDestination="#contact">contact</MenuItem>
-      </ul>
+      {children}
     </Container>
   </Flex>
 );
