@@ -193,6 +193,10 @@ const theme = {
       ':hover': {
         boxShadow: '2xl',
       },
+      '@media (max-width: 360px)': {
+        minWidth: '18rem',
+        maxWidth: '18rem',
+      },
     },
   },
   fonts: {

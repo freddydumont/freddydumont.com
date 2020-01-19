@@ -26,6 +26,9 @@ const Home = ({ children }) => (
         maxWidth: 'xs',
         fontSize: '2xl',
         lineHeight: 'relaxed',
+        '@media (max-width: 360px)': {
+          maxWidth: '16rem',
+        },
       }}
     >
       <Box pb="6">
