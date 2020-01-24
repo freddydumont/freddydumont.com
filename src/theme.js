@@ -629,6 +629,15 @@ const theme = {
         backgroundColor: 'gray.1',
       },
     },
+    icon: {
+      width: [10, 12],
+      height: [10, 12],
+      p: 0,
+      mr: 3,
+      '&:hover': {
+        color: 'teal_vivid.6',
+      },
+    },
   },
   forms: {
     label: {
