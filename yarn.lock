@@ -4581,6 +4581,11 @@ copyfiles@^2.1.1:
     through2 "^2.0.1"
     yargs "^13.2.4"
 
+copyright@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/copyright/-/copyright-0.0.2.tgz#b97924f6b166fbcefd738ff86ad0ab8f4c59bcfb"
+  integrity sha512-2mt105YFLrNA7CS69ppoha//V6qzGW4vnq2857uGbpKieEu7AEZXBsV6MEOS9TIaAeTdLPu5RSEHsi5iaW5ehg==
+
 core-js-compat@^3.6.0:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.6.2.tgz#314ca8b84d5e71c27c19f1ecda966501b1cf1f10"

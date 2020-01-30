@@ -4,6 +4,7 @@ import { Box, Container, Text, Flex, Link } from '@theme-ui/components';
 import Twitter from './icons/Twitter';
 import GitHub from './icons/GitHub';
 import LinkedIn from './icons/LinkedIn';
+import copyright from 'copyright';
 
 const IconLinks = [Twitter, GitHub, LinkedIn];
 
@@ -11,12 +12,12 @@ const Footer = () => {
   return (
     <>
       <FooterWave />
-      <Box as="footer" bg="gray.8" pb={16}>
+      <Box as="footer" bg="gray.8" pb={4}>
         <Container>
           <Text
             as="h2"
             variant="heading"
-            pt={3}
+            pt={4}
             mb={5}
             sx={{
               fontSize: ['2xl', '4xl'],
@@ -38,6 +39,9 @@ const Footer = () => {
               </Link>
             ))}
           </Flex>
+          <Text mt={8} color="gray.1">
+            {copyright('freddydumont')}
+          </Text>
         </Container>
       </Box>
     </>
