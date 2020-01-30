@@ -16,7 +16,7 @@ const Footer = () => {
           <Text
             as="h2"
             variant="heading"
-            pt={2}
+            pt={3}
             mb={5}
             sx={{
               fontSize: ['2xl', '4xl'],
@@ -32,6 +32,7 @@ const Footer = () => {
                 variant="icon"
                 href={Icon.link}
                 key={Icon.link}
+                mr={3}
               >
                 <Icon />
               </Link>

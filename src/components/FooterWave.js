@@ -3,7 +3,12 @@ import { jsx } from 'theme-ui';
 
 function FooterWave(props) {
   return (
-    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" {...props}>
+    <svg
+      sx={{ mt: [null, null, -8, -16] }}
+      viewBox="0 0 1440 320"
+      preserveAspectRatio="none"
+      {...props}
+    >
       <path
         sx={{
           fill: 'gray.8',

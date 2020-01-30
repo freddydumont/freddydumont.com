@@ -630,12 +630,12 @@ const theme = {
       },
     },
     icon: {
-      width: [10, 12],
-      height: [10, 12],
+      color: 'gray.1',
+      width: [8, 10],
+      height: [8, 10],
       p: 0,
-      mr: 3,
       '&:hover': {
-        color: 'teal_vivid.6',
+        color: 'primaryHover',
       },
     },
   },
