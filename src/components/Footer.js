@@ -1,15 +1,11 @@
 import React from 'react';
 import FooterWave from './FooterWave';
-import {
-  Box,
-  Container,
-  Text,
-  Flex,
-  IconButton,
-  Link,
-} from '@theme-ui/components';
+import { Box, Container, Text, Flex, Link } from '@theme-ui/components';
 import Twitter from './icons/Twitter';
 import GitHub from './icons/GitHub';
+import LinkedIn from './icons/LinkedIn';
+
+const IconLinks = [Twitter, GitHub, LinkedIn];
 
 const Footer = () => {
   return (
@@ -29,12 +25,17 @@ const Footer = () => {
             Elsewhere on the internet
           </Text>
           <Flex>
-            <Link variant="icon" href="https://twitter.com/_freddydumont">
-              <Twitter />
-            </Link>
-            <Link variant="icon" href="https://github.com/freddydumont">
-              <GitHub />
-            </Link>
+            {IconLinks.map((Icon) => (
+              <Link
+                target="_blank"
+                rel="noreferrer noopener"
+                variant="icon"
+                href={Icon.link}
+                key={Icon.link}
+              >
+                <Icon />
+              </Link>
+            ))}
           </Flex>
         </Container>
       </Box>

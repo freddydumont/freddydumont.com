@@ -6,13 +6,14 @@ import { IconButton } from '@theme-ui/components';
  * SVG Icon to use with Logos etc. Pass the path as children.
  * @param {Object} props
  * @param {String} props.title
+ * @param {String} [props.viewBox="0 0 20 20"] custom viewBox
  * @param {*} props.children the svg path
  */
-function SvgIcon({ title, children, ...props }) {
+function SvgIcon({ title, children, viewBox, ...props }) {
   return (
     <IconButton>
       <svg
-        viewBox="0 0 20 20"
+        viewBox={viewBox}
         fill="currentColor"
         sx={{
           width: 'inherit',
@@ -27,5 +28,9 @@ function SvgIcon({ title, children, ...props }) {
     </IconButton>
   );
 }
+
+SvgIcon.defaultProps = {
+  viewBox: '0 0 20 20',
+};
 
 export default SvgIcon;
