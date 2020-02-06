@@ -36,7 +36,7 @@ const Footer = () => {
               pt={4}
               mb={5}
               sx={{
-                fontSize: ['2xl', '4xl', '4xl', '4xl', '5xl'],
+                fontSize: ['2xl', '4xl', '4xl', '4xl'],
               }}
             >
               Elsewhere on the internet
@@ -49,7 +49,7 @@ const Footer = () => {
                   variant="icon"
                   href={Icon.link}
                   key={Icon.link}
-                  mr={3}
+                  mx={3}
                 >
                   <Icon />
                 </Link>
