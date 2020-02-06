@@ -23,58 +23,74 @@ const Footer = () => {
       <FooterWave />
       <Box as="footer" bg="gray.8" pb={4}>
         <Container>
-          <Text
-            as="h2"
-            variant="heading"
-            pt={4}
-            mb={5}
-            sx={{
-              fontSize: ['2xl', '4xl'],
-            }}
-          >
-            Elsewhere on the internet
-          </Text>
-          <Flex mb={8}>
-            {IconLinks.map((Icon) => (
-              <Link
-                target="_blank"
-                rel="noreferrer noopener"
-                variant="icon"
-                href={Icon.link}
-                key={Icon.link}
-                mr={3}
-              >
-                <Icon />
-              </Link>
-            ))}
-          </Flex>
           <Flex
-            as="ul"
             sx={{
-              flexWrap: 'wrap',
-              mb: 2,
-              fontFamily: 'mono',
-              color: 'gray.1',
-              li: {
-                mr: 3,
-                '&:hover': {
-                  color: 'primaryHover',
-                },
-              },
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
             }}
           >
-            {navLinks.map(({ name, clickDestination, to }) => (
-              <li>
-                {to && <a href={to}>{name}</a>}
-                {clickDestination && (
-                  <button onClick={() => scrollTo(clickDestination)}>
-                    {name}
-                  </button>
-                )}
-              </li>
-            ))}
+            <Text
+              as="h2"
+              variant="heading"
+              pt={4}
+              mb={5}
+              sx={{
+                fontSize: ['2xl', '4xl', '4xl', '4xl', '5xl'],
+              }}
+            >
+              Elsewhere on the internet
+            </Text>
+            <Flex mb={8}>
+              {IconLinks.map((Icon) => (
+                <Link
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  variant="icon"
+                  href={Icon.link}
+                  key={Icon.link}
+                  mr={3}
+                >
+                  <Icon />
+                </Link>
+              ))}
+            </Flex>
+            <Flex
+              as="ul"
+              sx={{
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                mb: 4,
+                fontFamily: 'mono',
+                color: 'gray.1',
+                li: {
+                  mx: 3,
+                  '&:hover': {
+                    color: 'primaryHover',
+                  },
+                },
+              }}
+            >
+              {navLinks.map(({ name, clickDestination, to }) => (
+                <li>
+                  {to && <a href={to}>{name}</a>}
+                  {clickDestination && (
+                    <button onClick={() => scrollTo(clickDestination)}>
+                      {name}
+                    </button>
+                  )}
+                </li>
+              ))}
+            </Flex>
+            <Text
+              color="gray.1"
+              sx={{
+                fontFamily: 'mono',
+              }}
+            >
+              {copyright('freddydumont')}
+            </Text>
           </Flex>
-          <Text color="gray.1">{copyright('freddydumont')}</Text>
         </Container>
       </Box>
     </>
