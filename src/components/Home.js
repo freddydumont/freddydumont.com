@@ -6,6 +6,7 @@ import circuitBg from '../assets/background.svg';
 
 const Home = ({ children }) => (
   <Flex
+    id="home"
     color="gray.0"
     bg="background"
     sx={{

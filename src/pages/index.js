@@ -8,6 +8,7 @@ import Contact from '../components/Contact';
 import Home from '../components/Home';
 import MainMenu from '../components/MainMenu';
 import ThemeProvider from '../components/ThemeProvider';
+import Footer from '../components/Footer';
 
 const Index = () => (
   <ThemeProvider>
@@ -19,7 +20,6 @@ const Index = () => (
     <Box
       as="main"
       bg="background"
-      pb={[16, 32]}
       sx={{
         height: 'full',
       }}
@@ -30,6 +30,7 @@ const Index = () => (
       <About />
       <Portfolio />
       <Contact />
+      <Footer />
     </Box>
   </ThemeProvider>
 );

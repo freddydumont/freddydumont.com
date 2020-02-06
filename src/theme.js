@@ -629,6 +629,15 @@ const theme = {
         backgroundColor: 'gray.1',
       },
     },
+    icon: {
+      color: 'gray.1',
+      width: [8, 10],
+      height: [8, 10],
+      p: 0,
+      '&:hover': {
+        color: 'primaryHover',
+      },
+    },
   },
   forms: {
     label: {

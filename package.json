@@ -19,6 +19,7 @@
     "@mdx-js/react": "^1.5.3",
     "@narative/gatsby-theme-novela": "^0.13.2",
     "@theme-ui/components": "^0.2.50",
+    "copyright": "^0.0.2",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-advanced-sitemap": "^1.4.5",

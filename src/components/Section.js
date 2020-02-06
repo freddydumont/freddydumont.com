@@ -14,7 +14,7 @@ const Section = ({ htmlId, withContainer, children }) => (
     sx={{
       height: 'full',
       color: 'gray.2',
-      marginY: [16, 32],
+      mt: [16, 32],
     }}
   >
     {withContainer ? <Container>{children}</Container> : children}
