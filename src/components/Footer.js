@@ -1,4 +1,5 @@
 import React from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import FooterWave from './FooterWave';
 import { Box, Container, Text, Flex, Link } from '@theme-ui/components';
 import Twitter from './icons/Twitter';
@@ -7,6 +8,14 @@ import LinkedIn from './icons/LinkedIn';
 import copyright from 'copyright';
 
 const IconLinks = [Twitter, GitHub, LinkedIn];
+
+const navLinks = [
+  { name: 'about', clickDestination: '#about' },
+  { name: 'blog', to: 'blog' },
+  { name: 'portfolio', clickDestination: '#portfolio' },
+  { name: 'contact', clickDestination: '#contact' },
+  { name: 'back to top', clickDestination: '#home' },
+];
 
 const Footer = () => {
   return (
@@ -25,7 +34,7 @@ const Footer = () => {
           >
             Elsewhere on the internet
           </Text>
-          <Flex>
+          <Flex mb={8}>
             {IconLinks.map((Icon) => (
               <Link
                 target="_blank"
@@ -39,9 +48,33 @@ const Footer = () => {
               </Link>
             ))}
           </Flex>
-          <Text mt={8} color="gray.1">
-            {copyright('freddydumont')}
-          </Text>
+          <Flex
+            as="ul"
+            sx={{
+              flexWrap: 'wrap',
+              mb: 2,
+              fontFamily: 'mono',
+              color: 'gray.1',
+              li: {
+                mr: 3,
+                '&:hover': {
+                  color: 'primaryHover',
+                },
+              },
+            }}
+          >
+            {navLinks.map(({ name, clickDestination, to }) => (
+              <li>
+                {to && <a href={to}>{name}</a>}
+                {clickDestination && (
+                  <button onClick={() => scrollTo(clickDestination)}>
+                    {name}
+                  </button>
+                )}
+              </li>
+            ))}
+          </Flex>
+          <Text color="gray.1">{copyright('freddydumont')}</Text>
         </Container>
       </Box>
     </>
