@@ -1,6 +1,6 @@
 const path = require('path');
 const portfolio = require('./src/data/portfolio.json');
-const { tagsStringToObject, TAG_COLORS } = require('./src/utils/tags');
+const { tagsStringToObject } = require('./src/utils/tags');
 
 const IMAGE_PATH = './src/assets/';
 
@@ -65,22 +65,6 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       internal: {
         type: 'PortfolioCard',
         contentDigest: createContentDigest(card),
-      },
-    };
-
-    actions.createNode(node);
-  });
-
-  // create tags node for portfolio filter dropdown
-  Object.entries(TAG_COLORS).forEach(([name, [bg, color]]) => {
-    const node = {
-      name,
-      bg,
-      color,
-      id: createNodeId(`tag-${name}`),
-      internal: {
-        type: 'Tag',
-        contentDigest: createContentDigest(name),
       },
     };
 
