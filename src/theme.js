@@ -640,22 +640,24 @@ const theme = {
     },
   },
   forms: {
-    label: {
-      display: 'block',
-      letterSpacing: 'wide',
-      mb: 2,
-      fontSize: ['base', 'lg'],
-    },
-    input: {
-      borderWidth: 0,
-      bg: 'transparent',
-      borderBottomWidth: 2,
-      mr: 3,
-      py: 1,
-      fontSize: ['xl', '2xl'],
-      fontFamily: 'body',
-      ':focus': {
-        outline: 'none',
+    contact: {
+      label: {
+        display: 'block',
+        letterSpacing: 'wide',
+        mb: 2,
+        fontSize: ['base', 'lg'],
+      },
+      input: {
+        borderWidth: 0,
+        bg: 'transparent',
+        borderBottomWidth: 2,
+        mr: 3,
+        py: 1,
+        fontSize: ['xl', '2xl'],
+        fontFamily: 'body',
+        ':focus': {
+          outline: 'none',
+        },
       },
     },
   },

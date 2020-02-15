@@ -29,8 +29,16 @@ const Contact = () => (
             width: ['full', 'full', '1/2'],
           }}
         >
-          <Label htmlFor="first-name">First Name*</Label>
-          <Input type="text" name="first-name" id="first-name" required />
+          <Label variant="contact.label" htmlFor="first-name">
+            First Name*
+          </Label>
+          <Input
+            variant="contact.input"
+            type="text"
+            name="first-name"
+            id="first-name"
+            required
+          />
         </Box>
         <Box
           variant="form_box"
@@ -38,20 +46,43 @@ const Contact = () => (
             width: ['full', 'full', '1/2'],
           }}
         >
-          <Label htmlFor="last-name">Last Name</Label>
-          <Input type="text" name="last-name" id="last-name" />
+          <Label variant="contact.label" htmlFor="last-name">
+            Last Name
+          </Label>
+          <Input
+            variant="contact.input"
+            type="text"
+            name="last-name"
+            id="last-name"
+          />
         </Box>
       </Flex>
       <Flex variant="flex_form_element">
         <Box variant="form_box">
-          <Label htmlFor="email">Email address*</Label>
-          <Input type="email" name="email" id="email" required />
+          <Label variant="contact.label" htmlFor="email">
+            Email address*
+          </Label>
+          <Input
+            variant="contact.input"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
         </Box>
       </Flex>
       <Flex variant="flex_form_element">
         <Box variant="form_box">
-          <Label htmlFor="message">Message*</Label>
-          <Textarea rows="8" name="message" id="message" required />
+          <Label variant="contact.label" htmlFor="message">
+            Message*
+          </Label>
+          <Textarea
+            variant="contact.input"
+            rows="8"
+            name="message"
+            id="message"
+            required
+          />
         </Box>
       </Flex>
       <Flex
