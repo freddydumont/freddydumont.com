@@ -34,4 +34,9 @@ describe('Contact form', () => {
   it('should have a send button', () => {
     expect(button).toHaveTextContent('Send');
   });
+
+  it('should match snapshot', () => {
+    const { container } = render(<Contact />);
+    expect(container).toMatchSnapshot();
+  });
 });
