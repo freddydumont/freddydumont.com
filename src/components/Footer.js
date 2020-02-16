@@ -72,7 +72,7 @@ const Footer = () => {
               }}
             >
               {navLinks.map(({ name, clickDestination, to }) => (
-                <li>
+                <li key={name}>
                   {to && <a href={to}>{name}</a>}
                   {clickDestination && (
                     <button onClick={() => scrollTo(clickDestination)}>
