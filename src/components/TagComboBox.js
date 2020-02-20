@@ -17,12 +17,11 @@ const TagComboBox = () => {
     }
   `);
 
-  return <PureTagComboBox data={tags} />;
+  return <PureTagComboBox tags={tags} />;
 };
 
-export const PureTagComboBox = ({ data }) => {
-  const [items, setItems] = useState(data);
-  console.log('TCL: Portfolio -> items', items);
+export const PureTagComboBox = ({ tags }) => {
+  const [items, setItems] = useState(tags);
 
   return (
     <Box mb={12}>
