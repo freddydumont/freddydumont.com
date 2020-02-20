@@ -1,11 +1,12 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Container, Link, Card, Box, Label, Input } from '@theme-ui/components';
+import { Container, Link, Card } from '@theme-ui/components';
 import { Global } from '@emotion/core';
 import Section from './Section';
 import PortfolioCard from './PortfolioCard';
 import ButtonLink from './ButtonLink';
+import TagComboBox from './TagComboBox';
 
 const Portfolio = () => {
   const {
@@ -85,10 +86,7 @@ const Portfolio = () => {
         <Section.Body>
           You can sort and filter the portfolio cards using the controls below:
         </Section.Body>
-        <Box mb={12}>
-          <Label htmlFor="tags">Filter by technology tags</Label>
-          <Input name="tags" id="tags" />
-        </Box>
+        <TagComboBox />
       </Container>
       <Masonry
         breakpointCols={{
