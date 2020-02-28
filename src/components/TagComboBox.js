@@ -44,6 +44,7 @@ export const PureTagComboBox = ({ tags: tagData }) => {
       <Input
         {...getInputProps({
           onFocus: openMenu,
+          onClick: openMenu,
         })}
       />
       <ul {...getMenuProps()}>

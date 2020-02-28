@@ -25,4 +25,21 @@ describe('PortfolioCard', () => {
     const item = await findByText(tags[0].name);
     expect(item).toBeInTheDocument();
   });
+
+  it('should display a tag dropdown when clicking input', async () => {
+    const { getAllByLabelText, findByText } = render(
+      <PureTagComboBox tags={tags} />
+    );
+
+    // get input and make sure it's rendered
+    const input = getAllByLabelText(/tags/i)[0];
+    expect(input).toBeInTheDocument();
+
+    // send focus event to input, it should trigger dropdown
+    fireEvent.click(input);
+
+    // if dropdown is triggered, the items should be in the document
+    const item = await findByText(tags[0].name);
+    expect(item).toBeInTheDocument();
+  });
 });
