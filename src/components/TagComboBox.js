@@ -47,7 +47,11 @@ export const PureTagComboBox = ({ tags: tagData }) => {
           onClick: openMenu,
         })}
       />
-      <ul {...getMenuProps()}>
+      <ul
+        {...getMenuProps({
+          'data-testid': 'dropdown',
+        })}
+      >
         {isOpen &&
           tags.map((item, index) => (
             <li
