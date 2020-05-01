@@ -7,6 +7,7 @@ import Section from './Section';
 import PortfolioCard from './PortfolioCard';
 import ButtonLink from './ButtonLink';
 import TagComboBox from './TagComboBox';
+import SelectedTagsProvider from './SelectedTagsProvider';
 
 const Portfolio = () => {
   const {
@@ -37,8 +38,11 @@ const Portfolio = () => {
       }
     }
   `);
-
-  return <PortfolioPure cards={nodes} />;
+  return (
+    <SelectedTagsProvider>
+      <PortfolioPure cards={nodes} />
+    </SelectedTagsProvider>
+  );
 };
 
 export const PortfolioPure = ({ cards }) => {

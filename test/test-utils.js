@@ -1,9 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ThemeProvider from '../src/components/ThemeProvider';
+import SelectedTagsProvider from '../src/components/SelectedTagsProvider';
 
 const AllTheProviders = ({ children }) => {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider>
+      <SelectedTagsProvider>{children}</SelectedTagsProvider>
+    </ThemeProvider>
+  );
 };
 
 const customRender = (ui, options) =>

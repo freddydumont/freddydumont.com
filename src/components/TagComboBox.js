@@ -1,35 +1,10 @@
-import React, { useReducer } from 'react';
+import React, { useContext } from 'react';
 import { Box, Label, Input } from '@theme-ui/components';
 import { useCombobox } from 'downshift';
-import { TAG_COLORS } from '../utils/tags';
-
-/** tags will move from one array to the other when selected on deleted */
-const initialState = {
-  /** @type {string[]} tags tags displayed in the dropdown */
-  tags: Object.keys(TAG_COLORS),
-  /** @type {string[]} selectedTags tags selected to be displayed under the input */
-  selectedTags: [],
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case 'SELECT_TAG':
-      return {
-        tags: state.tags.filter((tag) => tag !== action.tag),
-        selectedTags: [...state.selectedTags, action.tag],
-      };
-    case 'REMOVE_TAG':
-      return {
-        tags: [...state.tags, action.tag],
-        selectedTags: state.selectedTags.filter((tag) => tag !== action.tag),
-      };
-    default:
-      throw new Error();
-  }
-}
+import { SelectedTagsContext } from './SelectedTagsProvider';
 
 const TagComboBox = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useContext(SelectedTagsContext);
   const {
     isOpen,
     openMenu,
