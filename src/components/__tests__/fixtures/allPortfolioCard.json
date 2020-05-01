@@ -1,0 +1,387 @@
+{
+  "data": {
+    "allPortfolioCard": {
+      "nodes": [
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACHUlEQVQoz31TTWsTQRjOn7BCf4N/QUEFQfFSb3pVvIiXInjwA2yhNBREPYiEaqAtemibIJZa6QfFXHJQsCaEpGlCst+f2cTdZHezu3mcnTFpWtSBh33m3ZlnnnnfdxKDwQDxKGkKeF2jPI4N4+O83+/D9336dV2XcqPXRdvtjdYkhiQIQ4pxkXFEUTTiIeHRPzAS/N+IF6qaRqEbJhRVg6yqkBQFkixDlBWIkkyROO0oJC5Pgwnq0HSdCBpko4RqrQZeENghusH+kZRRQcdxUC6XUalU0Gw2IZENoiiC53lYlkUPik83TAsd20aD43FQKKHeFNFqd9Cy2hBEGZxuHws2OA71RoPyIAhOFCCex7x6WMZWdhMLKzxuJTncmX6N1eU0Hi6KuDF7iPTMChMMPB+u2UKPQCDXiF3KJDcKyVHsMIpCdB0fD57ncC/zHvObBdx+IeHc1RSSyVeY+yBi6lkVU9cXmeCRaeDR7mfM5/Zgd7vwPY+6Ynllhdn9XsTEtSzuft3BkWHh3UcRk+eXcX/6CTHAYe5tBROXvjBBwe5gqfgDq+UiwrGqs3ahdcbjtQzOXM7gys0Z5HN5bOctTF7M4unLLTiuj9RaE2cvbPy9bU72IBPcKx3gzfpPLKT2kdnYQUMysb4tIJ0t4FuhDl7+haVPteO2CYiV4E/zDmMYYDSPue06cELyQsjEcrskFpAidiArKjzPJQ+jj990GCN/jrWOHwAAAABJRU5ErkJggg==",
+                "aspectRatio": 1.7454545454545454,
+                "src": "/static/7afbbe5bef816bc1bd342cdc5826b7ad/450e9/nessia.png",
+                "srcSet": "/static/7afbbe5bef816bc1bd342cdc5826b7ad/d8419/nessia.png 96w,\n/static/7afbbe5bef816bc1bd342cdc5826b7ad/460e9/nessia.png 192w,\n/static/7afbbe5bef816bc1bd342cdc5826b7ad/450e9/nessia.png 384w,\n/static/7afbbe5bef816bc1bd342cdc5826b7ad/bb8b5/nessia.png 576w,\n/static/7afbbe5bef816bc1bd342cdc5826b7ad/0756a/nessia.png 768w,\n/static/7afbbe5bef816bc1bd342cdc5826b7ad/f0c20/nessia.png 2794w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "NessIA homepage",
+          "category": "Business website",
+          "description": "Built for a client operating in the Business Intelligence space, this website outperforms competitors in speed, design and usability. It serves as a showcase for their services and as social proof via the Client and Partners section.",
+          "technology": "The tool of choice these days for blazing fast websites is Gatsby. Its plugin architecture and Node API make website development a breeze.",
+          "link": "https://nessia.ca/en",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "purple.1",
+              "name": "gatsby",
+              "bg": "purple.7"
+            },
+            {
+              "color": "teal_vivid.9",
+              "name": "bulma",
+              "bg": "teal_vivid.2"
+            }
+          ],
+          "title": "NessIA.ca"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAADeklEQVQ4y1WTa0zbZRTG/5KQoH5Sv/jNaKKJ4YMmXqZsFArlDqMMpEADHWWUVqBlUNrCACdOOrlMHGKYl03oYAEKgzkGTmRxceqMJjLdB03UzS3lthYYbRlI+/NtjUt8kyfvc86bPDnPOeeVEuMqUMRXkBSGHkUojvuXJ8sNpCZWkpliFLkqDpmPwM5lgr5L7Hhm8N+egD9H+W5+lFNXnPw63Y+kkOlI3K0l9lWBV0pJiNX9Tyw9qZq9aTUiZ6TJ+g7wIwS+J+CbZcszDUuf8cvNc4xfn8D1wyBSrMJEsvYYJr2dg9WdZKfXhAXTFFVhsazUGnGbMBqOMjk2xcrdBfx+F1v3Ftny/QH+OYILk7AwTvD3EaT4eAOxafXkZpt5TVkfrkwRpyclIWTVhDKjTvBq3utysL25hmt5Dc+qF/9mkJ0dPxuLU7z4nIpafV1YVEpXVLK/+A1UeTby91nQqFsoKWqmpLBFVFsnBM1h6A/YmfvyKsvLt/D6Pfi8bnz+RdZW5nn6yXziYtTgnUYKNbzW2CnsdoQtm2vexWI+ToO1l4ryo+RkWSjMayI1wURn20l+vnaNW0tu7rg9rK+uETp60S5JimF4qBspJeF1VPusFIgK1apDlBQ0s1/ZgCa7gbLcZgqUjaJykS98k/MXvuXe5ire9SU2fCv85rrJxwMTPPGsWgjuwqQ1IOVk1tJ7fIS+XienPpygrd3BS01dyN56n5jWHnI0raiyG4WLbub/crO04sa/5ua2e4ne6z8RvatEiO1Biozj8adykfJzLIwOz+J0zjF59jI9J87yckcfyR/0I+s5Sc6BNkpVrWiL7VTqulCXHMZcWo9RY+WZ6GKiHk3ngYeSkCJ2E/FIVqiHJjKSjKQli3VR1JCVfBB1hhV1pg2Nsglt0RHKNe3oSo9RXdZOd0U19iId3WV61HJhNVJBZFQ8D0bJSIkuQJLvCf0MAynyKiEsBFPr2JteL4ZhQ5XbQlFeK8X5b1Nc1IFFc5gLVTpGqio431jJR9pyHouSC8vPC7zAwxEypIFPpzjdP82gY4ah058zODDDmcGLOEcuMeT4AufwV2Khv2Z87AqzoxeZ6x/jqnOCb86Mce6TcbrsDqzWPmwCFtsJpNDYA4EA/50bN1z3+eLCnftv6+sbYqHvhrl3829ci54wDwpsb23j922G438A0buolTC5NdQAAAAASUVORK5CYII=",
+                "aspectRatio": 1.5238095238095237,
+                "src": "/static/ec75f17e67604ed2419ccd18a158845a/450e9/huddol_homepage.png",
+                "srcSet": "/static/ec75f17e67604ed2419ccd18a158845a/d8419/huddol_homepage.png 96w,\n/static/ec75f17e67604ed2419ccd18a158845a/460e9/huddol_homepage.png 192w,\n/static/ec75f17e67604ed2419ccd18a158845a/450e9/huddol_homepage.png 384w,\n/static/ec75f17e67604ed2419ccd18a158845a/bb8b5/huddol_homepage.png 576w,\n/static/ec75f17e67604ed2419ccd18a158845a/0756a/huddol_homepage.png 768w,\n/static/ec75f17e67604ed2419ccd18a158845a/a3d81/huddol_homepage.png 2436w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "Huddol homepage",
+          "category": "Front End Development",
+          "description": "React front end development work on the Huddol website and platform as part of a small development team. I mentored junior developers and cooperated with the CTO and my peers to get ideas to production as fast.",
+          "technology": "Typical React/Redux application. Most of the codebase was of the early React adoption days so a major challenge which I enjoyed was to refactor enormous class components into well designed functional hook-based components for easier maintainability.",
+          "link": "https://huddol.com",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "purple.1",
+              "name": "redux",
+              "bg": "purple.6"
+            },
+            {
+              "color": "white",
+              "name": "jest",
+              "bg": "red_vivid.8"
+            },
+            {
+              "color": "gray.9",
+              "name": "emotion",
+              "bg": "pink.4"
+            }
+          ],
+          "title": "Huddol"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAAC/klEQVQ4y32TS0wTURRAR+uONW5wo3GhixrEJQQWkuASCSwkqRtJrF3hJ8ZPkJ8/JPxB8IO/6MKFHyDBhkKnU1ITRWPUVioqEKGl0M5MSzvttG/mXt+8gqkLvMnJ3Hnz3pn77rzhTCbTNi4buwoKCpTS0lIoLi7WNikp2aRkS4x5ZWVl+s78/AyXI9xjO3UKjVDUBMRSMTRIpBOYzCiYyiRR1wkDdO0vukYwk1bZupqaaswV7rbZbLrxIK2mABEYdBHQlf+FZNJ0LgIVApeXl7djQ7jXarUyYVSWwC0IOPfdj0lVQXFdxGgiilJcwmhcxlQqiUlFYVeVQgvIVlhNK8yJ/NP19Uz4zecFnp/CmffvMBaLoiiJKG0gyxLGojImEnEqTaBC+SusyQorKBbKmfLyciAkg7IkgpqkPSOEboS+I6dnm7BxZDv9t4dHKyvVuroTaLFYsJqWTKsC1keiYkZLo6ZvSP8hK0zE11GhlbIXbArfejxJmuuiGNECgWXweb0YV9YhEArAytoKrK6FgG4VxEiYEoFIOAxRWQZJjADtMYyOvIZpt5uVWlVVBRzvdKYxG7C8tASLiwvZG13H/4VR2cL8L/zun0Xv1y9srLb2GHIOx8S68bUkUYR5OuFqa6vW29tDuru7snQZdGo0h4GBfujq7AQ6pt24fo00NzWR9vZbpO3mTTLQ30/2799HOBfPxwy7mkpBMBCA+vqzeO78RcaFSw3Y0NiCzc3X8EpjCzlptWlttzq07p4+HBy6h8PDD3H4wSN89PgJ48XLV8i5XFkhbSMEQwEcunP/87h9ampk7I1gn3AKvMvj5AXPl3H7JN4evAsuwYNen//jwuJv/vdSUFgJrQlr4YggSrIQFkWem3JOxg0dgYweXA3icYvlcM7ZZH+Rw+Esn/nwCT1v3xHB7UG73XGQ2yrMZnO4sLAQDxUV6QfMZqR5GTucFUdMPX2DTMi7pjucvBtHx8bTjkkeaX7ZGH/67Pn2Wf8c5/s2y836f3BzP35yfwASeiGzx64WZgAAAABJRU5ErkJggg==",
+                "aspectRatio": 1.411764705882353,
+                "src": "/static/60909c2ca07236aed0694af0b129e950/450e9/digispeed.png",
+                "srcSet": "/static/60909c2ca07236aed0694af0b129e950/d8419/digispeed.png 96w,\n/static/60909c2ca07236aed0694af0b129e950/460e9/digispeed.png 192w,\n/static/60909c2ca07236aed0694af0b129e950/450e9/digispeed.png 384w,\n/static/60909c2ca07236aed0694af0b129e950/bb8b5/digispeed.png 576w,\n/static/60909c2ca07236aed0694af0b129e950/0756a/digispeed.png 768w,\n/static/60909c2ca07236aed0694af0b129e950/2d8f4/digispeed.png 1075w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "Digispeed homepage",
+          "category": "Business Website",
+          "description": "Built for a client who needed an online presence for their business. The provided company logo influenced the design decisions. We chose to keep a simple document feeling to complement its black and white nature. Smooth animations and well designed icons improve the usability of the site.",
+          "technology": "I believe in using the right tool for the job at hand. In this case, we needed a simple framework to quickly design and build a landing page. Gatsby is the obvious choice in this category, having all the features needed for navigation and extensibility. Bootstrap and Sass are used to power the CSS, and Netlify deploys the website at minimal costs.",
+          "link": "https://digispeed.io",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "purple.1",
+              "name": "gatsby",
+              "bg": "purple.7"
+            },
+            {
+              "color": "purple.1",
+              "name": "bootstrap",
+              "bg": "purple.8"
+            },
+            {
+              "color": "gray.9",
+              "name": "sass",
+              "bg": "pink.5"
+            }
+          ],
+          "title": "Digispeed.io"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACxElEQVQ4y22Q60/TYBTGJ1NYd+u27tLdL123sQG7FuIwrLANVDKB0e5CYLANSPaFL2D0L9BI+C9NjKImGhGFSo+nHRqS0eTJOc/b5/31nGo0+NRerGsdDnvPbDa9IknzMepEkYEkT8y3vdE0rGY8M1os2JMnFvQWklTyr+12qvP76s8DhaeJecdJExUAHZVAxVBxILBabCzold6eAJJOYI2DAT2J58SdnHJPb/F+Xy1ztiHQpbEaHbFvOvecTNDc9bh7VrI6s9LaBCU5rClpwluQatW89MjDST5rUlqZsEsUvldymL/Ce/hh9n2JYxwqcCqkpwz26A8dzQHhysk6lFK9gSeyP7woB8IlOczysifEy75gSfb4ivKd3I2OLiCQ+TCfZ5wqMMPaHAi8+A+kc2B0cTC/tANlYR+e1neh0ugBv9aD8voePF5og95ZACVH0P+A0Y9z6ZBLBRaSbhce/BwBlnegKuwB3+gDL/agVO/CYusQigstMIwCPxWmAm4VOJcO0oSNGQUubcOy0IWq2IVyE2HNQ+DbAyiW2vcBz7NJv0cFFnNRj87GXI5OuA1lEafb7EMZV65sIrSxD0WcfBTIfp6Oe31DYD7m01kjl8Q9Ey7iqvxGF3hcV6lLQg+Ki1v3Ab+kWI9fBc5zySCu/Itwz4KezqtAEz0L/PIurLQPceV9WBYPsB7ACv7DUqUDRgQS7rySvyHcHBjssa/TiUBIBZLjGseYMXihtedutFT6eoxKSw+pjBSIVCV2clWKxp9JDCqaeK76QKQiaW0ZSclpbUo+C1pz+BxRTs2bt+8Mnc52LcKmIBLPojLAJLCiQmwagswMhNkMxFMchKJpFPpYGpjJHERvpfRsYgb2djs1zdHRkb/f7x+LQv2sIWycNsX6UI36abspnLZbgupb6EVhXfVbbVF9t9USb6XkxLPBYPDyL4cPTucE5h1IAAAAAElFTkSuQmCC",
+                "aspectRatio": 1.6,
+                "src": "/static/63af9823975bb81bdcde8a6419894d81/450e9/netsweeper.png",
+                "srcSet": "/static/63af9823975bb81bdcde8a6419894d81/d8419/netsweeper.png 96w,\n/static/63af9823975bb81bdcde8a6419894d81/460e9/netsweeper.png 192w,\n/static/63af9823975bb81bdcde8a6419894d81/450e9/netsweeper.png 384w,\n/static/63af9823975bb81bdcde8a6419894d81/bb8b5/netsweeper.png 576w,\n/static/63af9823975bb81bdcde8a6419894d81/0756a/netsweeper.png 768w,\n/static/63af9823975bb81bdcde8a6419894d81/57430/netsweeper.png 3680w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "netsweeper gameplay",
+          "category": "Game",
+          "description": "Neon cyberpunk minesweeper. Built for fun and to learn Phaser and Typescript.",
+          "technology": "Netsweeper is built in TypeScript using the Phaser game engine. Since DOM Element Game Objects weren't supported in Phaser 3.16, React was used to create UI elements positioned on Game Objects. An xstate State Machine handles most of the gameplay logic.",
+          "link": "https://freddydumont.itch.io/netsweeper",
+          "tags": [
+            {
+              "color": "white",
+              "name": "typescript",
+              "bg": "blue.7"
+            },
+            {
+              "color": "gray.9",
+              "name": "phaser",
+              "bg": "orange.6"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "gray.0",
+              "name": "xstate",
+              "bg": "black"
+            },
+            {
+              "color": "gray.9",
+              "name": "emotion",
+              "bg": "pink.4"
+            }
+          ],
+          "title": "Netsweeper"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACh0lEQVQ4y4VTbU/TUBTuy1YgAkMIAXQTtnV9WbuytltZGTg3ZGETAoGAQ2MyYDAwaPQ7UZAQE4gxxhjlox/8nY/33g4kEeOHpyf3vDx97rnncBzH4W/wzAqCgEhvGHd6QswO9IWZj8Z5XiDgGYL8K3RIaKIgiB1Lk0VER3qQNyPIGRFMqv2Yzt4lvm6WL4oiw826G4Q8blPa1SVicLAXA/0SURlGpE8iSiXcfqtrcDAdH1v7b7Dd2sXObpvYNtr7L+HOlDE0oWIsFsdYlCCWwPBoDEurDbQPXmG72UJzq4WdvX1sNJ4jLEkBYWV+AZ8+f8HZx3McvTvB0fsTHJ+eYWVtA67nQzOzUI1JaJks4rKGg9MPuPj1E8eX57j48R1fv13i8PVbdHf3gKPNtRwPjjeN0egERu6PMzs0EkWuMIO1jU0WlzWTkaaUNPTVZ1DW68g8lOE5MdwbT2F4LAYxFOoQ2nlUqjVMkkKqJm3ZrDjvz6I0V4WesZHSM1AooWrCWati+nAJ9WUTvpcmfgeKbiIUCoMTyEtlsjkUZh4xMiVtMVBFLlFdnq/BzvuMkP5EJoT+SgVzzU3M7dbhVDykNAtJNR0Q0o+dK6BYqjCSK8KkamCqWCL9rSFj5wK/YSGRMlBtLOJR6ymSXhlxkieTWIK0IhSWAoXuVBHlxwtMAWs+USprGfizZdQWV1gPKaFm2lA0A/nlNkrrTSwt51D0puBaLhJUYbhzZcNyUCBqEikdcYKEomM8qTLl8wtPkCavOyGrSBL/g6SOekVHY68O+0UTJddHkYiIxlPBlenq0Emnj8M2pIOr6Wcrdn0OIIlkgEXpz0LwQbxz5v83+f/cdQq2z9c+Hr8Bs1ptpDSdwm8AAAAASUVORK5CYII=",
+                "aspectRatio": 1.5238095238095237,
+                "src": "/static/fd9af8e611ae13d89ed529f8aa4d0f37/450e9/starwars.png",
+                "srcSet": "/static/fd9af8e611ae13d89ed529f8aa4d0f37/d8419/starwars.png 96w,\n/static/fd9af8e611ae13d89ed529f8aa4d0f37/460e9/starwars.png 192w,\n/static/fd9af8e611ae13d89ed529f8aa4d0f37/450e9/starwars.png 384w,\n/static/fd9af8e611ae13d89ed529f8aa4d0f37/bb8b5/starwars.png 576w,\n/static/fd9af8e611ae13d89ed529f8aa4d0f37/0756a/starwars.png 768w,\n/static/fd9af8e611ae13d89ed529f8aa4d0f37/52bee/starwars.png 2466w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "star wars planet guide",
+          "category": "Typical interview project",
+          "description": "A tool for Star Wars fans to browse and learn about the different planets of the Star Wars extended universe.",
+          "technology": "The Planet Guide makes use of redux-saga to handle asynchronous events such as the API calls to SWAPI. The DevExtreme React Grid component is used to present the data in a table handling filtering, sorting and the display of detailed information.",
+          "link": "https://freddydumont.github.io/star-wars-planet-guide/",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "purple.1",
+              "name": "redux",
+              "bg": "purple.6"
+            },
+            {
+              "color": "gray.9",
+              "name": "redux-saga",
+              "bg": "green.5"
+            },
+            {
+              "color": "purple.1",
+              "name": "bootstrap",
+              "bg": "purple.8"
+            }
+          ],
+          "title": "Star Wars Planet Guide"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABv0lEQVQoz42S227TQBCGE5qmSYlP6/V6d502cXx2QykFHoIbXgMkrkG8a4vUZ+ht8AyzdmzStEis9GkP+v3tjLyjEY2bd7cb1/UeXddFmhsCDJbtgeN0s2WzAdcdMFlkjD+mWVmM+rGO4xvHcRopJQohIBACw1DgVcZxfRFgHvN2XSUB1ilHrQTlQsqEQJDQR98XHwfhZpO8oep2SikkKWgdQRRFUGcS0ljBVS6hSgWUSdgSaQkmtwc5D5ogkLeHwutOKFvharVCQ5LmqKMlKr3Ek8kUJ6dnLdPpGc5mMwyCoBX6PjfC9wfC9Lqv0IToCA0Ryc7P59jvj+GcgyniuTB5KhyPx3gZTjG+8Kmy0xdlJmOEXYWmZXUozJ5WSOGVtrDILnHyP0J+JEyOhfuPLMv+Z7sG3/dBqn2FQv8V1vX2LWNsp7VGkkL3t0Mjx+5ZMLRtmy6wcPF6gQt7gRZ1EKoQtNKUE81yuf4wCMevTor5fL5jzEPPdYFuxp5eaqAW0fO89gLGmVmD2VMnDWm2rezu/kF///HzU1FWv4uiQgLybm7J8rJ9Poac1kVZ0/kA5HmFZbVtvnz99vnu14P8Axam6GpQ52usAAAAAElFTkSuQmCC",
+                "aspectRatio": 1.7454545454545454,
+                "src": "/static/6d490e27efc15aafcc92da1729a482ee/450e9/labyrinth.png",
+                "srcSet": "/static/6d490e27efc15aafcc92da1729a482ee/d8419/labyrinth.png 96w,\n/static/6d490e27efc15aafcc92da1729a482ee/460e9/labyrinth.png 192w,\n/static/6d490e27efc15aafcc92da1729a482ee/450e9/labyrinth.png 384w,\n/static/6d490e27efc15aafcc92da1729a482ee/bb8b5/labyrinth.png 576w,\n/static/6d490e27efc15aafcc92da1729a482ee/0756a/labyrinth.png 768w,\n/static/6d490e27efc15aafcc92da1729a482ee/5c8a2/labyrinth.png 1903w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "The Labyrinth gameplay",
+          "category": "Game",
+          "description": "A roguelike game based on the ancient Greek myth of Theseus and the Minotaur, featuring dungeon-crawling, leveling and permadeath. The goal is to reach the depth of the labyrinth and slay the Minotaur before he devours the helpless Athenian youths sent as tribute.",
+          "technology": "The Labyrinth makes use of the rot.js library to manage some aspects of roguelike game development, React for the front end and Tachyons for the CSS.",
+          "link": "https://freddydumont.github.io/the-labyrinth-roguelike/",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "gray.0",
+              "name": "rot.js",
+              "bg": "black"
+            },
+            {
+              "color": "gray.9",
+              "name": "tachyons",
+              "bg": "gray.0"
+            }
+          ],
+          "title": "The Labyrinth"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAADnklEQVQoz22Tf1DTdRjHv3/E3A/iAvKGxxrJvISpmd55ifKrkGAyu2VXeF6nuMFB/oys3CLb8JLOust2l6IhLBEQXTKFNXFjCgKG+MXMqNli49emGLMGjB8b333efbP+9Ll73XP3fp57P/88b4p6QkVRVGl+RMTsNi53SMHjeTZzuZ43+HxPnvAZjyzhWc/rwiiPQsD/T2fnb/J4I5u4XH88h1NLpWZtWC3NevXzJavXaCWLkw6Jl774kVj8fO+HEgm64uMxt3AhJlj8QiHubMkCrcqGIz8DvgQRpmJjH88m/9/J4fHaqbfT0nTnlq+Afu1K6BQZOJK7FidWLEWZWMx8nZhIQkIh+SsujgRiYkhf8kpyVraZXF6TSiajY8gEq7OHSEAonP+bPZjL51upvenp6mB0LB69tm7GqcwJjbyTGfTJ1zN/RsegTiQigwsWYIjlN0EUyrWluERfhE2vRceieHg5HLj5Aozy+cwgn48sDsdGvZuWrvGLRBiIE4VMmbmkNkdBfnkukTyIFKAiL48Y1BqcLCnBoYJiXGyrgu1mDUy3+nBk3z4c3bYdR5Uq6FWFzFc7lFiekGCjdqWmarxPR6EyXxEq76ondEcDzhVsRWtkFHZv34Evjp+ErasTI74JmKvLYactUDffgKP/LiYZBuNTU/AHg4wvEECOTGajtshkmgOvbMDpBkPoMl1D7lw34lJzEz5Ytx7Hs18mXy5bhMY9uwiDMGm9PUpamtuI22ohs3NzJDA5+Zi5mRmG7cjbuNFG7dyzW+N66MP5usqQy36AnKX7cMJkQs9nh9GRlkLo7Az0FhcT19hYmKZ/JG6nE71mC9xud/hfXC5XeHh4KORk9ZSUFCtVWFikmZ7w41b/QKimsZlcqGvE70437NUGfFOlRffV80T9Vj72lu7H+6XvkZKSncx+9cfhsrJPcPDgp9BqddDqdDhcUQGlSnWNKiwqUhNmHvdGx2cHxsaZR4PTzNT90Dzd3x82NuiJpf0Kqusbp41Gk7fFfCWo1x+DxWJlem7SY7d/uuvp/9Xhddxzjvwx4PKPerx1lFwu1xmN3+OMoYrlFAyGWpbvcKGpCY7h8Xm/axBdVquRDVDEtfbOn1kj2K92+Lq7e5YAeMrlGoz0eO8LWDOBrc0eQb20alWaRCKpfyEp+VRSsrRaKl1mWJwoqczMzOwpVBZAyb7DJrn82wcPfdIWc+usydQC8w+tuN55Y+uTYvsPYSItd/HONCUAAAAASUVORK5CYII=",
+                "aspectRatio": 1.6842105263157894,
+                "src": "/static/88b74c1bb6a0325a464314e845265d42/450e9/pokesimon.png",
+                "srcSet": "/static/88b74c1bb6a0325a464314e845265d42/d8419/pokesimon.png 96w,\n/static/88b74c1bb6a0325a464314e845265d42/460e9/pokesimon.png 192w,\n/static/88b74c1bb6a0325a464314e845265d42/450e9/pokesimon.png 384w,\n/static/88b74c1bb6a0325a464314e845265d42/bb8b5/pokesimon.png 576w,\n/static/88b74c1bb6a0325a464314e845265d42/0756a/pokesimon.png 768w,\n/static/88b74c1bb6a0325a464314e845265d42/b83b3/pokesimon.png 823w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "Poké(Si)mon on different devices",
+          "category": "Game",
+          "description": "A port of the classic electronic game Simon with a Pokémon theme and sound effects.",
+          "technology": "Poké(Si)mon is a React application making use of Redux thunks to generate the game loop. Flexbox is used for the main layout and CSS Grid for the Pokémon buttons. The sound is managed by the powerful Howler library. Most icons were manipulated in Adobe Illustrator to achieve the desired result.",
+          "link": "https://freddydumont.github.io/simon-game/",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "purple.1",
+              "name": "redux",
+              "bg": "purple.6"
+            },
+            {
+              "color": "gray.0",
+              "name": "howler",
+              "bg": "yellow.7"
+            }
+          ],
+          "title": "Poké(Si)mon"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADTklEQVQ4y12TzW8bRRjGJzHEiTiQ2I69ttf2buK192P2+8N2GqdNnAYonAElEoh/gkslDiBUqBAHkMrHCVIRUpNWJNAIBCpK1QMHQCoIiZZSxA1RVEAtEs7a8/KOm0iIlR69s7Oa3z7POzOk3V4YGR0ZGSWE3IciiUTiibGx5CfJ5Pg51Nb4+MRWEsXr/fg+9p+5A32A792xZHIH1zbI/5/xiYlXFdUGzQyhbvhQ012UBwpW1wrBMgNQtHtzw284VmkApYoCI4Q8TTqdjjPfbnejRmPT87x3avX694bpgGV7+zq1YwTHuCCuGX78cONovBi2YwXHfE49+GbYzV5ZrgP6eZIcW1x6xjRMKIsVyAkFEPJFyOaEQTqThVK5ApbbBOo0wXRb4HB5c0CxUqc1dIYpmG5F/bJc4w5XyfLxldWZyixk0rneZGp6fyqVHaDgwckME0sSOMERMO0G2FYEBkIsf34INxF8CNTMqF+SatzhKllZeWitWJZhKiP0BUFkubyIDouQyuTRoQw2LsS4YAYIDZtDUS8a9vcQiAn60owKicTo4+jw+JpYkiE9XejPKDqrURPwbyyVETiQWV6LGTRgIda6GWC8gLmtFlNxXNM5rMFcPxxoOgVV0y6RzvLyWhGjZXLFPv6J+c1jUMVdRiDjDp1gHqjVgMCdgzoNcfcjcJtzGL+BDkNwsSWW6TOlTgF1lyx1OveA2WJf0RzGY0iz+tAh9pDJVXU/my/38qKMfVKYWKkyoSjFQkHqZYVyb6aqxaYdDQw7Ap36v5HFxSUEytxRP5PNs/R0HuEFmErnmDyrwEsvvwKvvX5mqJMnn4tPnTodr599DzY3u7Dz0cdw5o238IhFg6B1FCyveYu0FxZWC6J0ACywNIpXBIIkV//Z7J5/+/KVL5//7PO9r851L8D2zi58/c3V3Z9u/vLiH3/eOX3+wvaGjofd8Y6AboW3SBCGT/HIaewZOoRDcadFsfw3HoUUv0F7e1e2frh2A67/eBMufXH52cObNZWatlXq424H2FP/dw58xDCMnq7rdyilKPMur5qm9fDW/FySKpO3b/+V+3D74pvvrm9srJ99v3tx99MXrn773QMceOLRxwJVMwZ1VQdNN379FyR5dGN47iRaAAAAAElFTkSuQmCC",
+                "aspectRatio": 1.6,
+                "src": "/static/0d352b71617bc17de4b58cbe6fb08b61/450e9/tictactoe.png",
+                "srcSet": "/static/0d352b71617bc17de4b58cbe6fb08b61/d8419/tictactoe.png 96w,\n/static/0d352b71617bc17de4b58cbe6fb08b61/460e9/tictactoe.png 192w,\n/static/0d352b71617bc17de4b58cbe6fb08b61/450e9/tictactoe.png 384w,\n/static/0d352b71617bc17de4b58cbe6fb08b61/bb8b5/tictactoe.png 576w,\n/static/0d352b71617bc17de4b58cbe6fb08b61/0756a/tictactoe.png 768w,\n/static/0d352b71617bc17de4b58cbe6fb08b61/58a9c/tictactoe.png 1576w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "Minimax's Tic Tac Toe on different devices",
+          "category": "Game",
+          "description": "A tic tac toe game against an invincible robot taunting the player with clever commentary.",
+          "technology": "Why is this using jQuery I hear you ask yourself? This was before React was commonplace in job postings so I used jQuery for animations as a way to plug jQuery experience because most jobs still required it. I know you shouldn't do that no need to tell me.",
+          "link": "https://freddydumont.github.io/tic-tac-toe/",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "purple.1",
+              "name": "redux",
+              "bg": "purple.6"
+            }
+          ],
+          "title": "Minimax's Tic Tac Toe"
+        },
+        {
+          "image": {
+            "childImageSharp": {
+              "fluid": {
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEVElEQVQ4y3VTa0yTZxj9hFZA5SYqoiixihtQlNXWyh3k2hYEAtQWq6ysOqCCTJjOiaKCiKj1LgFlMPi4GoZOnBrcAAsOmAp4Y0wwxksc2w83fwh+H33PPt2MiclOcvIk55w8OU/evJS5ubkZxYGbYh6Pd4LP5x3iaHhPvoHTDVaWFoZpU60MXO6t9kHmIJ/HK+G8BMrB3ppH/YvNuzPjcb1xF1qrtuOn2p1oq8tDW/0udDYVoKn0S5QUpqL7fCHaGvLQ0ZiH9kYuU58L49kdOF+WBVubKc3UnFn27xam1xanASP1Y6/6KxjmXjUzMVjDsBzx5DumuSSHyc9SMeODNIOHdQx5QHOsZkxDlQwe0WPPOw9j5nSbKspp5vR3C/XleZ/h1c+n2Wetx8ho20mMdpTgZU85fmkoQLZWhi26KJTt0eFFdxn+7DyFP4xvMsfwV9cJ9n5zPhzsrGnKZa4T/7+FG/fpk9BfU8x2nsknPd/ug7G8AL3VRdibqUKiTAzd6gBkasJw8fhXnLcb7aU7cPXkNlwrzWXPFmbAznoqTb3HpDStPBTFG9ayRZ9ryNHMFBSlaaCR+2NttC/S1cHI0IRg86cR2LxOhqL01TiiV3NcjeMZanZvShxspk2hqbCwcB8vkbjFzc39jpdQCLm/N1kvDyE6WTAS/MWI9fVCWkwQspVh0Ml9kBEbhO2qcGxNDMH68BXQhkmQGrGCTZX5YIqlBU1t2aTNam3ch4M7dWgo20oKt6Ug3keCSLEnAoWuCBIuwoZIX665EpmxodCFS/DFqgDoo4KQ6O+FYE8B/N0XsNKP5mMyn09T3xi26McGa1C1P/X1Y+MxXKXzSMQyIZFLPEm0dAlRSN3ImtBlJEsZSXLUchLn50aUwV6c5k0UK4TkE9d5ZIlgLuvm4gQrK0uaOpy7Ud/XVIwmQxbbU7eHHP06hThMsyCCWbZk4Wx7stDJnsybYQ2Boy2E82dgsZM9Fs22JQJHGzLHzoo42VkSZzsrdsbUyeAegqaytUmp2WsVSJQvZ7UxPmSTJo4EBoeaQkPDTRERMpNMpjBFRa2aUCiiWbkiaiI+PmEiPiHBlJioNKlUKpNarTYlJSW9Tk5ORtKaNTQV4i1NWxfpjY3KlWxyhIjkaFWkrvEc29R8gf2+5TJ7+cqPbHtH10Rt3Vly+kwF6R+4a7p95x7769AwO/LwEfvo8VP2ydNn4y/+fonnv49WUAFSUWqc31Kkx6xkVIFLERssvXeqvHZ5ZWW1uJqu96Zr6hefO3+RvnS5FdzExR+u3G3vMC7rut4t6e29Ibl5q0/S1z8gHrh9x7tvYMCZkopFejeBC1ydHV8LBXOx5OOFN6gPcM3YdZVrBK4d2js6x9vajbbU/8HPz0/p6ekJd3d3xsPDAyKR6Mob/cChI2+/JHee4ELLpf0VlfQBjvsbGpuP9vTeDHrj3bw1YH5/cMhs6LcHZg+GR8yGRx5O+gcRMkdxfnWofQAAAABJRU5ErkJggg==",
+                "aspectRatio": 1.352112676056338,
+                "src": "/static/a0f11316894178a49e09ccecef64e45d/450e9/pomodoro.png",
+                "srcSet": "/static/a0f11316894178a49e09ccecef64e45d/d8419/pomodoro.png 96w,\n/static/a0f11316894178a49e09ccecef64e45d/460e9/pomodoro.png 192w,\n/static/a0f11316894178a49e09ccecef64e45d/450e9/pomodoro.png 384w,\n/static/a0f11316894178a49e09ccecef64e45d/bb8b5/pomodoro.png 576w,\n/static/a0f11316894178a49e09ccecef64e45d/0756a/pomodoro.png 768w,\n/static/a0f11316894178a49e09ccecef64e45d/82360/pomodoro.png 1350w",
+                "sizes": "(max-width: 384px) 100vw, 384px"
+              }
+            }
+          },
+          "alt": "Burmese Pomodoro on different devices",
+          "category": "Web app",
+          "description": "A time management tool based on the Pomodoro Technique allowing the user to set work intervals separated by short breaks. A soothing burmese bell sound annouces the end of a session—and the start of a new one.",
+          "technology": "Pomodoro is a React application using Bootstrap for the layout and Moment.js to format the timer.",
+          "link": "https://freddydumont.github.io/pomodoro-clock/",
+          "tags": [
+            {
+              "color": "gray.9",
+              "name": "javascript",
+              "bg": "yellow_vivid.4"
+            },
+            {
+              "color": "gray.9",
+              "name": "react",
+              "bg": "blue.4"
+            },
+            {
+              "color": "purple.1",
+              "name": "bootstrap",
+              "bg": "purple.8"
+            }
+          ],
+          "title": "Burmese Pomodoro"
+        }
+      ]
+    }
+  }
+}
