@@ -12,6 +12,16 @@ describe('Portfolio', () => {
     expect(container).toBeInTheDocument();
   });
 
+  it('should render all cards when no tag is selected', () => {
+    const cards = json.data.allPortfolioCard.nodes;
+
+    const { container } = render(<Portfolio cards={cards} />);
+
+    cards.forEach((card) => {
+      expect(container).toHaveTextContent(card.title);
+    });
+  });
+
   async function renderAndSelect() {
     const methods = render(
       <Portfolio cards={json.data.allPortfolioCard.nodes} />
@@ -57,6 +67,7 @@ describe('Portfolio', () => {
     fireEvent.click(htmlTag[0]);
 
     // repeat for the second one
+    fireEvent.click(input);
     const htmlTag1 = await methods.findAllByText(selectedTags[1].name);
     fireEvent.click(htmlTag1[0]);
 
