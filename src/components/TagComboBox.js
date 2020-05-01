@@ -33,19 +33,18 @@ const TagComboBox = () => {
   const {
     isOpen,
     openMenu,
-    selectedItem,
-    getToggleButtonProps,
     getLabelProps,
     getMenuProps,
     getInputProps,
-    getComboboxProps,
     highlightedIndex,
     getItemProps,
+    setInputValue,
   } = useCombobox({
     items: state.tags,
     defaultInputValue: '',
     circularNavigation: true,
     onSelectedItemChange: (changes) => {
+      setInputValue('');
       dispatch({
         type: 'SELECT_TAG',
         tag: changes.selectedItem,
