@@ -38,6 +38,10 @@ const Portfolio = () => {
     }
   `);
 
+  return <PortfolioPure cards={nodes} />;
+};
+
+export const PortfolioPure = ({ cards }) => {
   return (
     <Section htmlId="portfolio">
       {/* Injecting global here because Masonry expects actual classnames */}
@@ -97,7 +101,7 @@ const Portfolio = () => {
         className="masonry"
         columnClassName="masonry_column"
       >
-        {nodes.map((card, index, arr) => {
+        {cards.map((card, index, arr) => {
           // add the "see more" button with last item to avoid breaking the masonry library
           if (index === arr.length - 1) {
             return (
