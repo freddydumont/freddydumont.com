@@ -1,28 +1,35 @@
-import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useReducer } from 'react';
 import { Box, Label, Input } from '@theme-ui/components';
 import { useCombobox } from 'downshift';
+import { TAG_COLORS } from '../utils/tags';
 
-const TagComboBox = () => {
-  const {
-    allTag: { nodes: tags },
-  } = useStaticQuery(graphql`
-    query {
-      allTag {
-        nodes {
-          bg
-          color
-          name
-        }
-      }
-    }
-  `);
-
-  return <PureTagComboBox tags={tags} />;
+/** tags will move from one array to the other when selected on deleted */
+const initialState = {
+  /** @type {string[]} tags tags displayed in the dropdown */
+  tags: Object.keys(TAG_COLORS),
+  /** @type {string[]} selectedTags tags selected to be displayed under the input */
+  selectedTags: [],
 };
 
-export const PureTagComboBox = ({ tags: tagData }) => {
-  const [tags, setTags] = useState(tagData);
+function reducer(state, action) {
+  switch (action.type) {
+    case 'SELECT_TAG':
+      return {
+        tags: state.tags.filter((tag) => tag !== action.tag),
+        selectedTags: [...state.selectedTags, action.tag],
+      };
+    case 'REMOVE_TAG':
+      return {
+        tags: [...state.tags, action.tag],
+        selectedTags: state.selectedTags.filter((tag) => tag !== action.tag),
+      };
+    default:
+      throw new Error();
+  }
+}
+
+const TagComboBox = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   const {
     isOpen,
     openMenu,
@@ -35,7 +42,15 @@ export const PureTagComboBox = ({ tags: tagData }) => {
     highlightedIndex,
     getItemProps,
   } = useCombobox({
-    items: tags.map((item) => item.name),
+    items: state.tags,
+    defaultInputValue: '',
+    circularNavigation: true,
+    onSelectedItemChange: (changes) => {
+      dispatch({
+        type: 'SELECT_TAG',
+        tag: changes.selectedItem,
+      });
+    },
   });
 
   return (
@@ -47,22 +62,32 @@ export const PureTagComboBox = ({ tags: tagData }) => {
           onClick: openMenu,
         })}
       />
-      <ul
+      <Box
+        as="ul"
+        sx={{
+          border: (theme) => `solid 1px ${theme.colors.primary}`,
+        }}
         {...getMenuProps({
           'data-testid': 'dropdown',
         })}
       >
         {isOpen &&
-          tags.map((item, index) => (
+          state.tags.map((tag, index) => (
             <li
               style={
                 highlightedIndex === index ? { backgroundColor: '#bde4ff' } : {}
               }
-              key={`${item.name}${index}`}
-              {...getItemProps({ item: item.name, index })}
+              key={`${tag}${index}`}
+              {...getItemProps({ item: tag, index })}
             >
-              {item.name}
+              {tag}
             </li>
+          ))}
+      </Box>
+      <ul data-testid="tag-container">
+        {state.selectedTags.length > 0 &&
+          state.selectedTags.map((tag, index) => (
+            <li key={`${tag}${index}`}>{tag}</li>
           ))}
       </ul>
     </Box>

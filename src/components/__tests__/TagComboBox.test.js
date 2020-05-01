@@ -1,18 +1,16 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { PureTagComboBox } from '../TagComboBox';
+import { render, fireEvent } from '../../../test/test-utils';
+import TagComboBox from '../TagComboBox';
 import tags from './fixtures/tags.json';
 
 describe('TagComboBox', () => {
   it('should render without crashing', () => {
-    const { container } = render(<PureTagComboBox tags={tags} />);
+    const { container } = render(<TagComboBox />);
     expect(container).toBeInTheDocument();
   });
 
   it('should display a tag dropdown when focusing input', async () => {
-    const { getAllByLabelText, findByText } = render(
-      <PureTagComboBox tags={tags} />
-    );
+    const { getAllByLabelText, findByText } = render(<TagComboBox />);
 
     // get input and make sure it's rendered
     const input = getAllByLabelText(/tags/i)[0];
@@ -27,9 +25,7 @@ describe('TagComboBox', () => {
   });
 
   it('should display a tag dropdown when clicking input', async () => {
-    const { getAllByLabelText, findByText } = render(
-      <PureTagComboBox tags={tags} />
-    );
+    const { getAllByLabelText, findByText } = render(<TagComboBox />);
 
     // get input and make sure it's rendered
     const input = getAllByLabelText(/tags/i)[0];
@@ -46,7 +42,7 @@ describe('TagComboBox', () => {
 
 describe('When selecting a tag', () => {
   async function renderAndSelect() {
-    const methods = render(<PureTagComboBox tags={tags} />);
+    const methods = render(<TagComboBox />);
 
     // get a random tag from the list
     const selectedTag = tags[Math.floor(Math.random() * tags.length)];

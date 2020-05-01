@@ -45,11 +45,6 @@
     "name": "sass"
   },
   {
-    "bg": "green.5",
-    "color": "gray.9",
-    "name": "redux-saga"
-  },
-  {
     "bg": "orange.6",
     "color": "gray.9",
     "name": "phaser"

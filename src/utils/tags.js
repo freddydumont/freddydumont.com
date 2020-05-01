@@ -43,4 +43,5 @@ const tagsStringToObject = (tags) =>
 
 module.exports = {
   tagsStringToObject,
+  TAG_COLORS,
 };
