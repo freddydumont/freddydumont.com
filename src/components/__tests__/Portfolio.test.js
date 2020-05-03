@@ -54,7 +54,7 @@ describe('Portfolio', () => {
 
     // get two tags
     const selectedTags = tags.filter(
-      (tag) => tag.name === 'react' || tag.name === 'redux'
+      (tag) => tag.name === 'react' || tag.name === 'gatsby'
     );
 
     // get input and focus it to trigger dropdown

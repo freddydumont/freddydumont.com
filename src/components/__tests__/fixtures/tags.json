@@ -20,11 +20,6 @@
     "name": "bulma"
   },
   {
-    "bg": "purple.6",
-    "color": "purple.1",
-    "name": "redux"
-  },
-  {
     "bg": "red_vivid.8",
     "color": "white",
     "name": "jest"
