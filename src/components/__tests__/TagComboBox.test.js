@@ -40,29 +40,29 @@ describe('TagComboBox', () => {
   });
 });
 
+async function renderAndSelect() {
+  const methods = render(<TagComboBox />);
+
+  // get a random tag from the list
+  const selectedTag = tags[Math.floor(Math.random() * tags.length)];
+
+  // get input and focus it to trigger dropdown
+  const input = methods.getAllByLabelText(/tags/i)[0];
+  fireEvent.click(input);
+
+  // get html element corresponding with tag and click on it
+  const htmlTag = await methods.findByText(selectedTag.name);
+  fireEvent.click(htmlTag);
+
+  return {
+    ...methods,
+    input,
+    htmlTag,
+    selectedTag,
+  };
+}
+
 describe('When selecting a tag', () => {
-  async function renderAndSelect() {
-    const methods = render(<TagComboBox />);
-
-    // get a random tag from the list
-    const selectedTag = tags[Math.floor(Math.random() * tags.length)];
-
-    // get input and focus it to trigger dropdown
-    const input = methods.getAllByLabelText(/tags/i)[0];
-    fireEvent.click(input);
-
-    // get html element corresponding with tag and click on it
-    const htmlTag = await methods.findByText(selectedTag.name);
-    fireEvent.click(htmlTag);
-
-    return {
-      ...methods,
-      input,
-      htmlTag,
-      selectedTag,
-    };
-  }
-
   it('dropdown should be closed', async () => {
     const { getByTestId } = await renderAndSelect();
     // firstChild should be null when dropdown is closed
@@ -87,5 +87,37 @@ describe('When selecting a tag', () => {
   it('input should be empty', async () => {
     const { input } = await renderAndSelect();
     expect(input).not.toHaveValue();
+  });
+});
+
+describe('When clicking a selected tag in the list', () => {
+  it('should remove the tag from the list', async () => {
+    const { selectedTag, findByTestId, getByText } = await renderAndSelect();
+
+    // find the tag in tag-container and click it
+    const tag = getByText(selectedTag.name);
+    fireEvent.click(tag);
+
+    // tag-container should not include the removed tag
+    const tagContainer = await findByTestId('tag-container');
+    expect(tagContainer).not.toHaveTextContent(selectedTag.name);
+  });
+
+  it('should add the tag back in the dropdown', async () => {
+    const {
+      getByTestId,
+      input,
+      selectedTag,
+      getByText,
+    } = await renderAndSelect();
+
+    // find the tag in tag-container and click it
+    const tag = getByText(selectedTag.name);
+    fireEvent.click(tag);
+
+    // click triggers dropdown again
+    fireEvent.click(input);
+
+    expect(getByTestId('dropdown')).toHaveTextContent(selectedTag.name);
   });
 });
