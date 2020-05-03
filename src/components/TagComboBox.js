@@ -61,7 +61,17 @@ const TagComboBox = () => {
       <ul data-testid="tag-container">
         {state.selectedTags.length > 0 &&
           state.selectedTags.map((tag, index) => (
-            <li key={`${tag}${index}`}>{tag}</li>
+            <li
+              key={`${tag}${index}`}
+              onClick={() => {
+                dispatch({
+                  type: 'REMOVE_TAG',
+                  tag,
+                });
+              }}
+            >
+              {tag}
+            </li>
           ))}
       </ul>
     </Box>
