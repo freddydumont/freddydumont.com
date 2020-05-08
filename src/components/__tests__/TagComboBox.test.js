@@ -40,9 +40,7 @@ describe('TagComboBox', () => {
   });
 
   it('should display ONLY the tags that include the search field input value', () => {
-    const { container, getAllByLabelText, findByText, debug } = render(
-      <TagComboBox />
-    );
+    const { container, getAllByLabelText } = render(<TagComboBox />);
 
     // write something in the input eg. red
     const value = 'red';

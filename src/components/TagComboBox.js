@@ -14,6 +14,7 @@ const TagComboBox = () => {
     highlightedIndex,
     getItemProps,
     setInputValue,
+    inputValue,
   } = useCombobox({
     items: state.tags,
     defaultInputValue: '',
@@ -45,18 +46,25 @@ const TagComboBox = () => {
           'data-testid': 'dropdown',
         })}
       >
-        {isOpen &&
-          state.tags.map((tag, index) => (
-            <li
-              style={
-                highlightedIndex === index ? { backgroundColor: '#bde4ff' } : {}
-              }
-              key={`${tag}${index}`}
-              {...getItemProps({ item: tag, index })}
-            >
-              {tag}
-            </li>
-          ))}
+        {// When dropdown is open, it should be filled with a list of tags
+        // that are filtered to make sure that they include the input value.
+        // This input serves as a search field.
+        isOpen &&
+          state.tags
+            .filter((tag) => tag.includes(inputValue))
+            .map((tag, index) => (
+              <li
+                style={
+                  highlightedIndex === index
+                    ? { backgroundColor: '#bde4ff' }
+                    : {}
+                }
+                key={`${tag}${index}`}
+                {...getItemProps({ item: tag, index })}
+              >
+                {tag}
+              </li>
+            ))}
       </Box>
       <ul data-testid="tag-container">
         {state.selectedTags.length > 0 &&
