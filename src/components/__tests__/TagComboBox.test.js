@@ -38,6 +38,27 @@ describe('TagComboBox', () => {
     const item = await findByText(tags[0].name);
     expect(item).toBeInTheDocument();
   });
+
+  it('should display ONLY the tags that include the search field input value', () => {
+    const { container, getAllByLabelText, findByText, debug } = render(
+      <TagComboBox />
+    );
+
+    // write something in the input eg. red
+    const value = 'red';
+
+    const input = getAllByLabelText(/tags/i)[0];
+    fireEvent.focus(input);
+    fireEvent.change(input, { target: { value } });
+
+    // go through all individual <li />
+    const listItems = container.querySelectorAll(
+      '[data-testid="dropdown"] > li'
+    );
+
+    // assert that the text content includes 'red'
+    listItems.forEach((li) => expect(li).toHaveTextContent(value));
+  });
 });
 
 async function renderAndSelect() {
