@@ -24,6 +24,16 @@ function reducer(state, action) {
         tags: [...state.tags, action.tag],
         selectedTags: state.selectedTags.filter((tag) => tag !== action.tag),
       };
+    case 'FILTER':
+      return {
+        // always filter the initial state tags
+        tags: initialState.tags
+          // remove tags not matching inputValue
+          .filter((tag) => tag.includes(action.inputValue))
+          // remove tags already removed
+          .filter((tag) => !state.selectedTags.includes(tag)),
+        selectedTags: state.selectedTags,
+      };
     default:
       throw new Error();
   }
