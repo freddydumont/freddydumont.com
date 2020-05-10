@@ -39,15 +39,21 @@ describe('TagComboBox', () => {
     expect(item).toBeInTheDocument();
   });
 
-  it('should display ONLY the tags that include the search field input value', () => {
-    const { container, getAllByLabelText } = render(<TagComboBox />);
+  function renderAndWrite() {
+    const utils = render(<TagComboBox />);
 
     // write something in the input eg. red
     const value = 'red';
 
-    const input = getAllByLabelText(/tags/i)[0];
+    const input = utils.getAllByLabelText(/tags/i)[0];
     fireEvent.focus(input);
     fireEvent.change(input, { target: { value } });
+
+    return { ...utils, value };
+  }
+
+  it('should display ONLY the tags that include the search field input value', () => {
+    const { container, value } = renderAndWrite();
 
     // go through all individual <li />
     const listItems = container.querySelectorAll(
@@ -56,6 +62,28 @@ describe('TagComboBox', () => {
 
     // assert that the text content includes 'red'
     listItems.forEach((li) => expect(li).toHaveTextContent(value));
+  });
+
+  /**
+   * the purpose of this test is to make sure that, when the list is filtered,
+   * the selected tag is the expected one, rather than the one matching the index
+   * in the unfiltered list
+   *
+   * eg. I filter with 'red' and click the first result 'redux'
+   * -> redux should appear in `tag-container` not javascript
+   */
+  it('should select the correct tag after writing in the search field', () => {
+    const { container, value, getByTestId } = renderAndWrite();
+
+    // click a tag in the dropdown
+    const listItems = container.querySelectorAll(
+      '[data-testid="dropdown"] > li'
+    );
+
+    fireEvent.click(listItems[0]);
+
+    // assert that the selected tag appearing in tag-container includes `value`
+    expect(getByTestId('tag-container')).toHaveTextContent(value);
   });
 });
 
