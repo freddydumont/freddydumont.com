@@ -4,7 +4,7 @@ import { TAG_COLORS } from '../utils/tags';
 /** tags will move from one array to the other when selected or deleted */
 const initialState = {
   /** @type {string[]} tags tags displayed in the dropdown */
-  tags: Object.keys(TAG_COLORS),
+  tags: Object.keys(TAG_COLORS).map((tag) => ({ value: tag, label: tag })),
   /** @type {string[]} selectedTags tags selected to be displayed under the input */
   selectedTags: [],
 };
