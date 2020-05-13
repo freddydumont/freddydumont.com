@@ -52,7 +52,7 @@ export const PortfolioPure = ({ cards }) => {
 
   let filteredCards = cards;
 
-  if (state.selectedTags.length > 0) {
+  if (state.selectedTags?.length > 0) {
     // reset filteredCards
     filteredCards = [];
 
@@ -63,7 +63,7 @@ export const PortfolioPure = ({ cards }) => {
       // for a card to be accepted, it has to contain all selectedTags
       if (
         state.selectedTags.every((selectedTag) =>
-          cardTags.includes(selectedTag)
+          cardTags.includes(selectedTag.value)
         )
       ) {
         filteredCards.push(card);

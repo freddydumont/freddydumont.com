@@ -14,25 +14,10 @@ export const SelectedTagsContext = createContext(initialState);
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'SELECT_TAG':
+    case 'UPDATE_TAGS':
       return {
-        tags: state.tags.filter((tag) => tag !== action.tag),
-        selectedTags: [...state.selectedTags, action.tag],
-      };
-    case 'REMOVE_TAG':
-      return {
-        tags: [...state.tags, action.tag],
-        selectedTags: state.selectedTags.filter((tag) => tag !== action.tag),
-      };
-    case 'FILTER':
-      return {
-        // always filter the initial state tags
-        tags: initialState.tags
-          // remove tags not matching inputValue
-          .filter((tag) => tag.includes(action.inputValue))
-          // remove tags already removed
-          .filter((tag) => !state.selectedTags.includes(tag)),
-        selectedTags: state.selectedTags,
+        ...state,
+        selectedTags: action.updatedState,
       };
     default:
       throw new Error();

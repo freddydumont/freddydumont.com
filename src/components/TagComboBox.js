@@ -4,7 +4,7 @@ import Select from 'react-select';
 import { SelectedTagsContext } from './SelectedTagsProvider';
 
 const TagComboBox = () => {
-  const [state] = useContext(SelectedTagsContext);
+  const [state, dispatch] = useContext(SelectedTagsContext);
 
   return (
     <Box mb={12}>
@@ -13,9 +13,16 @@ const TagComboBox = () => {
         isMulti
         isSearchable
         isClearable
+        closeMenuOnSelect={false}
         name="tags"
         aria-labelledby="tag-select"
         options={state.tags}
+        onChange={(updatedState) => {
+          dispatch({
+            type: 'UPDATE_TAGS',
+            updatedState,
+          });
+        }}
       />
     </Box>
   );
