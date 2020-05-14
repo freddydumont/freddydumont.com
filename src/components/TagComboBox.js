@@ -12,7 +12,7 @@ const TagComboBox = () => {
   return (
     <Box mb={12}>
       <Label id="tag-select" sx={{ pl: '2px' }}>
-        Filter by technology tags
+        Search and filter by technology tags
       </Label>
       <Select
         isMulti
@@ -37,7 +37,7 @@ const TagComboBox = () => {
             primary50: themeUI.colors.teal_vivid[3],
             primary75: themeUI.colors.teal_vivid[4],
             primary: themeUI.colors.primary,
-            danger: themeUI.colors.red_vivid[3],
+            danger: themeUI.colors.red_vivid[4],
             dangerLight: 'transparent',
             neutral0: themeUI.colors.gray[9],
             neutral5: themeUI.colors.gray[8],

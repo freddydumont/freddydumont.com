@@ -116,9 +116,6 @@ export const PortfolioPure = ({ cards }) => {
           </Link>
           .
         </Section.Body>
-        <Section.Body>
-          You can sort and filter the portfolio cards using the controls below:
-        </Section.Body>
         <TagComboBox />
       </Container>
       <Masonry

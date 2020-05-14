@@ -642,9 +642,10 @@ const theme = {
   },
   forms: {
     label: {
-      fontFamily: 'mono',
-      fontSize: 'lg',
+      display: 'block',
+      letterSpacing: 'wide',
       mb: 2,
+      fontSize: ['base', 'lg'],
     },
     input: {
       borderColor: 'primary',
