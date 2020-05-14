@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Masonry from 'react-masonry-css';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container, Link, Card } from '@theme-ui/components';
@@ -6,6 +6,10 @@ import { Global } from '@emotion/core';
 import Section from './Section';
 import PortfolioCard from './PortfolioCard';
 import ButtonLink from './ButtonLink';
+import TagComboBox from './TagComboBox';
+import SelectedTagsProvider, {
+  SelectedTagsContext,
+} from './SelectedTagsProvider';
 
 const Portfolio = () => {
   const {
@@ -36,6 +40,36 @@ const Portfolio = () => {
       }
     }
   `);
+  return (
+    <SelectedTagsProvider>
+      <PortfolioPure cards={nodes} />
+    </SelectedTagsProvider>
+  );
+};
+
+export const PortfolioPure = ({ cards }) => {
+  const [state] = useContext(SelectedTagsContext);
+
+  let filteredCards = cards;
+
+  if (state.selectedTags?.length > 0) {
+    // reset filteredCards
+    filteredCards = [];
+
+    // go through all cards
+    cards.forEach((card) => {
+      const cardTags = card.tags.map((tag) => tag.name);
+
+      // for a card to be accepted, it has to contain all selectedTags
+      if (
+        state.selectedTags.every((selectedTag) =>
+          cardTags.includes(selectedTag.value)
+        )
+      ) {
+        filteredCards.push(card);
+      }
+    });
+  }
 
   return (
     <Section htmlId="portfolio">
@@ -82,6 +116,7 @@ const Portfolio = () => {
           </Link>
           .
         </Section.Body>
+        <TagComboBox />
       </Container>
       <Masonry
         breakpointCols={{
@@ -92,7 +127,7 @@ const Portfolio = () => {
         className="masonry"
         columnClassName="masonry_column"
       >
-        {nodes.map((card, index, arr) => {
+        {filteredCards.map((card, index, arr) => {
           // add the "see more" button with last item to avoid breaking the masonry library
           if (index === arr.length - 1) {
             return (

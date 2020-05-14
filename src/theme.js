@@ -336,6 +336,7 @@ const theme = {
     inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
     outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
     'outline-teal': '0 0 0 3px #079A82', // teal-vivid-600
+    'outline-teal-sm': '0 0 0 2px #079A82', // teal-vivid-600
     'lg-teal':
       '0 10px 15px -3px hsla(172, 98%, 20%, 50%), 0 4px 6px -2px hsla(172, 98%, 20%, 25%)',
     none: 'none',
@@ -647,15 +648,34 @@ const theme = {
       fontSize: ['base', 'lg'],
     },
     input: {
-      borderWidth: 0,
-      bg: 'transparent',
-      borderBottomWidth: 2,
-      mr: 3,
-      py: 1,
-      fontSize: ['xl', '2xl'],
-      fontFamily: 'body',
-      ':focus': {
+      borderColor: 'primary',
+      '&:hover': {
+        borderColor: 'primaryHover',
+      },
+      '&:focus': {
         outline: 'none',
+        borderColor: '#079A82',
+        boxShadow: 'outline-teal-sm',
+      },
+    },
+    contact: {
+      label: {
+        display: 'block',
+        letterSpacing: 'wide',
+        mb: 2,
+        fontSize: ['base', 'lg'],
+      },
+      input: {
+        borderWidth: 0,
+        bg: 'transparent',
+        borderBottomWidth: 2,
+        mr: 3,
+        py: 1,
+        fontSize: ['xl', '2xl'],
+        fontFamily: 'body',
+        ':focus': {
+          outline: 'none',
+        },
       },
     },
   },

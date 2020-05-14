@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact form should match snapshot 1`] = `
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  height: full;
+  color: gray.2;
+  margin-top: 16px;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-23 {
+    margin-top: 32px;
+  }
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: container;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 32px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 12px;
+}
+
+.emotion-21 {
+  width: full;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: background;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 12px;
+  width: full;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-5 {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .emotion-5 {
+    width: full;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-5 {
+    width: 1/2;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: full;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-8 {
+    width: full;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-8 {
+    width: 1/2;
+  }
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: initial;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-19 {
+    max-width: initial;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-19 {
+    max-width: xs;
+  }
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-18:hover {
+  box-shadow: 2xl;
+}
+
+<div>
+  <section
+    class="emotion-23"
+    id="contact"
+  >
+    <div
+      class="emotion-22"
+    >
+      <h1
+        class="emotion-0"
+      >
+        Contact
+      </h1>
+      <p
+        class="emotion-1"
+      >
+        Use the form below to send me an email.
+      </p>
+      <form
+        class="emotion-21"
+        data-netlify="true"
+        method="post"
+        name="contact"
+      >
+        <input
+          class="emotion-2"
+          name="form-name"
+          type="hidden"
+          value="contact"
+        />
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-5"
+          >
+            <label
+              class="emotion-3"
+              for="first-name"
+            >
+              First Name*
+            </label>
+            <input
+              class="emotion-2"
+              id="first-name"
+              name="first-name"
+              required=""
+              type="text"
+            />
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <label
+              class="emotion-3"
+              for="last-name"
+            >
+              Last Name
+            </label>
+            <input
+              class="emotion-2"
+              id="last-name"
+              name="last-name"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-12"
+          >
+            <label
+              class="emotion-3"
+              for="email"
+            >
+              Email address*
+            </label>
+            <input
+              class="emotion-2"
+              id="email"
+              name="email"
+              required=""
+              type="email"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-12"
+          >
+            <label
+              class="emotion-3"
+              for="message"
+            >
+              Message*
+            </label>
+            <textarea
+              class="emotion-2"
+              id="message"
+              name="message"
+              required=""
+              rows="8"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-20"
+        >
+          <div
+            class="emotion-19"
+          >
+            <button
+              class="emotion-18"
+              data-testid="button"
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+`;

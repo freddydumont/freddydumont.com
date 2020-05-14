@@ -72,6 +72,7 @@ const PortfolioCard = ({
             {category}
           </Text>
           <Flex
+            data-testid="card-tag-container"
             mb={2}
             css={{
               flexWrap: 'nowrap',

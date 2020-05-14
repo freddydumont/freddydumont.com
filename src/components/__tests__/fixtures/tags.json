@@ -1,0 +1,72 @@
+[
+  {
+    "bg": "yellow_vivid.4",
+    "color": "gray.9",
+    "name": "javascript"
+  },
+  {
+    "bg": "blue.4",
+    "color": "gray.9",
+    "name": "react"
+  },
+  {
+    "bg": "purple.7",
+    "color": "purple.1",
+    "name": "gatsby"
+  },
+  {
+    "bg": "teal_vivid.2",
+    "color": "teal_vivid.9",
+    "name": "bulma"
+  },
+  {
+    "bg": "red_vivid.8",
+    "color": "white",
+    "name": "jest"
+  },
+  {
+    "bg": "pink.4",
+    "color": "gray.9",
+    "name": "emotion"
+  },
+  {
+    "bg": "purple.8",
+    "color": "purple.1",
+    "name": "bootstrap"
+  },
+  {
+    "bg": "pink.5",
+    "color": "gray.9",
+    "name": "sass"
+  },
+  {
+    "bg": "orange.6",
+    "color": "gray.9",
+    "name": "phaser"
+  },
+  {
+    "bg": "blue.7",
+    "color": "white",
+    "name": "typescript"
+  },
+  {
+    "bg": "black",
+    "color": "gray.0",
+    "name": "xstate"
+  },
+  {
+    "bg": "black",
+    "color": "gray.0",
+    "name": "rot.js"
+  },
+  {
+    "bg": "gray.0",
+    "color": "gray.9",
+    "name": "tachyons"
+  },
+  {
+    "bg": "yellow.7",
+    "color": "gray.0",
+    "name": "howler"
+  }
+]
