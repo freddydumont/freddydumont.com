@@ -22,6 +22,13 @@ describe('Portfolio', () => {
     });
   });
 
+  function triggerDropdown(methods) {
+    // get input, focus it and press down arrow to trigger dropdown
+    const input = methods.getAllByLabelText(/tags/i)[0];
+    fireEvent.focus(input);
+    fireEvent.keyDown(input, { key: 'ArrowDown', code: 'ArrowDown' });
+  }
+
   async function renderAndSelect() {
     const methods = render(
       <Portfolio cards={json.data.allPortfolioCard.nodes} />
@@ -30,9 +37,7 @@ describe('Portfolio', () => {
     // get a tag that's only present in 2 cards: emotion
     const selectedTag = tags.find((tag) => tag.name === 'emotion');
 
-    // get input and focus it to trigger dropdown
-    const input = methods.getAllByLabelText(/tags/i)[0];
-    fireEvent.click(input);
+    triggerDropdown(methods);
 
     // get html element corresponding with tag and click on it
     const htmlTag = await methods.findAllByText(selectedTag.name);
@@ -41,7 +46,6 @@ describe('Portfolio', () => {
 
     return {
       ...methods,
-      input,
       htmlTag,
       selectedTag,
     };
@@ -57,23 +61,21 @@ describe('Portfolio', () => {
       (tag) => tag.name === 'react' || tag.name === 'gatsby'
     );
 
-    // get input and focus it to trigger dropdown
-    const input = methods.getAllByLabelText(/tags/i)[0];
-    fireEvent.click(input);
+    triggerDropdown(methods);
 
     // get html element corresponding with tag and click on it
     const htmlTag = await methods.findAllByText(selectedTags[0].name);
+
     // should be the first one in the tree
     fireEvent.click(htmlTag[0]);
 
     // repeat for the second one
-    fireEvent.click(input);
+    triggerDropdown(methods);
     const htmlTag1 = await methods.findAllByText(selectedTags[1].name);
     fireEvent.click(htmlTag1[0]);
 
     return {
       ...methods,
-      input,
       htmlTags: [htmlTag, htmlTag1],
       selectedTags,
     };
