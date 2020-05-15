@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "dev": "gatsby develop",
     "clean": "gatsby clean",
     "restart": "gatsby clean && gatsby develop",
@@ -20,7 +20,7 @@
     "@narative/gatsby-theme-novela": "^0.13.3",
     "@theme-ui/components": "^0.2.50",
     "copyright": "^0.0.2",
-    "gatsby": "^2.19.5",
+    "gatsby": "^2.21.33",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-advanced-sitemap": "^1.4.5",
     "gatsby-plugin-manifest": "^2.2.30",
