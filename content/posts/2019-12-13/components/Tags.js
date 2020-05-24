@@ -1,7 +1,6 @@
 /** @jsx jsx **/
 import { jsx } from 'theme-ui';
 import { Tag } from '../../../../src/components/PortfolioCard';
-import ThemeProvider from '../../../../src/components/ThemeProvider';
 import { Flex } from '@theme-ui/components';
 
 const tags = [
@@ -16,13 +15,11 @@ const tags = [
 ];
 
 const Tags = () => (
-  <ThemeProvider>
-    <Flex mx="auto" mb={8}>
-      {tags.map((tag) => (
-        <Tag key={tag.name} {...tag} />
-      ))}
-    </Flex>
-  </ThemeProvider>
+  <Flex mx="auto" mb={8}>
+    {tags.map((tag) => (
+      <Tag key={tag.name} {...tag} />
+    ))}
+  </Flex>
 );
 
 export default Tags;

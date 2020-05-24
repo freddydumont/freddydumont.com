@@ -25,6 +25,7 @@
     "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-smoothscroll": "^1.1.0",
+    "gatsby-plugin-theme-ui": "^0.4.0-alpha.1",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-sharp": "^2.5.3",
     "react": "^16.13.1",

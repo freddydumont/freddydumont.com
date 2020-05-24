@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import ThemeProvider from '../src/components/ThemeProvider';
+import { ThemeProvider } from 'theme-ui';
+import theme from '../src/gatsby-plugin-theme-ui/index';
 import SelectedTagsProvider from '../src/components/SelectedTagsProvider';
 
 const AllTheProviders = ({ children }) => {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <SelectedTagsProvider>{children}</SelectedTagsProvider>
     </ThemeProvider>
   );

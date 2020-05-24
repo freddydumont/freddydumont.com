@@ -7272,6 +7272,11 @@ gatsby-plugin-smoothscroll@^1.1.0:
   dependencies:
     smoothscroll-polyfill "^0.4.4"
 
+gatsby-plugin-theme-ui@^0.4.0-alpha.1:
+  version "0.4.0-highlight.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.4.0-highlight.0.tgz#7b7476ef523982d2436508ea91749048fa8181d5"
+  integrity sha512-M1NIHQb8HqJV/7AzZiEx7yQG/QFGaKQ0ESzw5I9dsdXkEQYhT2znnJTwIYk9ZaCQg7vWX8KDJs1nMtxTaUmGNA==
+
 gatsby-plugin-typescript@^2.4.3:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.4.3.tgz#07393d842d8cb6fd3d0fcdafee36ab3ff55ab32b"

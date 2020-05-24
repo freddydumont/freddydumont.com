@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import PortfolioCard from '../../../../src/components/PortfolioCard';
-import ThemeProvider from '../../../../src/components/ThemeProvider';
 
 const PortfolioCardSample = () => {
   const {
@@ -33,11 +32,7 @@ const PortfolioCardSample = () => {
     }
   `);
 
-  return (
-    <ThemeProvider>
-      <PortfolioCard {...nodes[0]} />
-    </ThemeProvider>
-  );
+  return <PortfolioCard {...nodes[0]} />;
 };
 
 export default PortfolioCardSample;
