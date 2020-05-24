@@ -9,13 +9,9 @@ import { Text, Link } from '@theme-ui/components';
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      author(name: { eq: "Frederick Morin" }) {
-        avatar {
-          childImageSharp {
-            fluid(maxWidth: 522) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+      imageSharp(original: { src: { regex: "/freddydumont/i" } }) {
+        fluid(maxWidth: 522) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -23,7 +19,7 @@ const About = () => {
   return (
     <Section htmlId="about" withContainer>
       <Img
-        fluid={data.author.avatar.childImageSharp.fluid}
+        fluid={data.imageSharp.fluid}
         alt="frederick morin"
         sx={{
           borderRadius: 'full',
