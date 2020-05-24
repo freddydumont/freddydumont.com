@@ -1,6 +1,6 @@
 /** @jsx jsx **/
 import { jsx } from 'theme-ui';
-import Logo from '../@narative/gatsby-theme-novela/components/Logo';
+import Logo from './Logo';
 import { Box, Flex, Container } from '@theme-ui/components';
 import circuitBg from '../assets/background.svg';
 

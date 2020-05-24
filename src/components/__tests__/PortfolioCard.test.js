@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, wait } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import PortfolioCard from '../PortfolioCard';
 import data from './fixtures/card_data.json';
 
@@ -24,7 +24,7 @@ describe('PortfolioCard', () => {
 
     fireEvent.click(button);
 
-    await wait(() => {
+    await waitFor(() => {
       expect(queryByText(/technology/i)).toBeVisible();
       expect(button).not.toBeInTheDocument();
       expect(queryByText(/go to project/i)).toBeVisible();

@@ -19,16 +19,7 @@ const Tags = () => (
   <ThemeProvider>
     <Flex mx="auto" mb={8}>
       {tags.map((tag) => (
-        <Tag
-          key={tag.name}
-          {...tag}
-          sx={{
-            // big fontsize and margins to compensate for novela's root font size
-            fontSize: 'xl',
-            marginRight: 3,
-            marginBottom: 3,
-          }}
-        />
+        <Tag key={tag.name} {...tag} />
       ))}
     </Flex>
   </ThemeProvider>

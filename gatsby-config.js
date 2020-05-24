@@ -38,20 +38,6 @@ module.exports = {
       },
     },
     {
-      resolve: '@narative/gatsby-theme-novela',
-      options: {
-        contentPosts: 'content/posts',
-        contentAuthors: 'content/authors',
-        rootPath: '/',
-        basePath: '/blog/',
-        authorsPage: true,
-        sources: {
-          local: true,
-          // contentful: true,
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `freddydumont's personal blog`,

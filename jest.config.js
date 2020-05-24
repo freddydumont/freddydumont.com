@@ -1,4 +1,5 @@
 module.exports = {
+  testEnvironment: 'jest-environment-jsdom-sixteen',
   transform: {
     '^.+\\.jsx?$': `<rootDir>/test/jest-preprocess.js`,
   },
