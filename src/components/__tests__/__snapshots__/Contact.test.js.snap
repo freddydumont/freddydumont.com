@@ -5,14 +5,14 @@ exports[`Contact form should match snapshot 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  height: full;
-  color: gray.2;
-  margin-top: 16px;
+  height: 100%;
+  color: var(--theme-ui-colors-gray-2,#CFCFCF);
+  margin-top: 4rem;
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:640px) {
   .emotion-23 {
-    margin-top: 32px;
+    margin-top: 8rem;
   }
 }
 
@@ -21,27 +21,71 @@ exports[`Contact form should match snapshot 1`] = `
   margin: 0;
   min-width: 0;
   width: 100%;
-  max-width: container;
+  max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  max-width: 32rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-22 {
+    max-width: 32rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-22 {
+    max-width: 42rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-22 {
+    max-width: 56rem;
+  }
 }
 
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  margin-bottom: 32px;
+  font-size: 2.25rem;
+  color: var(--theme-ui-colors-gray-1,#E1E1E1);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-0 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-0 {
+    font-size: 3rem;
+  }
 }
 
 .emotion-1 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-family: "IBM Plex Sans",sans-serif;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-1 {
+    font-size: 1.5rem;
+  }
 }
 
 .emotion-21 {
-  width: full;
+  width: 100%;
 }
 
 .emotion-2 {
@@ -50,7 +94,7 @@ exports[`Contact form should match snapshot 1`] = `
   min-width: 0;
   display: block;
   width: 100%;
-  padding: 8px;
+  padding: 0.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -59,13 +103,30 @@ exports[`Contact form should match snapshot 1`] = `
   border: 1px solid;
   border-radius: 4px;
   color: inherit;
-  background-color: transparent;
+  background-color: var(--theme-ui-colors-transparent,transparent);
+  border-color: var(--theme-ui-colors-primary,#17B897);
+}
+
+.emotion-2:hover {
+  border-color: var(--theme-ui-colors-primaryHover,#2DCCA7);
+}
+
+.emotion-2:focus {
+  outline: none;
+  border-color: #079A82;
+  box-shadow: 0 0 0 2px #079A82;
 }
 
 .emotion-9 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,31 +137,34 @@ exports[`Contact form should match snapshot 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  margin-bottom: 12px;
-  width: full;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  width: 100%;
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:640px) {
   .emotion-5 {
-    margin-bottom: 12px;
+    margin-bottom: 3rem;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:768px) {
   .emotion-5 {
     margin-bottom: 0;
   }
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:640px) {
   .emotion-5 {
-    width: full;
+    width: 100%;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:768px) {
   .emotion-5 {
-    width: 1/2;
+    width: 50%;
   }
 }
 
@@ -113,24 +177,76 @@ exports[`Contact form should match snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  display: block;
+  -webkit-letter-spacing: 0.025em;
+  -moz-letter-spacing: 0.025em;
+  -ms-letter-spacing: 0.025em;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-3 {
+    font-size: 1.125rem;
+  }
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: var(--theme-ui-colors-transparent,transparent);
+  border-width: 0;
+  background-color: var(--theme-ui-colors-transparent,transparent);
+  border-bottom-width: 2px;
+  margin-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.25rem;
+  font-family: "IBM Plex Sans",sans-serif;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-4 {
+    font-size: 1.5rem;
+  }
+}
+
+.emotion-4:focus {
+  outline: none;
 }
 
 .emotion-8 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: full;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
+  width: 100%;
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:640px) {
   .emotion-8 {
-    width: full;
+    width: 100%;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:768px) {
   .emotion-8 {
-    width: 1/2;
+    width: 50%;
   }
 }
 
@@ -138,12 +254,21 @@ exports[`Contact form should match snapshot 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
 }
 
 .emotion-20 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,18 +283,21 @@ exports[`Contact form should match snapshot 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
   max-width: initial;
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:640px) {
   .emotion-19 {
     max-width: initial;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:768px) {
   .emotion-19 {
-    max-width: xs;
+    max-width: 20rem;
   }
 }
 
@@ -186,18 +314,42 @@ exports[`Contact form should match snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: inherit;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: primary;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--theme-ui-colors-white,#fff);
+  background-color: var(--theme-ui-colors-primary,#17B897);
   border: 0;
   border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Overpass Mono",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  border-radius: inherit;
+  background-color: #B1B1B1;
+  color: #3B3B3B;
 }
 
 .emotion-18:hover {
-  box-shadow: 2xl;
+  background-color: #3B3B3B;
+  color: #B1B1B1;
+}
+
+.emotion-18:hover {
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
 }
 
 <div>
@@ -243,7 +395,7 @@ exports[`Contact form should match snapshot 1`] = `
               First Name*
             </label>
             <input
-              class="emotion-2"
+              class="emotion-4"
               id="first-name"
               name="first-name"
               required=""
@@ -260,7 +412,7 @@ exports[`Contact form should match snapshot 1`] = `
               Last Name
             </label>
             <input
-              class="emotion-2"
+              class="emotion-4"
               id="last-name"
               name="last-name"
               type="text"
@@ -280,7 +432,7 @@ exports[`Contact form should match snapshot 1`] = `
               Email address*
             </label>
             <input
-              class="emotion-2"
+              class="emotion-4"
               id="email"
               name="email"
               required=""
@@ -301,7 +453,7 @@ exports[`Contact form should match snapshot 1`] = `
               Message*
             </label>
             <textarea
-              class="emotion-2"
+              class="emotion-4"
               id="message"
               name="message"
               required=""
