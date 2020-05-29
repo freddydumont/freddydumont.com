@@ -55,6 +55,7 @@ const baseColors = {
 const colors = {
   ...baseColors,
   background: baseColors.gray[9],
+  text: baseColors.gray[2],
   primary: baseColors.teal_vivid[5],
   primaryHover: baseColors.teal_vivid[4],
   error: baseColors.red_vivid[5],
@@ -127,6 +128,28 @@ fontSizes['5xl'] = fontSizes[6];
 fontSizes['6xl'] = fontSizes[7];
 fontSizes['7xl'] = fontSizes[8];
 
+const space = [...tailwind.space];
+
+space['0'] = '0';
+space['1'] = '0.25rem';
+space['2'] = '0.5rem';
+space['3'] = '0.75rem';
+space['4'] = '1rem';
+space['5'] = '1.25rem';
+space['6'] = '1.5rem';
+space['8'] = '2rem';
+space['10'] = '2.5rem';
+space['12'] = '3rem';
+space['16'] = '4rem';
+space['20'] = '5rem';
+space['24'] = '6rem';
+space['32'] = '8rem';
+space['40'] = '10rem';
+space['48'] = '12rem';
+space['56'] = '14rem';
+space['64'] = '16rem';
+space.px = '1px';
+
 const theme = merge(tailwind, {
   colors,
   fonts: {
@@ -143,27 +166,7 @@ const theme = merge(tailwind, {
     container: '20rem',
   },
   shadows,
-  space: {
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
-    '40': '10rem',
-    '48': '12rem',
-    '56': '14rem',
-    '64': '16rem',
-    px: '1px',
-  },
+  space,
 
   // DEFAULT STYLES
   styles: {

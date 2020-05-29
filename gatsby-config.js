@@ -52,3 +52,12 @@ module.exports = {
     },
   ],
 };
+
+if (process.env.NODE_ENV === 'development') {
+  module.exports.plugins.push({
+    resolve: `@lekoarts/gatsby-theme-styleguide`,
+    options: {
+      basePath: `/style-guide`,
+    },
+  });
+}
