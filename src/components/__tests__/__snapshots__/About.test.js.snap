@@ -111,9 +111,9 @@ exports[`About section should match snapshot 1`] = `
 }
 
 .emotion-2:hover {
-  color: var(--theme-ui-colors-primaryHover,#2DCCA7);
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  color: var(--theme-ui-colors-primaryHover,#2DCCA7);
 }
 
 <div>

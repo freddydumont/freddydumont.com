@@ -2188,6 +2188,11 @@
     "@emotion/styled" "^10.0.0"
     "@mdx-js/react" "^1.0.0"
 
+"@theme-ui/preset-tailwind@^0.4.0-alpha.1":
+  version "0.4.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/preset-tailwind/-/preset-tailwind-0.4.0-alpha.1.tgz#ed82a06906287f5307f33a3fed5b89b3639cf287"
+  integrity sha512-Q4DUrcpEwkGLcbOR9AcQtNZcFrcCfiWDejzIev7z2B7z0yHnUpVOnTh8cDu5SvG/Yh+dWGDhXHKR2XwLrxzQ3Q==
+
 "@theme-ui/theme-provider@^0.4.0-highlight.0":
   version "0.4.0-highlight.0"
   resolved "https://registry.yarnpkg.com/@theme-ui/theme-provider/-/theme-provider-0.4.0-highlight.0.tgz#88e8cb28bc5f7d9629573e1bdbec4369fdacd044"

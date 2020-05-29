@@ -1,4 +1,7 @@
-const theme = {
+import { merge } from 'theme-ui';
+import tailwind from '@theme-ui/preset-tailwind';
+
+const theme = merge(tailwind, {
   borderWidths: {
     '0': '0',
     '2': '2px',
@@ -744,7 +747,7 @@ const theme = {
       width: 'full',
     },
   },
-};
+});
 
 theme.colors.background = theme.colors.gray[9];
 theme.colors.primary = theme.colors.teal_vivid[5];
