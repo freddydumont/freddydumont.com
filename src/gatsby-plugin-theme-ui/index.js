@@ -113,6 +113,20 @@ const shadows = {
     '0 10px 15px -3px hsla(172, 98%, 20%, 50%), 0 4px 6px -2px hsla(172, 98%, 20%, 25%)',
 };
 
+const fontSizes = [...tailwind.fontSizes];
+
+fontSizes.xs = '0.75rem';
+fontSizes.sm = fontSizes[0];
+fontSizes.base = fontSizes[1];
+fontSizes.lg = '1.125rem';
+fontSizes.xl = fontSizes[2];
+fontSizes['2xl'] = fontSizes[3];
+fontSizes['3xl'] = fontSizes[4];
+fontSizes['4xl'] = fontSizes[5];
+fontSizes['5xl'] = fontSizes[6];
+fontSizes['6xl'] = fontSizes[7];
+fontSizes['7xl'] = fontSizes[8];
+
 const theme = merge(tailwind, {
   colors,
   fonts: {
@@ -123,18 +137,7 @@ const theme = merge(tailwind, {
     monospace:
       '"Overpass Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   },
-  fontSizes: {
-    xs: '0.75rem',
-    sm: '0.875rem',
-    base: '1rem',
-    lg: '1.125rem',
-    xl: '1.25rem',
-    '2xl': '1.5rem',
-    '3xl': '1.875rem',
-    '4xl': '2.25rem',
-    '5xl': '3rem',
-    '6xl': '4rem',
-  },
+  fontSizes,
   sizes: {
     '7xl': '80rem',
     container: '20rem',

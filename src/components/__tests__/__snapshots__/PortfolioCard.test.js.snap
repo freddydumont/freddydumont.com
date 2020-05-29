@@ -127,7 +127,7 @@ exports[`PortfolioCard should match snapshot 1`] = `
   min-width: 0;
   display: inline-block;
   vertical-align: baseline;
-  font-size: 0;
+  font-size: 0.875rem;
   font-weight: 700;
   white-space: nowrap;
   padding-left: 0.25rem;
@@ -163,7 +163,7 @@ exports[`PortfolioCard should match snapshot 1`] = `
   min-width: 0;
   display: inline-block;
   vertical-align: baseline;
-  font-size: 0;
+  font-size: 0.875rem;
   font-weight: 700;
   white-space: nowrap;
   padding-left: 0.25rem;
@@ -199,7 +199,7 @@ exports[`PortfolioCard should match snapshot 1`] = `
   min-width: 0;
   display: inline-block;
   vertical-align: baseline;
-  font-size: 0;
+  font-size: 0.875rem;
   font-weight: 700;
   white-space: nowrap;
   padding-left: 0.25rem;
@@ -235,7 +235,7 @@ exports[`PortfolioCard should match snapshot 1`] = `
   min-width: 0;
   display: inline-block;
   vertical-align: baseline;
-  font-size: 0;
+  font-size: 0.875rem;
   font-weight: 700;
   white-space: nowrap;
   padding-left: 0.25rem;
