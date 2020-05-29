@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PortfolioCard should match snapshot 1`] = `
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-width: 20rem;
+  max-width: 20rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--theme-ui-colors-gray-8,#3B3B3B);
+  border-top-width: 4px;
+  border-top-color: var(--theme-ui-colors-teal_vivid-6,#079A82);
+  position: relative;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-13 {
+    max-width: 24rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-13 {
+    max-width: 20rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-13 {
+    max-width: 24rem;
+  }
+}
+
+.emotion-13:hover {
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+@media (max-width:360px) {
+  .emotion-13 {
+    min-width: 18rem;
+    max-width: 18rem;
+  }
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-weight: 600;
+  color: var(--theme-ui-colors-gray-0,#F7F7F7);
+  font-size: 1.5rem;
+  -webkit-letter-spacing: 0.025em;
+  -moz-letter-spacing: 0.025em;
+  -ms-letter-spacing: 0.025em;
+  letter-spacing: 0.025em;
+}
+
+.emotion-2 {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.125rem;
+}
+
+.emotion-12 {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.23,1,0.32,1);
+  -webkit-transition: transform 0.3s cubic-bezier(0.23,1,0.32,1);
+  transition: transform 0.3s cubic-bezier(0.23,1,0.32,1);
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-size: 1.25rem;
+  color: var(--theme-ui-colors-gray-1,#E1E1E1);
+  margin-bottom: 1rem;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 2px;
+  color: var(--theme-ui-colors-white,#fff);
+  background-color: var(--theme-ui-colors-primary,#17B897);
+  min-width: initial;
+  display: inline-block;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  color: bg-yellow-vivid-400;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-4 {
+    color: text-gray-900;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 2px;
+  color: var(--theme-ui-colors-white,#fff);
+  background-color: var(--theme-ui-colors-primary,#17B897);
+  min-width: initial;
+  display: inline-block;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  color: bg-blue-400;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-5 {
+    color: text-gray-900;
+  }
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 2px;
+  color: var(--theme-ui-colors-white,#fff);
+  background-color: var(--theme-ui-colors-primary,#17B897);
+  min-width: initial;
+  display: inline-block;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  color: bg-purple-700;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-6 {
+    color: text-purple-100;
+  }
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 2px;
+  color: var(--theme-ui-colors-white,#fff);
+  background-color: var(--theme-ui-colors-primary,#17B897);
+  min-width: initial;
+  display: inline-block;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  color: bg-teal-vivid-200;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-7 {
+    color: text-teal-vivid-900;
+  }
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: "IBM Plex Sans",sans-serif;
+  color: var(--theme-ui-colors-gray-3,#B1B1B1);
+  font-size: 1rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--theme-ui-colors-white,#fff);
+  background-color: var(--theme-ui-colors-primary,#17B897);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Overpass Mono",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  border-radius: inherit;
+  background-color: #016457;
+  color: #5FE3C0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-filter: drop-shadow(0 0 20px);
+  filter: drop-shadow(0 0 20px);
+}
+
+.emotion-11:hover {
+  background-color: #2DCCA7;
+  color: #004440;
+}
+
+<div>
+  <div
+    class="emotion-13"
+  >
+    <div
+      class="emotion-1"
+    >
+      <h2
+        class="emotion-0"
+      >
+        NessIA.ca
+      </h2>
+    </div>
+    <div
+      class="emotion-2 gatsby-image-wrapper"
+      style="position: relative; overflow: hidden;"
+    >
+      <div
+        aria-hidden="true"
+        style="width: 100%; padding-bottom: 57.48031496062992%;"
+      />
+      <img
+        alt=""
+        aria-hidden="true"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACHUlEQVQoz31TTWsTQRjOn7BCf4N/QUEFQfFSb3pVvIiXInjwA2yhNBREPYiEaqAtemibIJZa6QfFXHJQsCaEpGlCst+f2cTdZHezu3mcnTFpWtSBh33m3ZlnnnnfdxKDwQDxKGkKeF2jPI4N4+O83+/D9336dV2XcqPXRdvtjdYkhiQIQ4pxkXFEUTTiIeHRPzAS/N+IF6qaRqEbJhRVg6yqkBQFkixDlBWIkkyROO0oJC5Pgwnq0HSdCBpko4RqrQZeENghusH+kZRRQcdxUC6XUalU0Gw2IZENoiiC53lYlkUPik83TAsd20aD43FQKKHeFNFqd9Cy2hBEGZxuHws2OA71RoPyIAhOFCCex7x6WMZWdhMLKzxuJTncmX6N1eU0Hi6KuDF7iPTMChMMPB+u2UKPQCDXiF3KJDcKyVHsMIpCdB0fD57ncC/zHvObBdx+IeHc1RSSyVeY+yBi6lkVU9cXmeCRaeDR7mfM5/Zgd7vwPY+6Ynllhdn9XsTEtSzuft3BkWHh3UcRk+eXcX/6CTHAYe5tBROXvjBBwe5gqfgDq+UiwrGqs3ahdcbjtQzOXM7gys0Z5HN5bOctTF7M4unLLTiuj9RaE2cvbPy9bU72IBPcKx3gzfpPLKT2kdnYQUMysb4tIJ0t4FuhDl7+haVPteO2CYiV4E/zDmMYYDSPue06cELyQsjEcrskFpAidiArKjzPJQ+jj990GCN/jrWOHwAAAABJRU5ErkJggg=="
+        style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+      />
+      <picture>
+        <source
+          sizes="(max-width: 384px) 100vw, 384px"
+          srcset="/static/2e38d778d3d7f1a9c244a8bede600333/32a58/nessia.png 96w,
+/static/2e38d778d3d7f1a9c244a8bede600333/2c007/nessia.png 192w,
+/static/2e38d778d3d7f1a9c244a8bede600333/75125/nessia.png 384w,
+/static/2e38d778d3d7f1a9c244a8bede600333/b6f2d/nessia.png 576w,
+/static/2e38d778d3d7f1a9c244a8bede600333/17fa3/nessia.png 768w,
+/static/2e38d778d3d7f1a9c244a8bede600333/6d185/nessia.png 2794w"
+        />
+        <img
+          alt="NessIA homepage"
+          loading="lazy"
+          sizes="(max-width: 384px) 100vw, 384px"
+          src="/static/2e38d778d3d7f1a9c244a8bede600333/75125/nessia.png"
+          srcset="/static/2e38d778d3d7f1a9c244a8bede600333/32a58/nessia.png 96w,
+/static/2e38d778d3d7f1a9c244a8bede600333/2c007/nessia.png 192w,
+/static/2e38d778d3d7f1a9c244a8bede600333/75125/nessia.png 384w,
+/static/2e38d778d3d7f1a9c244a8bede600333/b6f2d/nessia.png 576w,
+/static/2e38d778d3d7f1a9c244a8bede600333/17fa3/nessia.png 768w,
+/static/2e38d778d3d7f1a9c244a8bede600333/6d185/nessia.png 2794w"
+          style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+        />
+      </picture>
+      <noscript>
+        &lt;picture&gt;&lt;source srcset="/static/2e38d778d3d7f1a9c244a8bede600333/32a58/nessia.png 96w,
+/static/2e38d778d3d7f1a9c244a8bede600333/2c007/nessia.png 192w,
+/static/2e38d778d3d7f1a9c244a8bede600333/75125/nessia.png 384w,
+/static/2e38d778d3d7f1a9c244a8bede600333/b6f2d/nessia.png 576w,
+/static/2e38d778d3d7f1a9c244a8bede600333/17fa3/nessia.png 768w,
+/static/2e38d778d3d7f1a9c244a8bede600333/6d185/nessia.png 2794w" sizes="(max-width: 384px) 100vw, 384px" /&gt;&lt;img loading="lazy" sizes="(max-width: 384px) 100vw, 384px" srcset="/static/2e38d778d3d7f1a9c244a8bede600333/32a58/nessia.png 96w,
+/static/2e38d778d3d7f1a9c244a8bede600333/2c007/nessia.png 192w,
+/static/2e38d778d3d7f1a9c244a8bede600333/75125/nessia.png 384w,
+/static/2e38d778d3d7f1a9c244a8bede600333/b6f2d/nessia.png 576w,
+/static/2e38d778d3d7f1a9c244a8bede600333/17fa3/nessia.png 768w,
+/static/2e38d778d3d7f1a9c244a8bede600333/6d185/nessia.png 2794w" src="/static/2e38d778d3d7f1a9c244a8bede600333/75125/nessia.png" alt="NessIA homepage" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+      </noscript>
+    </div>
+    <div
+      class="react-slidedown emotion-12"
+      style="height: auto;"
+    >
+      <div
+        class="emotion-10"
+      >
+        <h3
+          class="emotion-3"
+        >
+          Business website
+        </h3>
+        <div
+          class="emotion-8"
+          data-testid="card-tag-container"
+        >
+          <span
+            class="emotion-4"
+          >
+            javascript
+          </span>
+          <span
+            class="emotion-5"
+          >
+            react
+          </span>
+          <span
+            class="emotion-6"
+          >
+            gatsby
+          </span>
+          <span
+            class="emotion-7"
+          >
+            bulma
+          </span>
+        </div>
+        <p
+          class="emotion-9"
+        >
+          Built for a client operating in the Business Intelligence space, this website outperforms competitors in speed, design and usability. It serves as a showcase for their services and as social proof via the Client and Partners section.
+        </p>
+      </div>
+      <button
+        class="emotion-11"
+        data-testid="expand-button"
+      >
+        See More
+      </button>
+    </div>
+  </div>
+</div>
+`;

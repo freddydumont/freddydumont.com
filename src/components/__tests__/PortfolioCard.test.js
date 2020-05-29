@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '../../../test/test-utils';
 import PortfolioCard from '../PortfolioCard';
 import data from './fixtures/card_data.json';
 
@@ -29,5 +29,10 @@ describe('PortfolioCard', () => {
       expect(button).not.toBeInTheDocument();
       expect(queryByText(/go to project/i)).toBeVisible();
     });
+  });
+
+  it('should match snapshot', () => {
+    const { container } = render(<PortfolioCard {...data} />);
+    expect(container).toMatchSnapshot();
   });
 });
