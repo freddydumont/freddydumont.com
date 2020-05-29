@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About section should match snapshot 1`] = `
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  height: 100%;
+  color: var(--theme-ui-colors-gray-2,#CFCFCF);
+  margin-top: 4rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-5 {
+    margin-top: 8rem;
+  }
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  max-width: 32rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-4 {
+    max-width: 32rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-4 {
+    max-width: 42rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-4 {
+    max-width: 56rem;
+  }
+}
+
+.emotion-0 {
+  border-radius: 9999px;
+  height: 6rem;
+  width: 6rem;
+  margin-bottom: 2rem;
+  margin-left: -0.25rem;
+  box-shadow: 0 0 0 3px #079A82;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 2.25rem;
+  color: var(--theme-ui-colors-gray-1,#E1E1E1);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width:640px) {
+  .emotion-1 {
+    font-size: 2.25rem;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 1.25rem;
+  font-family: "IBM Plex Sans",sans-serif;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width:640px) {
+  .emotion-3 {
+    font-size: 1.5rem;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: var(--theme-ui-colors-primary,#17B897);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-2:hover {
+  color: var(--theme-ui-colors-primaryHover,#2DCCA7);
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div>
+  <section
+    class="emotion-5"
+    id="about"
+  >
+    <div
+      class="emotion-4"
+    >
+      <div
+        class="emotion-0 gatsby-image-wrapper"
+        style="position: relative; overflow: hidden;"
+      >
+        <div
+          aria-hidden="true"
+          style="width: 100%; padding-bottom: 100%;"
+        />
+        <img
+          alt=""
+          aria-hidden="true"
+          src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMCAQT/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAGdYWb04I3UjT1Aj//EAB0QAAICAQUAAAAAAAAAAAAAAAIDAAEREhMiIzH/2gAIAQEAAQUCayqaD4eLJIdmnbAE2NMLIq515P/EABkRAAIDAQAAAAAAAAAAAAAAAAABEBESMf/aAAgBAwEBPwGjSHyP/8QAFREBAQAAAAAAAAAAAAAAAAAAIGH/2gAIAQIBAT8Bg//EACAQAAECBQUAAAAAAAAAAAAAAAABAhASISJRAxExQUL/2gAIAQEABj8CsYVaqJk3HTJx0WuriDNT0TLD/8QAGxABAQEBAQADAAAAAAAAAAAAAREAIUExYZH/2gAIAQEAAT8hnQA5xlwQ/bDcRG+mm68IYUWb79MwPb2ZvheGmgx7ccTf/9oADAMBAAIAAwAAABBE6P3/xAAXEQEAAwAAAAAAAAAAAAAAAAARASAh/9oACAEDAQE/EJylA//EABgRAAMBAQAAAAAAAAAAAAAAAAABERBB/9oACAECAQE/EKmIcz//xAAdEAEBAQEAAgMBAAAAAAAAAAABESEAQWExUXGB/9oACAEBAAE/EPFPgQvKcBghKJPtOvKYGmPPOyoRrmfzp5iVsn5SL45jDTR8BhZ2XJwYaaezgU3LLN44dD717//Z"
+          style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+        />
+        <picture>
+          <source
+            sizes="(max-width: 522px) 100vw, 522px"
+            srcset="/static/63824fce019271f88473d108084d7f50/1e5af/freddydumont.jpg 131w,
+/static/63824fce019271f88473d108084d7f50/d6843/freddydumont.jpg 261w,
+/static/63824fce019271f88473d108084d7f50/57786/freddydumont.jpg 522w"
+          />
+          <img
+            alt="frederick morin"
+            loading="lazy"
+            sizes="(max-width: 522px) 100vw, 522px"
+            src="/static/63824fce019271f88473d108084d7f50/57786/freddydumont.jpg"
+            srcset="/static/63824fce019271f88473d108084d7f50/1e5af/freddydumont.jpg 131w,
+/static/63824fce019271f88473d108084d7f50/d6843/freddydumont.jpg 261w,
+/static/63824fce019271f88473d108084d7f50/57786/freddydumont.jpg 522w"
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+          />
+        </picture>
+        <noscript>
+          &lt;picture&gt;&lt;source srcset="/static/63824fce019271f88473d108084d7f50/1e5af/freddydumont.jpg 131w,
+/static/63824fce019271f88473d108084d7f50/d6843/freddydumont.jpg 261w,
+/static/63824fce019271f88473d108084d7f50/57786/freddydumont.jpg 522w" sizes="(max-width: 522px) 100vw, 522px" /&gt;&lt;img loading="lazy" sizes="(max-width: 522px) 100vw, 522px" srcset="/static/63824fce019271f88473d108084d7f50/1e5af/freddydumont.jpg 131w,
+/static/63824fce019271f88473d108084d7f50/d6843/freddydumont.jpg 261w,
+/static/63824fce019271f88473d108084d7f50/57786/freddydumont.jpg 522w" src="/static/63824fce019271f88473d108084d7f50/57786/freddydumont.jpg" alt="frederick morin" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+        </noscript>
+      </div>
+      <div
+        class="emotion-1"
+      >
+        Hi!
+         
+        <span
+          aria-label="Waving Hand Sign"
+          role="img"
+        >
+          👋
+        </span>
+         
+        I'm Frederick Morin.
+      </div>
+      <p
+        class="emotion-3"
+      >
+        I'm a full stack web application developer helping teams and startups turn ideas into reality.
+         
+        <button
+          class="emotion-2"
+        >
+          Contact me now
+        </button>
+         
+        to learn how I can help you grow your business.
+      </p>
+    </div>
+  </section>
+</div>
+`;

@@ -16,10 +16,15 @@ const About = () => {
       }
     }
   `);
+
+  return <AboutPure avatar={data.imageSharp.fluid} />;
+};
+
+export const AboutPure = ({ avatar }) => {
   return (
     <Section htmlId="about" withContainer>
       <Img
-        fluid={data.imageSharp.fluid}
+        fluid={avatar}
         alt="frederick morin"
         sx={{
           borderRadius: 'full',
