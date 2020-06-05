@@ -1,5 +1,6 @@
 import { merge } from 'theme-ui';
 import tailwind from '@theme-ui/preset-tailwind';
+import minimalTheme from '@lekoarts/gatsby-theme-minimal-blog/src/gatsby-plugin-theme-ui/index';
 
 const baseColors = {
   gray: [
@@ -54,11 +55,15 @@ const baseColors = {
 
 const colors = {
   ...baseColors,
-  background: baseColors.gray[9],
-  text: baseColors.gray[2],
-  primary: baseColors.teal_vivid[5],
-  primaryHover: baseColors.teal_vivid[4],
-  error: baseColors.red_vivid[5],
+  modes: {
+    dark: {
+      background: baseColors.gray[9],
+      text: baseColors.gray[2],
+      primary: baseColors.teal_vivid[5],
+      primaryHover: baseColors.teal_vivid[4],
+      error: baseColors.red_vivid[5],
+    },
+  },
 };
 
 const buttonBase = {
@@ -308,4 +313,4 @@ const theme = merge(tailwind, {
   },
 });
 
-export default theme;
+export default merge(minimalTheme, theme);

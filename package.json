@@ -14,19 +14,23 @@
     "e2e:record": "qawolf record http://localhost:8000/",
     "e2e:test": "QAW_URL=http://localhost:8000/ qawolf test"
   },
+  "resolutions": {
+    "theme-ui": "^0.4.0-alpha.1"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.28",
+    "@lekoarts/gatsby-theme-minimal-blog": "^2.3.6",
     "@mdx-js/react": "^1.6.4",
     "@theme-ui/components": "^0.4.0-alpha.1",
     "@theme-ui/preset-tailwind": "^0.4.0-alpha.1",
     "copyright": "^0.0.3",
     "gatsby": "^2.22.9",
+    "gatsby-alias-imports": "^1.0.4",
     "gatsby-image": "^2.4.5",
     "gatsby-plugin-advanced-sitemap": "^1.5.4",
     "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-smoothscroll": "^1.1.0",
-    "gatsby-plugin-theme-ui": "^0.4.0-alpha.1",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-sharp": "^2.5.3",
     "react": "^16.13.1",

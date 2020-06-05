@@ -2,28 +2,22 @@ const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
-    title: `freddydumont's personal blog`,
-    name: `freddydumont`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `freddydumont's blog`,
+    // Default title of the page
+    siteTitleAlt: `freddydumont | Full stack web application development`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `freddydumont | Full stack web application development`,
+    // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://freddydumont.com`,
-    description: `freddydumont's blog about modern full stack web app development using tech like JavasScript, React, GraphQL and Gatsby.`,
-    hero: {
-      heading: `Interested in modern web application development? Keep reading.`,
-      maxWidth: 652,
-    },
-    social: [
-      {
-        name: `twitter`,
-        url: `https://twitter.com/_freddydumont`,
-      },
-      {
-        name: `github`,
-        url: `https://github.com/freddydumont`,
-      },
-      {
-        name: `linkedin`,
-        url: `https://www.linkedin.com/in/freddydumont/`,
-      },
-    ],
+    // Used for SEO
+    siteDescription: `I'm a full stack web application developer helping teams and startups turn ideas into reality. Click to find out how I can help you grow your business!`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/dumont_digital_logo.png`,
+    // Twitter Handle
+    author: `@_freddydumont`,
   },
   plugins: [
     'gatsby-plugin-theme-ui',
@@ -31,6 +25,39 @@ module.exports = {
     'gatsby-plugin-smoothscroll',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-alias-imports`,
+      options: {
+        aliases: {
+          components: `src/components`,
+        },
+      },
+    },
+    {
+      // https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog
+      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+      options: {
+        tagsPath: '/blog/tags',
+        feed: true,
+        feedTitle: `freddydumont's blog`,
+        navigation: [
+          {
+            title: `Home`,
+            slug: `/`,
+          },
+          {
+            title: `Blog`,
+            slug: `/blog`,
+          },
+        ],
+        externalLinks: [
+          {
+            name: `Twitter`,
+            url: `https://twitter.com/_freddydumont`,
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
