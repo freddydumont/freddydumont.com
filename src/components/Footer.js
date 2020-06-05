@@ -21,8 +21,8 @@ const Footer = () => {
   return (
     <>
       <FooterWave />
-      <Box as="footer" bg="gray.8" pb={4}>
-        <Container>
+      <Box as="footer" bg="gray.8" pb={'t4'}>
+        <Container variant="home">
           <Flex
             sx={{
               flexDirection: 'column',
@@ -33,15 +33,15 @@ const Footer = () => {
             <Text
               as="h2"
               variant="heading"
-              pt={4}
-              mb={5}
+              pt={'t4'}
+              mb={'t5'}
               sx={{
                 fontSize: ['2xl', '4xl', '4xl', '4xl'],
               }}
             >
               Elsewhere on the internet
             </Text>
-            <Flex mb={8}>
+            <Flex mb={'t8'}>
               {IconLinks.map((Icon) => (
                 <Link
                   target="_blank"
@@ -49,7 +49,7 @@ const Footer = () => {
                   variant="icon"
                   href={Icon.link}
                   key={Icon.link}
-                  mx={3}
+                  mx={'t3'}
                 >
                   <Icon />
                 </Link>
@@ -60,11 +60,11 @@ const Footer = () => {
               sx={{
                 flexWrap: 'wrap',
                 justifyContent: 'center',
-                mb: 4,
+                mb: 't4',
                 fontFamily: 'mono',
                 color: 'gray.1',
                 li: {
-                  mx: 3,
+                  mx: 't3',
                   '&:hover': {
                     color: 'primaryHover',
                   },

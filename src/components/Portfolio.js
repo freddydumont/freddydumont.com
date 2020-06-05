@@ -96,7 +96,7 @@ export const PortfolioPure = ({ cards }) => {
           },
         })}
       />
-      <Container>
+      <Container variant="home">
         <Section.Title>Portfolio</Section.Title>
         <Section.Body>
           Here's a non-exhaustive collection of stuff I've worked on. I also

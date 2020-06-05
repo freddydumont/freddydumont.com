@@ -4,8 +4,8 @@ import { jsx } from 'theme-ui';
 function FooterWave(props) {
   return (
     <svg
-      sx={{ mt: [null, null, -8, -16] }}
-      viewBox="0 0 1440 320"
+      sx={{ mt: [null, null, '-t8', -16] }}
+      viewBox="0 0 1440 319"
       preserveAspectRatio="none"
       {...props}
     >

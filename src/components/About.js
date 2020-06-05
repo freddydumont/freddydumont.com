@@ -30,14 +30,14 @@ export const AboutPure = ({ avatar }) => {
           borderRadius: 'full',
           height: '24',
           width: '24',
-          marginBottom: 8,
+          marginBottom: 't8',
           marginLeft: -1,
           boxShadow: 'outline-teal',
         }}
       />
       <Text
         variant="heading"
-        mb={4}
+        mb={'t4'}
         sx={{
           fontSize: ['2xl', '4xl'],
         }}

@@ -70,7 +70,7 @@ const buttonBase = {
   cursor: 'pointer',
   display: 'inline-block',
   width: 'full',
-  py: 6,
+  py: 't6',
   textAlign: 'center',
   fontSize: 'lg',
   fontWeight: 'bold',
@@ -135,14 +135,24 @@ fontSizes['7xl'] = fontSizes[8];
 
 const space = [...tailwind.space];
 
-space['0'] = '0';
-space['1'] = '0.25rem';
-space['2'] = '0.5rem';
-space['3'] = '0.75rem';
-space['4'] = '1rem';
-space['5'] = '1.25rem';
-space['6'] = '1.5rem';
-space['8'] = '2rem';
+// export const space = [
+//   0,           0
+//   '0.25rem',   1
+//   '0.5rem',    2
+//   '1rem',      3
+//   '2rem',      4
+//   '4rem',      5
+//   '8rem',      6
+//   '16rem',     7
+//   '32rem',     8
+// ]
+
+// t prefix for tailwind spacing
+space['t3'] = '0.75rem';
+space['t4'] = '1rem';
+space['t5'] = '1.25rem';
+space['t6'] = '1.5rem';
+space['t8'] = '2rem';
 space['10'] = '2.5rem';
 space['12'] = '3rem';
 space['16'] = '4rem';
@@ -195,7 +205,7 @@ const theme = merge(tailwind, {
       fontWeight: 'semibold',
       fontSize: 'sm',
       borderRadius: 'lg',
-      px: 3,
+      px: 't3',
       py: 1,
       mr: 2,
       mb: 2,
@@ -210,7 +220,7 @@ const theme = merge(tailwind, {
       borderRadius: 'default',
       overflow: 'hidden',
       boxShadow: 'lg',
-      mb: 8,
+      mb: 't8',
       mx: 'auto',
       ':hover': {
         boxShadow: '2xl',
@@ -250,7 +260,7 @@ const theme = merge(tailwind, {
         borderWidth: 0,
         bg: 'transparent',
         borderBottomWidth: 2,
-        mr: 3,
+        mr: 't3',
         py: 1,
         fontSize: ['xl', '2xl'],
         fontFamily: 'body',
@@ -261,9 +271,9 @@ const theme = merge(tailwind, {
     },
   },
   layout: {
-    container: {
-      paddingRight: 6,
-      paddingLeft: 6,
+    home: {
+      paddingRight: 't6',
+      paddingLeft: 't6',
       maxWidth: ['lg', 'lg', '2xl', '4xl'],
     },
     box: {
@@ -303,11 +313,11 @@ const theme = merge(tailwind, {
   variants: {
     flex_form_element: {
       flexWrap: 'wrap',
-      mx: -3,
+      mx: '-t3',
       mb: 12,
     },
     form_box: {
-      px: 3,
+      px: 't3',
       width: 'full',
     },
   },

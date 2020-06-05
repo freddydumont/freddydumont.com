@@ -17,7 +17,11 @@ const Section = ({ htmlId, withContainer, children }) => (
       mt: [16, 32],
     }}
   >
-    {withContainer ? <Container>{children}</Container> : children}
+    {withContainer ? (
+      <Container variant="home">{children}</Container>
+    ) : (
+      children
+    )}
   </Box>
 );
 

@@ -21,7 +21,7 @@ const Home = ({ children }) => (
       as="nav"
       variant="box"
       bg="background"
-      p={6}
+      p="t6"
       mt={-32}
       sx={{
         maxWidth: 'xs',
@@ -32,7 +32,7 @@ const Home = ({ children }) => (
         },
       }}
     >
-      <Box pb="6">
+      <Box pb="t6">
         <Logo />
       </Box>
       {children}

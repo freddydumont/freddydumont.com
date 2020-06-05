@@ -47,7 +47,7 @@ const PortfolioCard = ({
         position: 'relative',
       }}
     >
-      <Box px={6} pt={4} pb={3}>
+      <Box px={'t6'} pt={'t4'} pb={'t3'}>
         <Text as="h2" variant="title">
           {title}
         </Text>
@@ -56,7 +56,7 @@ const PortfolioCard = ({
         fluid={image.childImageSharp.fluid}
         alt={alt}
         sx={{
-          marginBottom: 4,
+          marginBottom: 't4',
           marginX: 2,
           borderRadius: 'sm',
         }}
@@ -67,8 +67,8 @@ const PortfolioCard = ({
           transition: `transform 0.3s cubic-bezier(0.23, 1, 0.32, 1)`,
         }}
       >
-        <Box px={6} py={4}>
-          <Text as="h3" mb={4} variant="category">
+        <Box px={'t6'} py={'t4'}>
+          <Text as="h3" mb={'t4'} variant="category">
             {category}
           </Text>
           <Flex
@@ -91,7 +91,7 @@ const PortfolioCard = ({
             <Fragment>
               <Text
                 as="h3"
-                mt={4}
+                mt={'t4'}
                 mb={1}
                 color="gray.1"
                 sx={{ fontSize: 'lg', fontFamily: 'body' }}
