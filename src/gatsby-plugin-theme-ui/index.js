@@ -183,19 +183,6 @@ const theme = merge(tailwind, {
   shadows,
   space,
 
-  // DEFAULT STYLES
-  styles: {
-    a: {
-      color: 'primary',
-      textDecoration: 'none',
-      cursor: 'pointer',
-      ':hover': {
-        color: 'primaryHover',
-        textDecoration: 'underline',
-      },
-    },
-  },
-
   // VARIANTS
   badges: {
     tech_tag: {
