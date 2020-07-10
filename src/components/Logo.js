@@ -2,7 +2,7 @@ import React from 'react';
 
 function Logo() {
   return (
-    <svg viewBox="0 0 261.103 192.449" height={35}>
+    <svg aria-label="logo" viewBox="0 0 261.103 192.449" height={35}>
       <defs>
         <path
           d="M204.93 123.34c0 2.87 2.3 5.17 5.18 5.17h10.26c2.87 0 5.17-2.3 5.17-5.17 0-2.88-2.3-5.18-5.17-5.18h-10.26c-3.45 1.54-5.18 3.26-5.18 5.18z"
