@@ -3,20 +3,20 @@
  * Name must match with a tag found in `portfolio.json`.
  */
 const TAG_COLORS = {
-  javascript: ['yellow_vivid.4', 'gray.9'],
-  react: ['blue.4', 'gray.9'],
+  javascript: ['yellow_vivid.4', 'gray_dark.9'],
+  react: ['blue.4', 'gray_dark.9'],
   gatsby: ['purple.7', 'purple.1'],
   bulma: ['teal_vivid.2', 'teal_vivid.9'],
   redux: ['purple.6', 'purple.1'],
   jest: ['red_vivid.8', 'white'],
-  emotion: ['pink.4', 'gray.9'],
+  emotion: ['pink.4', 'gray_dark.9'],
   bootstrap: ['purple.8', 'purple.1'],
-  sass: ['pink.5', 'gray.9'],
-  'redux-saga': ['green.5', 'gray.9'],
-  phaser: ['orange.6', 'gray.9'],
+  sass: ['pink.5', 'gray_dark.9'],
+  'redux-saga': ['green.5', 'gray_dark.9'],
+  phaser: ['orange.6', 'gray_dark.9'],
   typescript: ['blue.7', 'white'],
-  xstate: ['black', 'gray.0'],
-  'rot.js': ['black', 'gray.0'],
+  xstate: ['gray.9', 'gray.0'],
+  'rot.js': ['gray.9', 'gray.0'],
   tachyons: ['gray.0', 'gray.9'],
   howler: ['yellow.7', 'gray.0'],
 };

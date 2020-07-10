@@ -3,7 +3,7 @@ import tailwind from '@theme-ui/preset-tailwind';
 import minimalTheme from '@lekoarts/gatsby-theme-minimal-blog/src/gatsby-plugin-theme-ui/index';
 
 const baseColors = {
-  gray: [
+  gray_dark: [
     '#F7F7F7',
     '#E1E1E1',
     '#CFCFCF',
@@ -53,12 +53,16 @@ const baseColors = {
   ],
 };
 
+baseColors.gray = [...baseColors.gray_dark];
+baseColors.gray.reverse();
+
 const colors = {
   ...baseColors,
   modes: {
     dark: {
-      background: baseColors.gray[9],
-      text: baseColors.gray[2],
+      gray: baseColors.gray_dark,
+      background: baseColors.gray_dark[9],
+      text: baseColors.gray_dark[2],
       primary: baseColors.teal_vivid[5],
       primaryHover: baseColors.teal_vivid[4],
       error: baseColors.red_vivid[5],
