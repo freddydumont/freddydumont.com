@@ -19,7 +19,7 @@ const CommandLineText = ({ children, withPrompt, withError }) => (
   >
     {withPrompt ? (
       <Text as="span" color={withError ? 'error' : 'primary'}>
-        >
+        &gt;
       </Text>
     ) : (
       ' '
