@@ -1,6 +1,7 @@
 const path = require('path');
 const portfolio = require('./src/data/portfolio.json');
 const { tagsStringToObject } = require('./src/utils/tags');
+const kebabCase = require(`lodash.kebabcase`);
 
 const IMAGE_PATH = './src/assets/';
 
@@ -70,4 +71,39 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 
     actions.createNode(node);
   });
+};
+
+/**
+ * Customizing blog posts path
+ * @see https://github.com/LekoArts/gatsby-themes/issues/428
+ */
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes, createFieldExtension } = actions;
+
+  /** If the slug is provided, append `blog/` to it else create slug from title */
+  const customSlug = (source) => {
+    const title = kebabCase(source.title);
+    const slug = source.slug ? `blog/${source.slug}` : `blog/${title}`;
+
+    return `/${slug}`.replace(/\/\/+/g, `/`);
+  };
+
+  createFieldExtension({
+    name: `customSlug`,
+    extend() {
+      return {
+        resolve: customSlug,
+      };
+    },
+  });
+
+  createTypes(`
+    interface Post @nodeInterface {
+      slug: String! @customSlug
+    }
+    
+    type MdxPost implements Node & Post {
+      slug: String! @customSlug
+    }
+  `);
 };
