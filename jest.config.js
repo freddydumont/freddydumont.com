@@ -13,5 +13,6 @@ module.exports = {
   },
   setupFiles: [`<rootDir>/test/loadershim.js`],
   setupFilesAfterEnv: ['<rootDir>/test/setup-test-env.js'],
+  testEnvironment: 'jest-environment-jsdom-fifteen',
   collectCoverageFrom: ['**/src/**/*.{js,jsx}', '!**/node_modules/**'],
 };
