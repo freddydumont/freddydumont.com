@@ -6,8 +6,6 @@ hero: ./images/header.jpg
 excerpt: Use Gatsby's Node API to process images in JSON files with gatsby-plugin-sharp and customize the shape of your data in GraphQL nodes.
 ---
 
-import PortfolioCardSample from './components/PortfolioCardSample';
-
 When I started building the portfolio section of my personal site, I encountered a small problem.
 
 I was building cards that contained both data and image and I wanted everything to appear under the same GraphQL node. Turns out there's no way for Gatsby to recognize a path to an image in a JSON file by default.
@@ -16,7 +14,9 @@ Additionally, I needed to do some processing on the tag data before it could be 
 
 Here's what a card looks like:
 
-<PortfolioCardSample />
+<div className="Image__Small">
+  <img src="./images/portfolio-card-sample.png" alt="Portfolio card sample" />
+</div>
 
 ## The problem
 
